@@ -10,8 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="动态规划 背包问题01背包问题题目n件物品，容量为v的背包，每件物品价值w[i]&amp;amp;费用c[i]，求解取那些物品使价值最大
-思路子状态：用f [i] [v]表示前i件物品恰放入每一个容量为v的,"> 
+    <meta name="description" content="动态规划 背包问题对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具,"> 
     <meta name="author" content="Shaosy"> 
     <link rel="alternative" href="atom.xml" title="shaosy&#39;s blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -92,22 +91,22 @@
                 <a href="/categories/编程"><b>「
                     </b>编程<b> 」</b></a>
                 
-                January 09, 2021
+                January 20, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/01/09/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题" class="">背包问题</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题" class="">背包问题</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    893
+                    8.3k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -141,12 +140,15 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="动态规划-背包问题"><a href="#动态规划-背包问题" class="headerlink" title="动态规划 背包问题"></a>动态规划 背包问题</h1><h2 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>n件物品，容量为v的背包，每件物品价值w[i]&amp;费用c[i]，求解取那些物品使价值最大</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>子状态：<strong>用f [i] [v]表示前i件物品恰放入每一个容量为v的背包获得的最大值</strong></p>
-<p>那么仅仅考虑第i件物品的取用状况（放、不放）。若不放，其价值即为f [i-1] [v]，而若放，则转化问题为取用i-1件物品，而背包容量为v-c[i]时的解，所以价值为f[i-1] [v-c[i]]+w[i]。</p>
-<p>由此可以得到状态转移方程：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f[i][v]=max&#123;f[i<span class="number">-1</span>][v],f[i<span class="number">-1</span>][v-c[i]]+w[i]&#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度和空间复杂度均为O(N)、</p>
+            <h1 id="动态规划-背包问题"><a href="#动态规划-背包问题" class="headerlink" title="动态规划 背包问题"></a>动态规划 背包问题</h1><p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p>
+<p>01背包问题状态转移方程为</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line">    f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完全背包问题状态转移方程为</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>混合背包问题状态转移方程为</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">	CompletePack(i);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	m[i] = m[i] - k;</span><br><span class="line">	k = <span class="number">2</span> * k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>总代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1010</span>], c[<span class="number">1010</span>], w[<span class="number">1010</span>], m[<span class="number">1010</span>], val;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ZeroOnePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//01背包问题状态转移方程</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CompletePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//完全背包问题</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MultiplePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;	<span class="comment">//多重背包问题，二进制区分</span></span><br><span class="line">	<span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">		CompletePack(i);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">			f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		m[i] = m[i] - k;</span><br><span class="line">		k = <span class="number">2</span> * k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MixinPack</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;	 <span class="comment">//混合背包问题</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (m[i] == <span class="number">1</span>) &#123;</span><br><span class="line">			ZeroOnePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] == <span class="number">0</span>) &#123;</span><br><span class="line">			CompletePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			MultiplePack(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -192,7 +194,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">动态规划 背包问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">01背包问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.2.</span> <span class="toc-text">思路</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">动态规划 背包问题</span></a></li></ol>
                 </div>
             </div>
             

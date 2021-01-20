@@ -76,6 +76,22 @@
                                 
                                 <li class="timeline-item">
                                     <div class="timeline-info">
+                                        <span class="gradient-text">January 20, 2021</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <a class="timeline-title" target="_self" href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题</a>
+                                        <p>
+                                            动态规划 背包问题对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：
+01背包问题状态转移方程为
+123for(int v = val ; v &gt;= c[i] ; v--)&#123;    f[v] = max(f[v], f[v...
+                                        </p>
+                                    </div>
+                                </li>
+                            
+                                
+                                <li class="timeline-item">
+                                    <div class="timeline-info">
                                         <span class="gradient-text">January 14, 2021</span>
                                     </div>
                                     <div class="timeline-marker"></div>
@@ -88,22 +104,6 @@ yysy 有点阴间
 输入格式（样例）
 data.yaml
 12345678910111213141516#以下写入表格7.1数据，格式形如[t1,t2,t2&#x27;,t1&#x27;]t11: [ 28.65,29.07,29.60,30.12 ]t12: [ 21.46,...
-                                        </p>
-                                    </div>
-                                </li>
-                            
-                                
-                                <li class="timeline-item">
-                                    <div class="timeline-info">
-                                        <span class="gradient-text">January 09, 2021</span>
-                                    </div>
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2021/01/09/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">背包问题</a>
-                                        <p>
-                                            动态规划 背包问题01背包问题题目n件物品，容量为v的背包，每件物品价值w[i]&amp;费用c[i]，求解取那些物品使价值最大
-思路子状态：用f [i] [v]表示前i件物品恰放入每一个容量为v的背包获得的最大值
-那么仅仅考虑第i件物品的取用状况（放、不放）。若不放，其价值即为f [i-1] [v]，而若放，则转化问题为取用i-1件物品，而背包容量为v-c[i]时的解，所以价值为f[i-1...
                                         </p>
                                     </div>
                                 </li>
