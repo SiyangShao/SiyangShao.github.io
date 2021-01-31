@@ -156,7 +156,7 @@
 <p>取走最后一个石子的玩家获胜</p>
 <p>若都采取最佳策略，先手是否必胜？</p>
 <h3 id="结论：-1"><a href="#结论：-1" class="headerlink" title="结论："></a>结论：</h3><p>$$<br>当且仅当a_1\oplus a_2\oplus \cdot\cdot\cdot a_n \ne 0时先手存在必胜策略<br>$$</p>
-<h3 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h3><p><img src="/images/nime_game.png" alt="nim游戏证明"></p>
+<h3 id="证明："><a href="#证明：" class="headerlink" title="证明："></a>证明：</h3><p><img src="/images/nim_game.png" alt="nim游戏证明"></p>
 <h2 id="SG函数"><a href="#SG函数" class="headerlink" title="SG函数"></a>SG函数</h2><p>首先介绍mex函数：<br>$$<br>mex(S) = min_{i\in N , i \notin S}{i}<br>$$<br>即mex(S)表示最小不属于集合的非负整数 </p>
 <p>SG函数就是对DAG图上节点取Mex值<br>$$<br>SG(x) = mex{SG(y)|x \to y}<br>$$<br>即对局面x所有后继状态y取mex得到的值</p>
 <h3 id="SG定理"><a href="#SG定理" class="headerlink" title="SG定理"></a>SG定理</h3><p>对多个 DAG Game，整个游戏的SG值为<br>$$<br>SG(x) = SG(x_1) \oplus SG(x_2) \oplus \cdot \cdot\cdot SG(x_n)<br>$$<br>当且仅当SG（X）==0，先手必败</p>
@@ -208,9 +208,9 @@
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">5 <p>Articles</p></a></li>
+                    <li><a href="/">6 <p>Articles</p></a></li>
                     <li><a href="/categories">4 <p>Categories</p></a></li>
-                    <li><a href="/tags">11 <p>Tags</p></a></li>
+                    <li><a href="/tags">12 <p>Tags</p></a></li>
                 </ul>
             </div>
             
