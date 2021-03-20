@@ -21,7 +21,7 @@
             <meta name="keywords" content="TriDiamond Obsidian,">
             
                 
-                    <meta name="description" content="线性代数知识点行列式计算对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {,">
+                    <meta name="description" content="线性代数知识点行列式性质对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -122,13 +122,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.1k
+                    4.2k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    4 mins.
                 </span>
                 
                 
@@ -162,10 +162,49 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="行列式计算"><a href="#行列式计算" class="headerlink" title="行列式计算"></a>行列式计算</h3><p>对$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {0} &amp; {0} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]<br>$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {0} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]$，则行列式的值有<br>$$<br>A=a_{11}\cdot a_{22}\cdots a_{mn}<br>$$</p>
+            <h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h3><p>对$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]<br>$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {0} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]$，则行列式的值有<br>$$<br>A=a_{11}\cdot a_{22}\cdots a_{mn}<br>$$</p>
 <h4 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h4><p>1.某行（列）加上or减去某行（列）几倍，行列式值不变</p>
 <p>2.某行（列）乘k，等于A*k</p>
 <p>3.互换两行（列），行列式变号</p>
+<h3 id="行列式计算"><a href="#行列式计算" class="headerlink" title="行列式计算"></a>行列式计算</h3><h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>$$<br>A=\left[\begin{array}{cccc}{x} &amp; {a} &amp; {\cdots} &amp; {a} \ {a} &amp; {x} &amp; {\cdots} &amp; {a} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a} &amp; {a} &amp; {\cdots} &amp; {x}\end{array}\right]=(x-a)^{n-1}[x+(n-1)a]<br>$$</p>
+<h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>$$<br>A=\left[\begin{array}{cccc}{1} &amp; {1} &amp; {\cdots} &amp; {1} \ {x_{1}} &amp; {x_{2}} &amp; {\cdots} &amp; {x_n} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {x_1^{n-1}} &amp; {x_2^{n-1}} &amp; {\cdots} &amp; {x_n^{n-1}}\end{array}\right] \begin{aligned}&amp;= (x_n-x_{n-1})(x_n-x_{n-2})(x_n-x_{n-3})\cdots(x_n-x_1)\  &amp;\times(x_{n-1}-x{n-2})(x_{n-1}-x_{n-3})\cdots (x_{n-1}-x_1)\&amp;\times\cdots\&amp;\times(x_2-x_1)\end{aligned}<br>$$</p>
+<h4 id="3"><a href="#3" class="headerlink" title="3"></a>3</h4><p>两行（列）相同/成比例时，行列式值为0</p>
+<p>两行（列）为两项相加减时，行列式可拆分为两个行列式相加减</p>
+<h4 id="4-余子式-代数余子式"><a href="#4-余子式-代数余子式" class="headerlink" title="4 余子式/代数余子式"></a>4 余子式/代数余子式</h4><p>余子式：$M_{ab}$即抹掉a行b列，计算行列式值</p>
+<p>代数余子式：$A_{ab}=(-1)^{a+b}*M_{ab}$</p>
+<h4 id="5"><a href="#5" class="headerlink" title="5"></a>5</h4><p>$$<br>D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots +a_{in}A_{in}(第i行)\<br>D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A{nj}(第j列)<br>$$</p>
+<h4 id="6-多个A或M相加减"><a href="#6-多个A或M相加减" class="headerlink" title="6 多个A或M相加减"></a>6 多个A或M相加减</h4><h5 id="多个A相加"><a href="#多个A相加" class="headerlink" title="多个A相加"></a>多个A相加</h5><p>对$x\cdot A_{ij}$而言，将$a_{ij}$替换为$x$，带入计算行列式的值即为结果</p>
+<h5 id="多个M相加"><a href="#多个M相加" class="headerlink" title="多个M相加"></a>多个M相加</h5><p>将M转化为A，而后替换</p>
+<h4 id="7-给一方程组-判断解的情况"><a href="#7-给一方程组-判断解的情况" class="headerlink" title="7 给一方程组 判断解的情况"></a>7 给一方程组 判断解的情况</h4><table>
+<thead>
+<tr>
+<th>方程组</th>
+<th>$D\not=0$</th>
+<th>$D=0$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>齐次</td>
+<td>只有一组零解</td>
+<td>有零解与非零解</td>
+</tr>
+<tr>
+<td>非齐次</td>
+<td>只有一组非零解</td>
+<td>有多个解或无解</td>
+</tr>
+</tbody></table>
+<p>齐次：方程组除了x与0，没有常数项</p>
+<p>非齐次：有常数项</p>
+<p>D：将$x_1,x_2\cdots x_n$前系数提取得到的行列式的值</p>
+<h3 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h3><h4 id="1-矩阵的加减"><a href="#1-矩阵的加减" class="headerlink" title="1.矩阵的加减"></a>1.矩阵的加减</h4><p>直接加</p>
+<h3 id="2-矩阵相乘"><a href="#2-矩阵相乘" class="headerlink" title="2.矩阵相乘"></a>2.矩阵相乘</h3><p>方法：前行乘后列</p>
+<h4 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h4><p>$ \left{<br> \begin{matrix}<br>   0 &amp; 0 &amp; 0 \<br>   0 &amp; 0 &amp; 0 \<br>   0 &amp; 0 &amp; 0<br>  \end{matrix}<br>  \right}=0 $ </p>
+<p>$ \left{<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \<br>   0 &amp; 1 &amp; 0 \<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right}=E $ </p>
+<p>$E\cdot A=A$         $A\cdot E=A$         $E^2=E\cdot E = E$</p>
+<p>矩阵乘法不满足交换律！！！（$E$除外）</p>
+<h4 id="3-矩阵取绝对值"><a href="#3-矩阵取绝对值" class="headerlink" title="3.矩阵取绝对值"></a>3.矩阵取绝对值</h4><p>计算行列式$A$的值即为矩阵$A$的值</p>
+<p>其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$</p>
 <h2 id="历年卷"><a href="#历年卷" class="headerlink" title="历年卷"></a>历年卷</h2>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -211,7 +250,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">行列式计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵的运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.矩阵相乘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a></li></ol></li></ol>
                 </div>
             </div>
             
