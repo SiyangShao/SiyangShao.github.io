@@ -122,13 +122,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    4.2k
+                    7.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    4 mins.
+                    7 mins.
                 </span>
                 
                 
@@ -162,7 +162,7 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h3><p>对$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]<br>$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {0} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]$，则行列式的值有<br>$$<br>A=a_{11}\cdot a_{22}\cdots a_{mn}<br>$$</p>
+            <h1 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h1><h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h3><p>对$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]<br>$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {0} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {0} &amp; {0} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]$，则行列式的值有<br>$$<br>A=a_{11}\cdot a_{22}\cdots a_{mn}<br>$$</p>
 <h4 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks:"></a>Tricks:</h4><p>1.某行（列）加上or减去某行（列）几倍，行列式值不变</p>
 <p>2.某行（列）乘k，等于A*k</p>
 <p>3.互换两行（列），行列式变号</p>
@@ -200,11 +200,51 @@
 <h3 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h3><h4 id="1-矩阵的加减"><a href="#1-矩阵的加减" class="headerlink" title="1.矩阵的加减"></a>1.矩阵的加减</h4><p>直接加</p>
 <h3 id="2-矩阵相乘"><a href="#2-矩阵相乘" class="headerlink" title="2.矩阵相乘"></a>2.矩阵相乘</h3><p>方法：前行乘后列</p>
 <h4 id="特殊矩阵"><a href="#特殊矩阵" class="headerlink" title="特殊矩阵"></a>特殊矩阵</h4><p>$ \left{<br> \begin{matrix}<br>   0 &amp; 0 &amp; 0 \<br>   0 &amp; 0 &amp; 0 \<br>   0 &amp; 0 &amp; 0<br>  \end{matrix}<br>  \right}=0 $ </p>
-<p>$ \left{<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \<br>   0 &amp; 1 &amp; 0 \<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right}=E $ </p>
-<p>$E\cdot A=A$         $A\cdot E=A$         $E^2=E\cdot E = E$</p>
+<p>$ \left{<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \<br>   0 &amp; 1 &amp; 0 \<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right}=I $ </p>
+<p>$I\cdot A=A$         $A\cdot I=A$         $I^2=I\cdot I = I$</p>
 <p>矩阵乘法不满足交换律！！！（$E$除外）</p>
 <h4 id="3-矩阵取绝对值"><a href="#3-矩阵取绝对值" class="headerlink" title="3.矩阵取绝对值"></a>3.矩阵取绝对值</h4><p>计算行列式$A$的值即为矩阵$A$的值</p>
 <p>其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$</p>
+<h4 id="4-矩阵转置"><a href="#4-矩阵转置" class="headerlink" title="4.矩阵转置"></a>4.矩阵转置</h4><p>$A^T$将A的行变为列，列变为行</p>
+<p>注意：$1.(AB)^T=B^TA^T$    $2.\left|A^T\right|=\left|A\right|$</p>
+<h4 id="5-证明矩阵可逆"><a href="#5-证明矩阵可逆" class="headerlink" title="5.证明矩阵可逆"></a>5.证明矩阵可逆</h4><p>条件：1.矩阵A为方阵（<strong>行数与列数相等</strong>）</p>
+<p>​            2. $\left|A\right|\not=0$或者存在一个方阵B，满足$AB=I$或者$BA=I$</p>
+<h4 id="6-求逆矩阵"><a href="#6-求逆矩阵" class="headerlink" title="6.求逆矩阵"></a>6.求逆矩阵</h4><p>$$<br>\left(A ,\vdots, I\right)\rightarrow\left(I ,\vdots, A^{-1}\right)<br>$$</p>
+<h4 id="7-利用-A-cdot-A-1-I-或-A-1-cdot-A-I-计算"><a href="#7-利用-A-cdot-A-1-I-或-A-1-cdot-A-I-计算" class="headerlink" title="7.利用$A\cdot A^{-1}I=$或$A^{-1}\cdot A=I$计算"></a>7.利用$A\cdot A^{-1}I=$或$A^{-1}\cdot A=I$计算</h4><p>利用该性质等号两边同时乘以逆矩阵而后做到除法效果</p>
+<h4 id="8-伴随矩阵"><a href="#8-伴随矩阵" class="headerlink" title="8.伴随矩阵"></a>8.伴随矩阵</h4><p>$A^*$为$A$的伴随矩阵</p>
+<p>其中，$A^*$的第$i$行$j$列是$$</p>
+<p>$A\cdot A^*=\left|A\right| I$或$A^* \cdot A=\left|A\right| I$</p>
+<h4 id="9-求矩阵的秩"><a href="#9-求矩阵的秩" class="headerlink" title="9.求矩阵的秩"></a>9.求矩阵的秩</h4><p>将矩阵化简为行阶梯形，有几行有非零数，秩就是多少</p>
+<h5 id="Trick："><a href="#Trick：" class="headerlink" title="Trick："></a>Trick：</h5><p>以下内容等价</p>
+<ol>
+<li>$A$可逆</li>
+<li>$A$的相抵标准型是$n$阶单位矩阵</li>
+<li>$A$可以表示为若干初等矩阵的积</li>
+<li>存在$n$阶矩阵$B$，使得$AB=I$</li>
+<li>若$A$是$n$阶矩阵，则$A$可逆，$r(A)=n$</li>
+</ol>
+<h3 id="向量组与线性空间"><a href="#向量组与线性空间" class="headerlink" title="向量组与线性空间"></a>向量组与线性空间</h3><h4 id="判断某向量是否可以由某向量组线性表示"><a href="#判断某向量是否可以由某向量组线性表示" class="headerlink" title="判断某向量是否可以由某向量组线性表示"></a>判断某向量是否可以由某向量组线性表示</h4><p>若$\left(a_1,a_2\cdots b\right)$的秩和$(a_1,a_2\cdots a_m , b)$的秩相等，则$b$可以由$a_1,a_2,a_3\cdots a_m$线性表示</p>
+<h4 id="判断某个向量组是否线性相关"><a href="#判断某个向量组是否线性相关" class="headerlink" title="判断某个向量组是否线性相关"></a>判断某个向量组是否线性相关</h4><p>若$R$&lt;向量个数，则线性相关；若R=向量个数，则线性无关</p>
+<h4 id="已知三维向量空间的一组基底，求某一向量在此基地下的坐标"><a href="#已知三维向量空间的一组基底，求某一向量在此基地下的坐标" class="headerlink" title="已知三维向量空间的一组基底，求某一向量在此基地下的坐标"></a>已知三维向量空间的一组基底，求某一向量在此基地下的坐标</h4><p>对空间向量的一组基底$\alpha_1,\alpha_2,\alpha_3$，向量$\beta$的坐标$k_1,k_2,k_3$满足:<br>$$<br>\beta=k_1\alpha_1+k_2\alpha_2+k_3\alpha_c<br>$$</p>
+<h4 id="求一组向量的极大无关组"><a href="#求一组向量的极大无关组" class="headerlink" title="求一组向量的极大无关组"></a>求一组向量的极大无关组</h4><p>对于行向量$a_1,a_2,a_3,a_4$求其极大无关组</p>
+<p>将其写入矩阵，变换为最简行阶梯型。则非零行（由上至下）即为其极大无关组</p>
+<h3 id="解方程组"><a href="#解方程组" class="headerlink" title="解方程组"></a>解方程组</h3><p>齐次方程组：</p>
+<p>​                $R(A)=未知数个数$ 唯一解（零解）</p>
+<p>​                $R(A)&lt;未知数个数$ 多个解（零解和多个非零解）</p>
+<p>非齐次方程组：</p>
+<p>​                $R(A)\not=R(A|b)$ 无解</p>
+<p>​                $R(A)=R(A|b)=未知数个数$ 一个非零解</p>
+<p>​                $R(A)=R(A|b)&lt;未知数个数$ 多个非零解</p>
+<p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162138852.png" alt="线性代数"></p>
+<p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162726234.png" alt="基础解系"></p>
+<p>集合中线性无关的解向量个数：</p>
+<p>​        齐次：未知数个数减去秩</p>
+<p>​        非齐次：未知数个数减去秩加一</p>
+<h4 id="矩阵特征值"><a href="#矩阵特征值" class="headerlink" title="矩阵特征值"></a>矩阵特征值</h4><p>满足$\left|A-\lambda E\right|=0$的$\lambda$为特征值</p>
+<h4 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h4><p>$(A-\lambda E)x=0$的通解</p>
+<h4 id="判断方阵是否与对角线相似-是否满足-P-1-AP-A"><a href="#判断方阵是否与对角线相似-是否满足-P-1-AP-A" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$"></a>判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$</h4><p>方阵特征向量等于方阵阶数：相似/满足</p>
+<p>不等于：不相似/不满足</p>
+<h4 id="求对角阵-可逆变换矩阵"><a href="#求对角阵-可逆变换矩阵" class="headerlink" title="求对角阵/可逆变换矩阵"></a>求对角阵/可逆变换矩阵</h4><p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320180006361.png" alt="image-20210320180006361"></p>
 <h2 id="历年卷"><a href="#历年卷" class="headerlink" title="历年卷"></a>历年卷</h2>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -250,7 +290,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">行列式计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵的运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.矩阵相乘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">行列式计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵的运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.矩阵相乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.5.</span> <span class="toc-text">向量组与线性空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.1.6.</span> <span class="toc-text">解方程组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a></li></ol></li></ol>
                 </div>
             </div>
             
