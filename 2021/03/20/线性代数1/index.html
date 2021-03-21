@@ -122,13 +122,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    7.8k
+                    8.7k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    7 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -203,6 +203,7 @@
 <p>$ \left{<br> \begin{matrix}<br>   1 &amp; 0 &amp; 0 \<br>   0 &amp; 1 &amp; 0 \<br>   0 &amp; 0 &amp; 1<br>  \end{matrix}<br>  \right}=I $ </p>
 <p>$I\cdot A=A$         $A\cdot I=A$         $I^2=I\cdot I = I$</p>
 <p>矩阵乘法不满足交换律！！！（$E$除外）</p>
+<p>相似矩阵：</p>
 <h4 id="3-矩阵取绝对值"><a href="#3-矩阵取绝对值" class="headerlink" title="3.矩阵取绝对值"></a>3.矩阵取绝对值</h4><p>计算行列式$A$的值即为矩阵$A$的值</p>
 <p>其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$</p>
 <h4 id="4-矩阵转置"><a href="#4-矩阵转置" class="headerlink" title="4.矩阵转置"></a>4.矩阵转置</h4><p>$A^T$将A的行变为列，列变为行</p>
@@ -245,7 +246,21 @@
 <h4 id="判断方阵是否与对角线相似-是否满足-P-1-AP-A"><a href="#判断方阵是否与对角线相似-是否满足-P-1-AP-A" class="headerlink" title="判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$"></a>判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$</h4><p>方阵特征向量等于方阵阶数：相似/满足</p>
 <p>不等于：不相似/不满足</p>
 <h4 id="求对角阵-可逆变换矩阵"><a href="#求对角阵-可逆变换矩阵" class="headerlink" title="求对角阵/可逆变换矩阵"></a>求对角阵/可逆变换矩阵</h4><p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320180006361.png" alt="image-20210320180006361"></p>
-<h2 id="历年卷"><a href="#历年卷" class="headerlink" title="历年卷"></a>历年卷</h2>
+<h2 id="历年卷"><a href="#历年卷" class="headerlink" title="历年卷"></a>历年卷</h2><p>矩阵相抵定义：$存在可逆矩阵P,Q,使得PAQ=B$</p>
+<p>矩阵相似定义：$存在实可逆矩阵P,是的P^{-1}AP=B$</p>
+<p>由此：矩阵相似则必定相抵，反之不一定</p>
+<p>矩阵可逆的充分必要条件：与单位矩阵相抵</p>
+<p>矩阵可对角化（与对角阵相似）的<strong>充分</strong>条件：有n个不同的特征值</p>
+<p>n阶方阵与对角阵相似的充要条件：有n个线性无关的特征向量</p>
+<p>充要条件：有n个线性无关特征向量</p>
+<p>注意：相似矩阵的<strong>秩、行列式值、迹、特征值、特征多项式</strong>均相等</p>
+<p>正交一定线性无关，线性无关不一定正交（nmd 正交就是垂直</p>
+<p>行满秩情况下$R(A)=R(A|B)$，但是列满秩情况下不一定</p>
+<p>$AA^*=\left|A\right|I$<br>$$<br>A^*=\left|A\right|A^{-1}<br>$$</p>
+<p>$$<br>|A||A^{-1}|=I\<br>|A^{-1}|=\frac{1}{|A|}\<br>|A^*|=|A|^{n-1}<br>$$</p>
+<p>对于$A=BC$，有$A^n=B(CB)^{n-1}C$</p>
+<h3 id="规范正交化"><a href="#规范正交化" class="headerlink" title="规范正交化"></a>规范正交化</h3><p>对线性无关$a_1,a_2,a_3:$<br>$$<br>b_1=a_1\<br>b_2=a_2-\frac{b_1\cdot a_2}{b_1 \cdot b_1}b_1\<br>b_3=a_3-\frac{b_1\cdot a_3}{b_1 \cdot b_1}b_1-\frac{b_2 \cdot a_3}{b_2 \cdot b_2}b2<br>$$<br>证明$r(A)=r(A^TA)$，证明$Ax=0$与$A^TAx=0$同解即可</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -290,7 +305,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">行列式计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵的运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.矩阵相乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.5.</span> <span class="toc-text">向量组与线性空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.1.6.</span> <span class="toc-text">解方程组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">线性代数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="toc-number">1.1.1.</span> <span class="toc-text">行列式性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E8%AE%A1%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">行列式计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.3.</span> <span class="toc-text">矩阵的运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%9F%A9%E9%98%B5%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">2.矩阵相乘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="toc-number">1.1.5.</span> <span class="toc-text">向量组与线性空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="toc-number">1.1.6.</span> <span class="toc-text">解方程组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%86%E5%B9%B4%E5%8D%B7"><span class="toc-number">1.2.</span> <span class="toc-text">历年卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E6%AD%A3%E4%BA%A4%E5%8C%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">规范正交化</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
             
