@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
-            Category: 编程 - shaosy&#39;s blog
+            Tag: 并查集 - shaosy&#39;s blog
         </title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -156,8 +156,8 @@
     <div id="post0" class="else">
         <p class="animated fadeInDown">
             
-            <a href="/categories/编程"><b>「
-                </b>编程<b> 」</b></a>
+            <a href="/categories/算法"><b>「
+                </b>算法<b> 」</b></a>
             
             March 03, 2021
         </p>
@@ -181,7 +181,7 @@
         </p>
         
         
-        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E4%BA%8C%E5%88%86/" rel="tag">二分</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%9B%9E%E6%96%87/" rel="tag">回文</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/" rel="tag">并查集</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%A1%A5%E9%A2%98/" rel="tag">补题</a></li></ul>
         
         <div class="md-content animated fadeIn">
             
@@ -213,161 +213,11 @@
 
     <div id="primary">
         
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/编程">
-                  <b>「 </b>编程<b> 」</b>
-                </a>
-            
-            January 31, 2021
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2021/01/31/%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="图论基础" class="posttitle">图论基础</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        48k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        44 mins.
-                    </span>
-                
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%9B%BE%E8%AE%BA/" rel="tag">图论</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD/" rel="tag">寒假集训</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span><span class="keyword">int</span> u ,v,w;&#125; e[M];</span><br><span class="line"><span class="keyword">int</span> tot;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line">    e[++tot].u=u,e[tot].v=v,e[tot].w=w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Edge a , Edge b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.w&lt;b.w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//add</span></span><br><span class="line">    sort(e+<span class="number">1</span>,e...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2021/01/31/%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/编程">
-                  <b>「 </b>编程<b> 」</b>
-                </a>
-            
-            January 26, 2021
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2021/01/26/%E5%8D%9A%E5%BC%88/" title="博弈" class="posttitle">博弈</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
-                    </span>
-                
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%8D%9A%E5%BC%88/" rel="tag">博弈</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%AF%92%E5%81%87%E9%9B%86%E8%AE%AD/" rel="tag">寒假集训</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p>对于博弈而言，我最常用的方法是~~~自己自闭玩一玩看看能不能凑出解答，凑出来就去dirt一发数据~~</p>
-<p>今天学到的解法是sg函数</p>
-<h3 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h3><p><strong>1.无后继节点的局面必败</strong></p>
-<p><strong>2.必胜态的后继结点中必然存在必败态</strong></p>
-<p><strong>3.必败态的后继结点均为必胜态</strong></p>
-<h3 id="解释："><a href="#解释：" class="headerlink" title="解释："></a>解释：</h3><p><strong>1.无后继节点的局面代表决策者无事可做，即已经失败</strong></p>
-<p><strong>2.对于必胜态而言，意味着决策者经过一定的行动可以使得对手进入必败态，即后续节点一定存在必败态</strong></p>
-<p><strong>3.对必败态，无论如何抉择对手一定必胜， 故后继结点均为必胜态</strong></p>
-<h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>有n堆石子，每堆石子有$a_i$个</p>
-<p>两名玩家轮...</p>
-            
-            <span class="read-more"><a href="/2021/01/26/%E5%8D%9A%E5%BC%88/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="/categories/编程">
-                  <b>「 </b>编程<b> 」</b>
-                </a>
-            
-            January 20, 2021
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题" class="posttitle">背包问题</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
-                    </span>
-                
-                
-            </p>
-            
-                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" rel="tag">背包问题</a></li></ul>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p>
-<p>01背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line">    f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>完全背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
     </div>
     
 </div>
 <div id="preview"></div>
+
 
     <div id="back-to-top" class="animated fadeIn faster">
         <div class="flow"></div>
