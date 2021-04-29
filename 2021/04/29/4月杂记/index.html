@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
-            背包问题 - shaosy&#39;s blog
+            4月杂记 - shaosy&#39;s blog
         </title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -21,7 +21,8 @@
             <meta name="keywords" content="Personal Blog,">
             
                 
-                    <meta name="description" content="动态规划 背包问题对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具,">
+                    <meta name="description" content="四月眨眼间已经过去了。距离去年疫情后返校也过去了足足一年。又是一年高考季。
+确实，我的四月过的还算充实。第一周的昆明区域赛，第二周的csp，第三周的蓝桥杯+校赛，都可以说刺激着我的神经。与此同时，c,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -80,7 +81,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://siyangshao.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">背包问题</h3>
+        <h3 class="subtitle">4月杂记</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -110,25 +111,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/算法"><b>「
-                    </b>算法<b> 」</b></a>
+                <a href="/categories/杂记"><b>「
+                    </b>杂记<b> 」</b></a>
                 
-                January 20, 2021
+                April 29, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="背包问题" class="">背包问题</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/04/29/4%E6%9C%88%E6%9D%82%E8%AE%B0/" title="4月杂记" class="">4月杂记</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    8.3k
+                    709
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    8 mins.
+                    1 mins.
                 </span>
                 
                 
@@ -141,7 +142,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" rel="tag">背包问题</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E6%97%A0%E7%97%85%E5%91%BB%E5%90%9F/" rel="tag">无病呻吟</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
             
         </div>
     </div>
@@ -162,19 +163,12 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="动态规划-背包问题"><a href="#动态规划-背包问题" class="headerlink" title="动态规划 背包问题"></a>动态规划 背包问题</h1><p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p>
-<p>01背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line">    f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>完全背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>混合背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">	CompletePack(i);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	m[i] = m[i] - k;</span><br><span class="line">	k = <span class="number">2</span> * k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>总代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1010</span>], c[<span class="number">1010</span>], w[<span class="number">1010</span>], m[<span class="number">1010</span>], val;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ZeroOnePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//01背包问题状态转移方程</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CompletePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//完全背包问题</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MultiplePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;	<span class="comment">//多重背包问题，二进制区分</span></span><br><span class="line">	<span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">		CompletePack(i);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">			f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		m[i] = m[i] - k;</span><br><span class="line">		k = <span class="number">2</span> * k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MixinPack</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;	 <span class="comment">//混合背包问题</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (m[i] == <span class="number">1</span>) &#123;</span><br><span class="line">			ZeroOnePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] == <span class="number">0</span>) &#123;</span><br><span class="line">			CompletePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			MultiplePack(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>四月眨眼间已经过去了。距离去年疫情后返校也过去了足足一年。又是一年高考季。</p>
+<p>确实，我的四月过的还算充实。第一周的昆明区域赛，第二周的csp，第三周的蓝桥杯+校赛，都可以说刺激着我的神经。与此同时，codeforces第一次上蓝，蓝桥杯几乎擦着线拿了个省一，csp295分，昆明的不断地dirt……似乎看起来一切都在向着好的地方发展，不是么？</p>
+<p>但是，对现在生活的概括，或许只能用无聊透顶来形容了。我不知道明天的方向是什么。在集训队无所事事地晃着，刷一些水题来彰显自己所谓的“努力”，在无尽的游戏里消磨时光……不想听课，不想学习……</p>
+<p>见到以前的一位初中同学拿到了昆山杜克的offer+奖学金，属实是羡慕了。他至少不用担心高考万一如何如何，不是么？</p>
+<p>最近有条新闻很火，一男子于二号线龙阳路站跳入铁轨自杀。好像是因为地铁急刹车了等原因，走的并不算安详。龙阳路距离我家不远，然而正如同网友所说的，当听到这则消息我的第一感受并不是震惊，也不是按照某些知乎答主所谓“要的就tm是团结”所形容的对无良资本家的声讨，而是——有完没完啊。的确，这是一种看客精神，也是应当受到批判的。这种看法的由来大概是因为已经对现状麻木了。改变？改变？改变？别了吧。如今，活着已经让人尽力了，我真的已经没有多余的想法和精力去说出对世界的看法了。也是，自从高中退出模联以后，模联经历的那两年似乎耗尽了我此生对键政所有的兴趣。正如计算机一样——我甚至不在乎我学什么，为什么这么学了。</p>
+<p>对自己失望，似乎就是一个失败者的宿命。作为一个失败者，失败的不是现状，而是对未来的期许。</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -216,13 +210,6 @@
             </div>
             
             
-            
-            <div class="box sticky animated fadeInRight faster">
-                <div id="toc" class="subbox">
-                    <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">动态规划 背包问题</span></a></li></ol>
-                </div>
-            </div>
             
             
         </div>
