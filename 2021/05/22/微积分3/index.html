@@ -21,8 +21,7 @@
             <meta name="keywords" content="Personal Blog,">
             
                 
-                    <meta name="description" content="personal blog,微分方程对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:$$y = F(x)+C$$
-可分离变量的微分方程考虑方程$$\frac{dy}{dx} = f(x)g(y);$$,">
+                    <meta name="description" content="personal blog,常见的泰勒级数$$e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}$$$$\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -123,13 +122,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    8k
+                    8.6k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    7 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -163,7 +162,9 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:<br>$$<br>y = F(x)+C<br>$$</p>
+            <h2 id="常见的泰勒级数"><a href="#常见的泰勒级数" class="headerlink" title="常见的泰勒级数"></a>常见的泰勒级数</h2><p>$$<br>e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}<br>$$<br>$$<br>\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}<br>$$<br>$$<br>\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}<br>$$</p>
+<h2 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a>傅里叶级数</h2><p>$$<br>f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx))<br>$$<br>其中<br>$$<br>a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx<br>$$<br>$$<br>b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx<br>$$</p>
+<h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:<br>$$<br>y = F(x)+C<br>$$</p>
 <h3 id="可分离变量的微分方程"><a href="#可分离变量的微分方程" class="headerlink" title="可分离变量的微分方程"></a>可分离变量的微分方程</h3><p>考虑方程<br>$$<br>\frac{dy}{dx} = f(x)g(y);<br>$$<br>则其可以改写为<br>$$<br>\frac{dy}{g(y)} = f(x)dx<br>$$<br>对其两端积分，于是有<br>$$<br>\int\frac{dy}{g(y)} = \int f(x)dx+C<br>$$<br>其所确定的隐式函数即为其通解</p>
 <h3 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h3><p>对方程$$ \frac{dy}{dx}=f(x,y)$$<br>若$f(x,y)$可以表现为$\frac{y}{x}$的一元函数，即有<br>$$<br>f(x,y) = g(\frac{y}{x})<br>$$<br>可以得到方程<br>$$<br>\frac{dy}{dx} = g(\frac{y}{x})<br>$$<br>被称之为齐次方程<br>对此，令$u = \frac{y}{x}$，则可得：<br>$$<br>\frac{dy}{dx} = u+x\frac{du}{dx}<br>$$<br>带入，可得<br>$$<br>u + x\frac{du}{dx} = g(u)<br>$$<br>分离变量，可以得到<br>$$<br>\frac{du}{g(u)-u} = \frac{dx}{x}<br>$$<br>积分可得通解<br>$$<br>\int \frac{du}{g(u)-u}=ln|x|+C<br>$$<br>用$\frac{y}{x}$替换$u$，即可得到通解</p>
 <h4 id="可化为齐次的微分方程"><a href="#可化为齐次的微分方程" class="headerlink" title="可化为齐次的微分方程"></a>可化为齐次的微分方程</h4><p>对于方程<br>$$<br>\frac{dy}{dx} = \frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}<br>$$<br>当$c_1=c_2=0$时为齐次方程<br>当其为非齐次时<br>为消元，令$x=X+h,y=Y+k$<br>于是有$dx=dX , dy=dY$<br>带入原式，可得<br>$$<br>\frac{dY}{dX} = \frac{a_1X+b_1Y+a_1h+b_1k+c_1}{a_2X+b_2Y+a_2h+b_2k+c_2}<br>$$<br>如果选取$h$和$k$，使得$a_1h+b_1k+c_1=0$,$a_2h+b_2k+c_2=0$<br>于是得到齐次方程<br>$$\frac{dY}{dX}=\frac{a_1X+b_1Y}{a_2X+b_2Y}$$<br>接下来可用齐次方程解法，令$u=\frac{Y}{X}$求出通解</p>
@@ -229,7 +230,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">微分方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E7%9A%84%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">可分离变量的微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.2.</span> <span class="toc-text">齐次方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.3.</span> <span class="toc-text">一阶线性微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.4.</span> <span class="toc-text">全微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%99%8D%E9%98%B6%E6%95%B0%E7%9A%84%E9%AB%98%E7%BB%B4%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.5.</span> <span class="toc-text">可降阶数的高维微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E9%98%B6%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.0.6.</span> <span class="toc-text">高阶线性微分方程解的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%B3%BB%E6%95%B0%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.7.</span> <span class="toc-text">常系数齐次线性微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.8.</span> <span class="toc-text">欧拉方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">1.0.9.</span> <span class="toc-text">差分方程</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">常见的泰勒级数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">傅里叶级数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number"></span> <span class="toc-text">微分方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E7%9A%84%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.1.</span> <span class="toc-text">可分离变量的微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="toc-number">0.2.</span> <span class="toc-text">齐次方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E9%98%B6%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.3.</span> <span class="toc-text">一阶线性微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.4.</span> <span class="toc-text">全微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%99%8D%E9%98%B6%E6%95%B0%E7%9A%84%E9%AB%98%E7%BB%B4%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.5.</span> <span class="toc-text">可降阶数的高维微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E9%98%B6%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E8%A7%A3%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">0.6.</span> <span class="toc-text">高阶线性微分方程解的结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%B3%BB%E6%95%B0%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.7.</span> <span class="toc-text">常系数齐次线性微分方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B"><span class="toc-number">0.8.</span> <span class="toc-text">欧拉方程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">0.9.</span> <span class="toc-text">差分方程</span></a></li></ol></li></ol>
                 </div>
             </div>
             
