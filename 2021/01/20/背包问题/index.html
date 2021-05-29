@@ -122,13 +122,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    8.3k
+                    3.6k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    8 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -164,16 +164,74 @@
         <div class="content markdown animated fadeIn">
             <h1 id="动态规划-背包问题"><a href="#动态规划-背包问题" class="headerlink" title="动态规划 背包问题"></a>动态规划 背包问题</h1><p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p>
 <p>01背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line">    f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int v &#x3D; val ; v &gt;&#x3D; c[i] ; v--)&#123;
+    f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>完全背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int v &#x3D; c[i]; v &lt;&#x3D; val; v++) &#123;
+	f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>混合背包问题状态转移方程为</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">	CompletePack(i);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	m[i] = m[i] - k;</span><br><span class="line">	k = <span class="number">2</span> * k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">	f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">if (c[i] * m[i] &gt;&#x3D; val) &#123;
+	CompletePack(i);
+	return;
+&#125;
+int k &#x3D; 1;
+while (k &lt; m[i]) &#123;
+	for (int v &#x3D; val; v &gt;&#x3D; k * c[i]; v--) &#123;
+		f[v] &#x3D; max(f[v], f[v - k * c[i]] + k * w[i]);
+	&#125;
+	m[i] &#x3D; m[i] - k;
+	k &#x3D; 2 * k;
+&#125;
+for (int v &#x3D; val; v &gt;&#x3D; c[i] * m[i]; v--) &#123;
+	f[v] &#x3D; max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>总代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> f[<span class="number">1010</span>], c[<span class="number">1010</span>], w[<span class="number">1010</span>], m[<span class="number">1010</span>], val;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ZeroOnePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//01背包问题状态转移方程</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CompletePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt;= val; v++) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i]] + w[i]);  <span class="comment">//完全背包问题</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MultiplePack</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;	<span class="comment">//多重背包问题，二进制区分</span></span><br><span class="line">	<span class="keyword">if</span> (c[i] * m[i] &gt;= val) &#123;</span><br><span class="line">		CompletePack(i);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> k = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (k &lt; m[i]) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= k * c[i]; v--) &#123;</span><br><span class="line">			f[v] = max(f[v], f[v - k * c[i]] + k * w[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		m[i] = m[i] - k;</span><br><span class="line">		k = <span class="number">2</span> * k;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> v = val; v &gt;= c[i] * m[i]; v--) &#123;</span><br><span class="line">		f[v] = max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MixinPack</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;	 <span class="comment">//混合背包问题</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (m[i] == <span class="number">1</span>) &#123;</span><br><span class="line">			ZeroOnePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] == <span class="number">0</span>) &#123;</span><br><span class="line">			CompletePack(i);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (m[i] &gt; <span class="number">1</span>) &#123;</span><br><span class="line">			MultiplePack(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int f[1010], c[1010], w[1010], m[1010], val;
+void ZeroOnePack(int i) &#123;
+	for (int v &#x3D; val; v &gt;&#x3D; c[i]; v--) &#123;
+		f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]);  &#x2F;&#x2F;01背包问题状态转移方程
+	&#125;
+&#125;
+void CompletePack(int i) &#123;
+	for (int v &#x3D; c[i]; v &lt;&#x3D; val; v++) &#123;
+		f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]);  &#x2F;&#x2F;完全背包问题
+	&#125;
+&#125;
+void MultiplePack(int i) &#123;	&#x2F;&#x2F;多重背包问题，二进制区分
+	if (c[i] * m[i] &gt;&#x3D; val) &#123;
+		CompletePack(i);
+		return;
+	&#125;
+	int k &#x3D; 1;
+	while (k &lt; m[i]) &#123;
+		for (int v &#x3D; val; v &gt;&#x3D; k * c[i]; v--) &#123;
+			f[v] &#x3D; max(f[v], f[v - k * c[i]] + k * w[i]);
+		&#125;
+		m[i] &#x3D; m[i] - k;
+		k &#x3D; 2 * k;
+	&#125;
+	for (int v &#x3D; val; v &gt;&#x3D; c[i] * m[i]; v--) &#123;
+		f[v] &#x3D; max(f[v], f[v - c[i] * m[i]] + m[i] * w[i]);
+	&#125;
+&#125;
+void MixinPack(int n) &#123;	 &#x2F;&#x2F;混合背包问题
+	for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+		if (m[i] &#x3D;&#x3D; 1) &#123;
+			ZeroOnePack(i);
+		&#125; else if (m[i] &#x3D;&#x3D; 0) &#123;
+			CompletePack(i);
+		&#125; else if (m[i] &gt; 1) &#123;
+			MultiplePack(i);
+		&#125;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->

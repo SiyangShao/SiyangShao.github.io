@@ -25,7 +25,7 @@
 算法被4整除：偶数多
 被2整除：一样
 奇数：奇数多
-代码12345678910111213141516171819#in,">
+代码#include &amp;lt;bits&amp;#x2F;stdc++.h&amp;,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -126,13 +126,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    7.4k
+                    3.4k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    7 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -170,16 +170,57 @@
 <h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>被4整除：偶数多</p>
 <p>被2整除：一样</p>
 <p>奇数：奇数多</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> t;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">		<span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (n % <span class="number">4</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Even\n&quot;</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Same\n&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Odd\n&quot;</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int t;
+long long n;
+int main() &#123;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		cin &gt;&gt; n;
+		if (n % 2 &#x3D;&#x3D; 0) &#123;
+			if (n % 4 &#x3D;&#x3D; 0) &#123;
+				cout &lt;&lt; &quot;Even\n&quot;;
+			&#125; else &#123;
+				cout &lt;&lt; &quot;Same\n&quot;;
+			&#125;
+		&#125; else &#123;
+			cout &lt;&lt; &quot;Odd\n&quot;;
+		&#125;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="B-Products-of-Min-Max"><a href="#B-Products-of-Min-Max" class="headerlink" title="B- Products of Min-Max"></a><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/arc116/tasks/arc116_b">B- Products of Min-Max</a></h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><p>给出一个序列，求其所有非空子序列中最大值与最小值积的和</p>
 <h4 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h4><p>将其从小到大排序</p>
 <p>则对$A_iA_j$，其总共出现了$w^{j-i-1}$次</p>
 <p>于是可得：<br>$$<br>Sum = \sum_{i=1}^N{\sum_{j=i+1}^N{A_i\cdot A_j\cdot 2^{j-i-1}}}+\sum_{i=1}^{N}{A_i^2}<br>$$<br>对于$\sum_{j=i+1}^N{ A_j\cdot 2^{j-i-1}}$，有：<br>$$<br>\sum_{j=(i-1)+1}^{N}{A_j}\cdot 2^{j-(i-1)+1}<br>$$<br>即：<br>$$<br>\sum_{j=i+1}^{N}{A_j}\cdot 2^{j-i+1}=2\cdot\sum_{j=(i-1)+1}^{N}{A_j}\cdot 2^{j-(i-1)+1}+A_i<br>$$<br>于是由上而下预处理有</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f[i] = <span class="number">2</span> * f[i + <span class="number">1</span>] + a[i + <span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">f[i] &#x3D; 2 * f[i + 1] + a[i + 1];<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>而后从下至上累加即可。</p>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> N;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> a[<span class="number">200010</span>], f[<span class="number">200010</span>];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	sort(a + <span class="number">1</span>, a + <span class="number">1</span> + N);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = N; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">		f[i] = <span class="number">2</span> * f[i + <span class="number">1</span>] + a[i + <span class="number">1</span>];</span><br><span class="line">		f[i] %= mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">		sum += a[i] * f[i];</span><br><span class="line">		sum %= mod;</span><br><span class="line">		sum += a[i] * a[i];</span><br><span class="line">		sum %= mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int N;
+long long a[200010], f[200010];
+const int mod &#x3D; 998244353;
+int main() &#123;
+	cin &gt;&gt; N;
+	for (int i &#x3D; 1; i &lt;&#x3D; N; i++) &#123;
+		cin &gt;&gt; a[i];
+	&#125;
+	sort(a + 1, a + 1 + N);
+	for (int i &#x3D; N; i &gt;&#x3D; 1; i--) &#123;
+		f[i] &#x3D; 2 * f[i + 1] + a[i + 1];
+		f[i] %&#x3D; mod;
+	&#125;
+	long long sum &#x3D; 0;
+	for (int i &#x3D; 1; i &lt;&#x3D; N; i++) &#123;
+		sum +&#x3D; a[i] * f[i];
+		sum %&#x3D; mod;
+		sum +&#x3D; a[i] * a[i];
+		sum %&#x3D; mod;
+	&#125;
+	cout &lt;&lt; sum;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->

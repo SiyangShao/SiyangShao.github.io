@@ -22,7 +22,9 @@
             
                 
                     <meta name="description" content="personal blog,A.Domino on Windowsill略
-123456789101112131415161718192021222324#include &amp;lt;bits/stdc++.h&amp;gt;using ,">
+#include &amp;lt;bits&amp;#x2F;stdc++.h&amp;gt;
+using namespace std;
+int t , n , k1 , k,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -123,13 +125,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    14k
+                    5.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    13 mins.
+                    5 mins.
                 </span>
                 
                 
@@ -164,17 +166,111 @@
     <div class='main'>
         <div class="content markdown animated fadeIn">
             <h2 id="A-Domino-on-Windowsill"><a href="#A-Domino-on-Windowsill" class="headerlink" title="A.Domino on Windowsill"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1499/problem/A">A.Domino on Windowsill</a></h2><p>略</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> t , n , k1 , k2 , w , b;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>),<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;k1&gt;&gt;k2&gt;&gt;w&gt;&gt;b;</span><br><span class="line">        <span class="keyword">if</span>((k1+k2&lt;w+w)||(n+n-k1-k2&lt;b+b))&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            w -= min(k1,k2);</span><br><span class="line">            w -= <span class="built_in">abs</span>(k1-k2)/<span class="number">2</span>;</span><br><span class="line">            b -= min(n-k1 , n-k2);</span><br><span class="line">            b -= <span class="built_in">abs</span>((n-k1)-(n-k2))/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(w&lt;=<span class="number">0</span>&amp;&amp;b&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int t , n , k1 , k2 , w , b;
+int main()&#123;
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&gt;&gt;t;
+    while(t--)&#123;
+        cin&gt;&gt;n&gt;&gt;k1&gt;&gt;k2&gt;&gt;w&gt;&gt;b;
+        if((k1+k2&lt;w+w)||(n+n-k1-k2&lt;b+b))&#123;
+            cout&lt;&lt;&quot;NO\n&quot;;
+        &#125;else&#123;
+            w -&#x3D; min(k1,k2);
+            w -&#x3D; abs(k1-k2)&#x2F;2;
+            b -&#x3D; min(n-k1 , n-k2);
+            b -&#x3D; abs((n-k1)-(n-k2))&#x2F;2;
+            if(w&lt;&#x3D;0&amp;&amp;b&lt;&#x3D;0)&#123;
+                cout&lt;&lt;&quot;YES\n&quot;;
+            &#125;else&#123;
+                cout&lt;&lt;&quot;NO\n&quot;;
+            &#125;
+        &#125;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="B-Binary-Removals"><a href="#B-Binary-Removals" class="headerlink" title="B.Binary Removals"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1499/problem/B">B.Binary Removals</a></h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给出一个字符串，判断能否消去任意个非连续的字符使得其为单调序列</p>
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>略</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> t ;</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">        <span class="keyword">int</span> x = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]==<span class="string">&#x27;1&#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(i&lt;s.length()&amp;&amp;s[i+<span class="number">1</span>]==<span class="string">&#x27;0&#x27;</span>)&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                x = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x==<span class="number">-1</span>)&#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">bool</span> flag = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = x+<span class="number">1</span> ; i &lt; s.length() ; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(s[i]==<span class="string">&#x27;0&#x27;</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(i+<span class="number">1</span>&lt;s.length()&amp;&amp;s[i+<span class="number">1</span>]==<span class="string">&#x27;0&#x27;</span>)&#123;</span><br><span class="line">                        <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">                        flag = <span class="literal">true</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(!flag)&#123;</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int t ;
+string s;
+int main()&#123;
+    cin&gt;&gt;t;
+    while(t--)&#123;
+        cin&gt;&gt;s;
+        int x &#x3D; -1;
+        for(int i &#x3D; 0 ; i &lt; s.length(); i++)&#123;
+            if(s[i]&#x3D;&#x3D;&#39;1&#39;)&#123;
+                if(i&lt;s.length()&amp;&amp;s[i+1]&#x3D;&#x3D;&#39;0&#39;)&#123;
+                    continue;
+                &#125;
+                x &#x3D; i;
+                break;
+            &#125;
+        &#125;
+        if(x&#x3D;&#x3D;-1)&#123;
+            cout&lt;&lt;&quot;YES\n&quot;;
+        &#125;else&#123;
+            bool flag &#x3D; false;
+            for(int i &#x3D; x+1 ; i &lt; s.length() ; i++)&#123;
+                if(s[i]&#x3D;&#x3D;&#39;0&#39;)&#123;
+                    if(i+1&lt;s.length()&amp;&amp;s[i+1]&#x3D;&#x3D;&#39;0&#39;)&#123;
+                        cout&lt;&lt;&quot;NO\n&quot;;
+                        flag &#x3D; true;
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+            if(!flag)&#123;
+                cout&lt;&lt;&quot;YES\n&quot;;
+            &#125;
+        &#125;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="C-Minimum-Grid-Path"><a href="#C-Minimum-Grid-Path" class="headerlink" title="C.Minimum Grid Path"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1499/problem/C">C.Minimum Grid Path</a></h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>从(0,0)到(n,n)，每走一次（任意步）的单步消耗为c[i]，且每次走完必须转向，求最小消耗的代价</p>
 <h3 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h3><p>从1~n遍历c[i]，选x向和y向的最小值走最大，其他的都只走一步，最终选取ans最小值</p>
 <h4 id="注意！！！"><a href="#注意！！！" class="headerlink" title="注意！！！"></a>注意！！！</h4><p>本题由于$c_i$数据量级在$10^9$，导致如果初始化ans为$ans=0x3f3f3f3f$时在Case 4会不够大，直接输出结果为0x3f3f3f3f……</p>
 <p>所以初始化为1e16</p>
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		ll n, x;</span><br><span class="line">		ll sum1 = <span class="number">0</span>, sum2 = <span class="number">0</span>;</span><br><span class="line">		ll mn1 = <span class="number">1e16</span>, mn2 = <span class="number">1e16</span>;</span><br><span class="line">		ll ans = <span class="number">1e16</span>;</span><br><span class="line">		ll c1 = <span class="number">0</span>, c2 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">			<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">			<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">				c1++;</span><br><span class="line">				sum1 += x;</span><br><span class="line">				mn1 = min(mn1, x);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				c2++;</span><br><span class="line">				sum2 += x;</span><br><span class="line">				mn2 = min(mn2, x);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (i &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">				ans = min(ans, (sum1 + sum2 - mn1 - mn2) + mn1 * (n - c1 + <span class="number">1</span>) +</span><br><span class="line">								   mn2 * (n - c2 + <span class="number">1</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+#define ll long long
+int main() &#123;
+	int t &#x3D; 1;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		ll n, x;
+		ll sum1 &#x3D; 0, sum2 &#x3D; 0;
+		ll mn1 &#x3D; 1e16, mn2 &#x3D; 1e16;
+		ll ans &#x3D; 1e16;
+		ll c1 &#x3D; 0, c2 &#x3D; 0;
+
+		cin &gt;&gt; n;
+
+		for (int i &#x3D; 0; i &lt; n; i++) &#123;
+			cin &gt;&gt; x;
+			if (i % 2 &#x3D;&#x3D; 0) &#123;
+				c1++;
+				sum1 +&#x3D; x;
+				mn1 &#x3D; min(mn1, x);
+			&#125; else &#123;
+				c2++;
+				sum2 +&#x3D; x;
+				mn2 &#x3D; min(mn2, x);
+			&#125;
+
+			if (i &gt;&#x3D; 1) &#123;
+				ans &#x3D; min(ans, (sum1 + sum2 - mn1 - mn2) + mn1 * (n - c1 + 1) +
+								   mn2 * (n - c2 + 1));
+			&#125;
+		&#125;
+		cout &lt;&lt; ans &lt;&lt; endl;
+	&#125;
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->

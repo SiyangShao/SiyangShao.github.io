@@ -123,13 +123,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    33k
+                    14k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    30 mins.
+                    12 mins.
                 </span>
                 
                 
@@ -167,12 +167,63 @@
 <h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><p>注意到若一个字符串是M形字符串，则字符串$[0,i]$和字符串$[0,\frac{i+1}{2}]$必为回文串</p>
 <p>则可通过字符串Hash预处理并判断</p>
 <p>对字符串正反Hash预处理（自然溢出）：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">makeHash</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    s[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; i++) s[i] = p * s[i - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; i++) hashL[i] = hashL[i - <span class="number">1</span>] * p + m[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) hashR[n + <span class="number">1</span> - i] = hashR[n - i] * p + m[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void makeHash() &#123;
+    s[0] &#x3D; 1;
+    for (int i &#x3D; 1; i &lt; N; i++) s[i] &#x3D; p * s[i - 1];
+    for (int i &#x3D; 1; i &lt; N; i++) hashL[i] &#x3D; hashL[i - 1] * p + m[i] - &#39;a&#39;;
+    for (int i &#x3D; n; i &gt;&#x3D; 1; i--) hashR[n + 1 - i] &#x3D; hashR[n - i] * p + m[i] - &#39;a&#39;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>判断该字符串是否为回文串：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> st, <span class="keyword">int</span> ed)</span> </span>&#123;</span><br><span class="line">    ull t1 = hashL[ed] - hashL[st - <span class="number">1</span>] * s[ed - st + <span class="number">1</span>];</span><br><span class="line">    ull t2 = hashR[n + <span class="number">1</span> - st] - hashR[n - ed] * s[ed - st + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span> (t1 == t2)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">bool check(int st, int ed) &#123;
+    ull t1 &#x3D; hashL[ed] - hashL[st - 1] * s[ed - st + 1];
+    ull t2 &#x3D; hashR[n + 1 - st] - hashR[n - ed] * s[ed - st + 1];
+    if (t1 &#x3D;&#x3D; t2)return true;
+    else return false;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> p = <span class="number">133</span>;</span><br><span class="line"><span class="keyword">char</span> m[N];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">ull hashL[N], hashR[N], s[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">makeHash</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    s[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; i++) s[i] = p * s[i - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; N; i++) hashL[i] = hashL[i - <span class="number">1</span>] * p + m[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; i--) hashR[n + <span class="number">1</span> - i] = hashR[n - i] * p + m[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> st, <span class="keyword">int</span> ed)</span> </span>&#123;</span><br><span class="line">    ull t1 = hashL[ed] - hashL[st - <span class="number">1</span>] * s[ed - st + <span class="number">1</span>];</span><br><span class="line">    ull t2 = hashR[n + <span class="number">1</span> - st] - hashR[n - ed] * s[ed - st + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">if</span> (t1 == t2)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>), <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; m + <span class="number">1</span>;</span><br><span class="line">    n = <span class="built_in">strlen</span>(m + <span class="number">1</span>);</span><br><span class="line">    makeHash();</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (check(<span class="number">1</span>, i)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (check(<span class="number">1</span>, (i + <span class="number">1</span>) / <span class="number">2</span>)) &#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; res &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+
+using namespace std;
+typedef unsigned long long ull;
+const int N &#x3D; 2e5 + 10;
+const int p &#x3D; 133;
+char m[N];
+int n;
+ull hashL[N], hashR[N], s[N];
+
+void makeHash() &#123;
+    s[0] &#x3D; 1;
+    for (int i &#x3D; 1; i &lt; N; i++) s[i] &#x3D; p * s[i - 1];
+    for (int i &#x3D; 1; i &lt; N; i++) hashL[i] &#x3D; hashL[i - 1] * p + m[i] - &#39;a&#39;;
+    for (int i &#x3D; n; i &gt;&#x3D; 1; i--) hashR[n + 1 - i] &#x3D; hashR[n - i] * p + m[i] - &#39;a&#39;;
+&#125;
+
+
+bool check(int st, int ed) &#123;
+    ull t1 &#x3D; hashL[ed] - hashL[st - 1] * s[ed - st + 1];
+    ull t2 &#x3D; hashR[n + 1 - st] - hashR[n - ed] * s[ed - st + 1];
+    if (t1 &#x3D;&#x3D; t2)return true;
+    else return false;
+&#125;
+
+int main() &#123;
+    ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0);
+    cin &gt;&gt; m + 1;
+    n &#x3D; strlen(m + 1);
+    makeHash();
+    int res &#x3D; 0;
+    for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+        if (check(1, i)) &#123;
+            if (check(1, (i + 1) &#x2F; 2)) &#123;
+                res++;
+            &#125;
+        &#125;
+    &#125;
+    cout &lt;&lt; res &lt;&lt; &quot;\n&quot;;
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="B-找山坡"><a href="#B-找山坡" class="headerlink" title="B.找山坡"></a><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/13504/B">B.找山坡</a></h2><h3 id="题意：-1"><a href="#题意：-1" class="headerlink" title="题意："></a>题意：</h3><p>找到使得$R-L$最大的$R$和$L$，满足$a[R]==a[L]$且对$i\in [L,R]$有$a[i]\geq a[L]$</p>
 <h3 id="算法：-1"><a href="#算法：-1" class="headerlink" title="算法："></a>算法：</h3><p>构建一个内部由小到大排序的堆栈使栈顶为min，对$a[i]$做如下处理：</p>
@@ -180,13 +231,73 @@
 <p>若$a[i]&gt;top$，将$a[i]$入栈</p>
 <p>若$a[i]=top$，$ans=max(i-top)$</p>
 <p>即：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">	<span class="keyword">while</span> (top &amp;&amp; a[st[top]] &gt; a[i])</span><br><span class="line">		top--;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (top &amp;&amp; a[st[top]] == a[i])</span><br><span class="line">		ans = max(ans, i - st[top]);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		st[++top] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+	while (top &amp;&amp; a[st[top]] &gt; a[i])
+		top--;
 
-<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="keyword">int</span> st[maxn];</span><br><span class="line"><span class="keyword">int</span> top;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="keyword">while</span> (top &amp;&amp; a[st[top]] &gt; a[i])</span><br><span class="line">			top--;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (top &amp;&amp; a[st[top]] == a[i])</span><br><span class="line">			ans = max(ans, i - st[top]);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			st[++top] = i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, ans);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+	if (top &amp;&amp; a[st[top]] &#x3D;&#x3D; a[i])
+		ans &#x3D; max(ans, i - st[top]);
+	else
+		st[++top] &#x3D; i;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;algorithm&gt;
+#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+using namespace std;
+const int maxn &#x3D; 1e6 + 10;
+
+int a[maxn];
+int st[maxn];
+int top;
+
+int main() &#123;
+	int n;
+	scanf(&quot;%d&quot;, &amp;n);
+	for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+		scanf(&quot;%d&quot;, &amp;a[i]);
+	&#125;
+
+	int ans &#x3D; 0;
+
+	for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+		while (top &amp;&amp; a[st[top]] &gt; a[i])
+			top--;
+
+		if (top &amp;&amp; a[st[top]] &#x3D;&#x3D; a[i])
+			ans &#x3D; max(ans, i - st[top]);
+		else
+			st[++top] &#x3D; i;
+	&#125;
+
+	printf(&quot;%d\n&quot;, ans);
+
+	return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="C-涂墙"><a href="#C-涂墙" class="headerlink" title="C.涂墙"></a><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/13504/C">C.涂墙</a></h2><h3 id="题意：-2"><a href="#题意：-2" class="headerlink" title="题意："></a>题意：</h3><p>给出一个自然数n，判断n是否能表示成五个正整数平方和</p>
 <h3 id="算法1："><a href="#算法1：" class="headerlink" title="算法1："></a>算法1：</h3><p>DFS减支（较low）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (p != <span class="number">5</span> &amp;&amp; s &lt;= <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (p &gt; <span class="number">5</span>) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (p == <span class="number">5</span> &amp;&amp; s == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;YES&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        flag = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> x = <span class="built_in">pow</span>(s, <span class="number">0.5</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = x; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line"></span><br><span class="line">        flag = <span class="number">0</span>;</span><br><span class="line">        s -= i * i;</span><br><span class="line">        dfs(s, p + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span> (flag) <span class="keyword">break</span>;</span><br><span class="line">        s += i * i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void dfs(int s, int p) &#123;
+    if (p !&#x3D; 5 &amp;&amp; s &lt;&#x3D; 0) return;
+    if (p &gt; 5) return;
+    if (p &#x3D;&#x3D; 5 &amp;&amp; s &#x3D;&#x3D; 0) &#123;
+        cout &lt;&lt; &quot;YES&quot; &lt;&lt; endl;
+        flag &#x3D; 1;
+        return;
+    &#125;
+    int x &#x3D; pow(s, 0.5);
+    for (int i &#x3D; x; i &gt;&#x3D; 1; i--) &#123;
+
+        flag &#x3D; 0;
+        s -&#x3D; i * i;
+        dfs(s, p + 1);
+        if (flag) break;
+        s +&#x3D; i * i;
+    &#125;
+
+
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="算法2："><a href="#算法2：" class="headerlink" title="算法2："></a>算法2：</h3><p>由拉格朗日平方和定理：</p>
 <blockquote>
@@ -194,25 +305,111 @@
 </blockquote>
 <p>注意到169可以表示为1个或2个或3个或4个平方数的和<br>$$<br>169=13^2\<br>169=12^2+5^2\<br>169=12^2+4^2+3^2\<br>169=10^2+8^2+2^2+1^2\<br>169=12^2+4^2+2^2+2^2+1^2<br>$$<br>所以对一个不小于169的正整数，必然满足条件（n-169可以用1~4个表示，必然能凑出五个）</p>
 <p>对于小于169的正整数，发现0,1,2,3,4,6,7,9,10,12,15,18,33不满足</p>
-<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="keyword">int</span> n;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span> || n == <span class="number">2</span> || n == <span class="number">3</span> || n == <span class="number">4</span> || n == <span class="number">6</span> ||</span><br><span class="line">			n == <span class="number">7</span> || n == <span class="number">9</span> || n == <span class="number">10</span> || n == <span class="number">12</span> || n == <span class="number">15</span> || n == <span class="number">18</span> ||</span><br><span class="line">			n == <span class="number">33</span>) &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int main() &#123;
+	int t;
+	cin &gt;&gt; t;
+	while (t--) &#123;
+		int n;
+		cin &gt;&gt; n;
+		if (n &#x3D;&#x3D; 0 || n &#x3D;&#x3D; 1 || n &#x3D;&#x3D; 2 || n &#x3D;&#x3D; 3 || n &#x3D;&#x3D; 4 || n &#x3D;&#x3D; 6 ||
+			n &#x3D;&#x3D; 7 || n &#x3D;&#x3D; 9 || n &#x3D;&#x3D; 10 || n &#x3D;&#x3D; 12 || n &#x3D;&#x3D; 15 || n &#x3D;&#x3D; 18 ||
+			n &#x3D;&#x3D; 33) &#123;
+			cout &lt;&lt; &quot;NO\n&quot;;
+		&#125; else &#123;
+			cout &lt;&lt; &quot;YES\n&quot;;
+		&#125;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="G-分割"><a href="#G-分割" class="headerlink" title="G.分割"></a><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/13504/G">G.分割</a></h2><h3 id="题意：-3"><a href="#题意：-3" class="headerlink" title="题意："></a>题意：</h3><p>给出n条平行于y轴的直线和m条平行于x轴的直线，求他们可能形成的矩形的和</p>
 <h3 id="算法：-2"><a href="#算法：-2" class="headerlink" title="算法："></a>算法：</h3><p>$$<br>Sum = \Sigma{(x_i-x_{i-1})\cdot(y_i-y_{i-1})}\<br>Sum = \Sigma{(x_i\cdot{(2i-1-n)})}\cdot\Sigma(y_i\cdot{(2i-1-m)})<br>$$</p>
-<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> sumx , sumy;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> mod = <span class="number">1000000007</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> x[<span class="number">100001</span>] , y[<span class="number">100001</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a , <span class="keyword">long</span> <span class="keyword">long</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&lt;b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;x[i];</span><br><span class="line">        x[i]+=<span class="number">1000000000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(x+<span class="number">1</span>,x+<span class="number">1</span>+n,cmp);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">1</span> ; i&lt;= n ; i++)&#123;</span><br><span class="line">        sumx += x[i]*(<span class="number">2</span>*i<span class="number">-1</span>-n) %mod;</span><br><span class="line">        sumx%=mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= m ; i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;y[i];</span><br><span class="line">        y[i]+=<span class="number">1000000000</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(y+<span class="number">1</span>,y+<span class="number">1</span>+m,cmp);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= m ; i++)&#123;</span><br><span class="line">        sumy += y[i]*(<span class="number">2</span>*i<span class="number">-1</span>-m) %mod;</span><br><span class="line">        sumy%=mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sumx*sumy%mod&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int n,m;
+long long sumx , sumy;
+const long long mod &#x3D; 1000000007;
+long long x[100001] , y[100001];
+bool cmp(long long a , long long b)&#123;
+    return a&lt;b;
+&#125;
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i &#x3D; 1 ; i &lt;&#x3D; n ; i++)&#123;
+        cin&gt;&gt;x[i];
+        x[i]+&#x3D;1000000000;
+    &#125;
+    sort(x+1,x+1+n,cmp);
+    for(int i &#x3D;1 ; i&lt;&#x3D; n ; i++)&#123;
+        sumx +&#x3D; x[i]*(2*i-1-n) %mod;
+        sumx%&#x3D;mod;
+    &#125;
+    for(int i &#x3D; 1 ; i &lt;&#x3D; m ; i++)&#123;
+        cin&gt;&gt;y[i];
+        y[i]+&#x3D;1000000000;
+    &#125;
+    sort(y+1,y+1+m,cmp);
+    for(int i &#x3D; 1 ; i &lt;&#x3D; m ; i++)&#123;
+        sumy +&#x3D; y[i]*(2*i-1-m) %mod;
+        sumy%&#x3D;mod;
+    &#125;
+    cout&lt;&lt;sumx*sumy%mod&lt;&lt;&quot;\n&quot;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="I-母牛哥与子序列"><a href="#I-母牛哥与子序列" class="headerlink" title="I.母牛哥与子序列"></a><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/13504/I">I.母牛哥与子序列</a></h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意:"></a>题意:</h3><p>计算一个子序列所有非空子序列的积的和</p>
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h3><p>$$<br>Ans = Ans\cdot(a_i+1)+a_i<br>$$</p>
-<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">1000000007</span>;</span><br><span class="line">ll n , a , ans;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;a;</span><br><span class="line">    ans = a;</span><br><span class="line">    <span class="keyword">for</span>(ll i = <span class="number">2</span> ; i&lt;= n ; i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">        ans = ((ans)*(a+<span class="number">1</span>))%mod+a;</span><br><span class="line">        ans %= mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+typedef long long ll;
+const ll mod &#x3D; 1000000007;
+ll n , a , ans;
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;a;
+    ans &#x3D; a;
+    for(ll i &#x3D; 2 ; i&lt;&#x3D; n ; i++)&#123;
+        cin&gt;&gt;a;
+        ans &#x3D; ((ans)*(a+1))%mod+a;
+        ans %&#x3D; mod;
+    &#125;
+    cout&lt;&lt;ans&lt;&lt;&quot;\n&quot;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="E-捡贝壳"><a href="#E-捡贝壳" class="headerlink" title="E.捡贝壳"></a><a target="_blank" rel="noopener" href="https://ac.nowcoder.com/acm/contest/13504/E">E.捡贝壳</a></h2><h3 id="题意：-4"><a href="#题意：-4" class="headerlink" title="题意："></a>题意：</h3><p>给出一个数列，多次查询，其中$[l,r]$里有多少个$x$的整数倍</p>
 <p>P.S 一开始数据较弱，完全彻底的暴力搜索（遍历）可以过掉，复杂度差不多是1e9数量级？</p>
 <h3 id="算法：-3"><a href="#算法：-3" class="headerlink" title="算法："></a>算法：</h3><p>用vector存储大小为i的数字的位置</p>
 <p>即：q[t]={a , b , c} 表现大小为t的数字的形式</p>
 <p>那么可以用二分查找找到大小为t的数字在l到r区间内出现了多少次</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmp = upper_bound(a[i].begin(),a[i].end(),r)-lower_bound(a[i].begin(),a[i].end(),l);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">tmp &#x3D; upper_bound(a[i].begin(),a[i].end(),r)-lower_bound(a[i].begin(),a[i].end(),l);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>遍历x的整数倍累加就可以得到解答</p>
-<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; a[<span class="number">100010</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, q, t,maxn = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; q;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;t);</span><br><span class="line">        a[t].push_back(i);</span><br><span class="line">        maxn = max(maxn , t);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> l, r, x;</span><br><span class="line">    <span class="keyword">while</span> (q--) &#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>, &amp;l, &amp;r, &amp;x);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = x; i &lt;= maxn; i += x) &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = upper_bound(a[i].begin(), a[i].end(), r) - lower_bound(a[i].begin(), a[i].end(), l);</span><br><span class="line">            ans += temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="代码-5"><a href="#代码-5" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+
+using namespace std;
+typedef long long ll;
+vector&lt;int&gt; a[100010];
+
+int main() &#123;
+    int n, q, t,maxn &#x3D; 0;
+    cin &gt;&gt; n &gt;&gt; q;
+    for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+        scanf(&quot;%d&quot;, &amp;t);
+        a[t].push_back(i);
+        maxn &#x3D; max(maxn , t);
+    &#125;
+    int l, r, x;
+    while (q--) &#123;
+        int ans &#x3D; 0;
+        scanf(&quot;%d%d%d&quot;, &amp;l, &amp;r, &amp;x);
+        for (int i &#x3D; x; i &lt;&#x3D; maxn; i +&#x3D; x) &#123;
+            int temp &#x3D; upper_bound(a[i].begin(), a[i].end(), r) - lower_bound(a[i].begin(), a[i].end(), l);
+            ans +&#x3D; temp;
+        &#125;
+        cout &lt;&lt; ans &lt;&lt; endl;
+    &#125;
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->

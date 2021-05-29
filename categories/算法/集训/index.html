@@ -170,13 +170,13 @@
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>Words count</i>
-                48k
+                22k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                44 mins.
+                20 mins.
             </span>
             
             
@@ -187,7 +187,7 @@
         
         <div class="md-content animated fadeIn">
             
-            <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span><span class="keyword">int</span> u ,v,w;&#125; e[M];</span><br><span class="line"><span class="keyword">int</span> tot;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u...</span></span></span></pre></td></tr></table></figure>
+            <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int M &#x3D; 1e5+10; struct Edge&#123;int u ,v,w;&#125; e[M]; int tot; void add(int u,int v,int...</code></pre>
             
             <span class="read-more"><a href="/2021/01/31/%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="Read article" class="posttitle">Read article</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
@@ -231,13 +231,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
+                        5.5k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
+                        5 mins.
                     </span>
                 
                 
@@ -277,13 +277,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
+                        3.6k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
+                        3 mins.
                     </span>
                 
                 
@@ -294,7 +294,7 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p> <p>01背包问题状态转移方程为</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line"> f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <p>完全背包问题状态转移方程为</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt...</span></pre></td></tr></table></figure>
+                <p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p> <p>01背包问题状态转移方程为</p> <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int v &#x3D; val ; v &gt;&#x3D; c[i] ; v--)&#123; f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]); &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> <p>完全背包问题状态转移方程为</p> <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int v &#x3D...</code></pre>
             
             <span class="read-more"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>

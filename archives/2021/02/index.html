@@ -127,8 +127,8 @@
                                     <div class="timeline-content">
                                         <a class="timeline-title" target="_self" href="/2021/05/22/%E5%BE%AE%E7%A7%AF%E5%88%863/">微积分3</a>
                                         <p>
-                                            常见的泰勒级数$$e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}$$$$\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}$$$$\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}$$
-傅里叶级数$$f(x) = \frac{...
+                                            级数常见的泰勒级数$$e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}$$$$\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}$$$$\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}$$
+傅里叶级数$$f(x) = \fra...
                                         </p>
                                     </div>
                                 </li>
@@ -188,7 +188,13 @@ $...
 算法被4整除：偶数多
 被2整除：一样
 奇数：奇数多
-代码12345678910111213141516171819#include &lt;bits/stdc++.h&gt;using namespace std;int t;long long n;int main() &#123;	cin &gt;&gt; t;...
+代码#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int t;
+long long n;
+int main() &#123;
+	cin &gt;&gt; t;
+	while (t--) &#123...
                                         </p>
                                     </div>
                                 </li>
@@ -204,7 +210,14 @@ $...
                                         <p>
                                             A. Array and Peaks题意给出一个字符串，使其具有k个波峰
 算法略
-代码123456789101112131415161718192021222324252627#include &lt;bits/stdc++.h&gt;using namespace std;int _, n, k;int main() &#123;	cin &gt;&gt; _;	while (_--) &...
+代码#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int _, n, k;
+int main() &#123;
+	cin &gt;&gt; _;
+	while (_--) &#123;
+		cin &gt;&gt; n &gt;&gt; k;
+...
                                         </p>
                                     </div>
                                 </li>
@@ -246,7 +259,13 @@ C-Statues题意给出n个位置，k个节点（不重复的位置和可能重复
                                         <a class="timeline-title" target="_self" href="/2021/03/28/codeforces-educational-round-106-cf1499-%E9%A2%98%E8%A7%A3/">codeforces educational round 106 cf1499 题解</a>
                                         <p>
                                             A.Domino on Windowsill略
-123456789101112131415161718192021222324#include &lt;bits/stdc++.h&gt;using namespace std;int t , n , k1 , k2 , w , b;int main()&#123;    ios::sync_with_stdio(false);    cin....
+#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int t , n , k1 , k2 , w , b;
+int main()&#123;
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    cin&g...
                                         </p>
                                     </div>
                                 </li>
@@ -264,7 +283,9 @@ C-Statues题意给出n个位置，k个节点（不重复的位置和可能重复
 算法：注意到若一个字符串是M形字符串，则字符串$[0,i]$和字符串$[0,\frac{i+1}{2}]$必为回文串
 则可通过字符串Hash预处理并判断
 对字符串正反Hash预处理（自然溢出）：
-123456void makeHash() &#123;    s[0] = 1;    for...
+void makeHash() &#123;
+    s[0] &#x3D; 1;
+    fo...
                                         </p>
                                     </div>
                                 </li>
@@ -331,7 +352,8 @@ C. 1D Sokoban题目链接
 算法当a和b都大于0时：
 可用一个数组表示从0~i，有多少个an与bm是初始重合的
 （p表示a，sp表示b，下同）
-1234567map&lt;long,bool&gt;mp;for(long k:p) mp[k...
+map&lt;long,bool&gt;mp;
+for(long k:p) mp[k]&#x3D...
                                         </p>
                                     </div>
                                 </li>
@@ -378,7 +400,13 @@ C. 1D Sokoban题目链接
                                     <div class="timeline-content">
                                         <a class="timeline-title" target="_self" href="/2021/01/31/%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80/">图论基础</a>
                                         <p>
-                                            存储直接存边12345678910111213const int M = 1e5+10;struct Edge&#123;int u ,v,w;&#125; e[M];int tot;void add(int u,int v,int w)&#123;    e[++tot].u=u,e[tot].v=v,e[tot].w=w;&#125;bool cmp(Edge a , Edge b)&#...
+                                            存储直接存边const int M &#x3D; 1e5+10;
+struct Edge&#123;int u ,v,w;&#125; e[M];
+int tot;
+void add(int u,int v,int w)&#123;
+    e[++tot].u&#x3D;u,e[tot].v&#x3D;v,e[tot].w&#x3D;w;
+&#125;
+bool cmp(Edge a , ...
                                         </p>
                                     </div>
                                 </li>
@@ -429,7 +457,8 @@ C. 1D Sokoban题目链接
                                         <p>
                                             动态规划 背包问题对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：
 01背包问题状态转移方程为
-123for(int v = val ; v &gt;= c[i] ; v--)&#123;    f[v] = max(f[v], f[v...
+for(int v &#x3D; val ; v &gt;&#x3D; c[i] ; v--)&#123;
+    f[v] &#x3D; ...
                                         </p>
                                     </div>
                                 </li>
@@ -448,7 +477,10 @@ yysy 有点阴间
 以上海大学2020届这个大学物理实验数据为主
 输入格式（样例）
 data.yaml
-12345678910111213141516#以下写入表格7.1数据，格式形如[t1,t2,t2&#x27;,t1&#x27;]t11: [ 28.65,29.07,29.60,30.12 ]t12: [ 21.46,...
+#以下写入表格7.1数据，格式形如[t1,t2,t2',t1']
+t11: [ 28.65,29.07,29.60,30.12 ]
+t12: [ 21.46,21.87,22.14,22.52 ]
+t13: [ 20.6...
                                         </p>
                                     </div>
                                 </li>

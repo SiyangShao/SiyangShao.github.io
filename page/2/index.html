@@ -323,13 +323,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        29k
+                        13k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        27 mins.
+                        12 mins.
                     </span>
                 
                 
@@ -340,7 +340,7 @@
         
         <div class="md-content animated fadeIn">
             
-                <blockquote> <p>codeforces Educational Round 105补题</p> </blockquote> <h3 id="C-1D-Sokoban"><a href="#C-1D-Sokoban" class="headerlink" title="C. 1D Sokoban"></a>C. 1D Sokoban</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1494/problem/C">题目链接</a></p> <h4 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h4><p>从（0，0）将an向左or向右移动，最多能让多少个an与bm重合</p> <h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>当a和b都大于0时：</p> <p>可用一个数组表示从0~i，有多少个an与bm是初始重合的</p> <p>（p表示a，sp表示b，下同）</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">long</span>,<span class="keyword">bool</span>&gt;mp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">long</span> k:p) mp[k]=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">long</span> n = p.size() , m = sp.size();</span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long...</span></span></span></pre></td></tr></table></figure>
+                <blockquote> <p>codeforces Educational Round 105补题</p> </blockquote> <h3 id="C-1D-Sokoban"><a href="#C-1D-Sokoban" class="headerlink" title="C. 1D Sokoban"></a>C. 1D Sokoban</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1494/problem/C">题目链接</a></p> <h4 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h4><p>从（0，0）将an向左or向右移动，最多能让多少个an与bm重合</p> <h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>当a和b都大于0时：</p> <p>可用一个数组表示从0~i，有多少个an与bm是初始重合的</p> <p>（p表示a，sp表示b，下同）</p> <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">map&lt;long,bool&gt;mp; for(long k:p) mp[k]&#x3D;true; long n &#x3D; p.size() , m &#x3D; sp.size(); vector...</code></pre>
             
             <span class="read-more"><a href="/2021/03/03/codeforces-educational-round-105-cf1494-%E9%A2%98%E8%A7%A3/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
@@ -415,13 +415,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        48k
+                        22k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        44 mins.
+                        20 mins.
                     </span>
                 
                 
@@ -432,7 +432,7 @@
         
         <div class="md-content animated fadeIn">
             
-                <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Edge</span>&#123;</span><span class="keyword">int</span> u ,v,w;&#125; e[M];</span><br><span class="line"><span class="keyword">int</span> tot;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span></span>&#123;</span><br><span class="line"> e[++tot].u=u,e[tot].v=v,e[tot].w=w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(Edge a , Edge b)</span></span>&#123;</span><br><span class="line"> <span class="keyword">return</span> a.w&lt;b.w;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"> <span class="comment">//add</span></span><br><span class="line"> sort(e+<span class="number">1</span>,e...</span></pre></td></tr></table></figure>
+                <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">const int M &#x3D; 1e5+10; struct Edge&#123;int u ,v,w;&#125; e[M]; int tot; void add(int u,int v,int w)&#123; e[++tot].u&#x3D;u,e[tot].v&#x3D;v,e[tot].w&#x3D;w; &#125; bool cmp(Edge a , Edge b)&#123; return a.w&lt;b.w; &#125; int main()&#123; &#x2F;...</code></pre>
             
             <span class="read-more"><a href="/2021/01/31/%E5%9B%BE%E8%AE%BA%E5%9F%BA%E7%A1%80/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
@@ -461,13 +461,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
+                        5.5k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
+                        5 mins.
                     </span>
                 
                 
@@ -553,13 +553,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        8.3k
+                        3.6k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        8 mins.
+                        3 mins.
                     </span>
                 
                 
@@ -570,7 +570,7 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p> <p>01背包问题状态转移方程为</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> v = val ; v &gt;= c[i] ; v--)&#123;</span><br><span class="line"> f[v] = max(f[v], f[v - c[i]] + w[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> <p>完全背包问题状态转移方程为</p> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> v = c[i]; v &lt...</span></pre></td></tr></table></figure>
+                <p>对于一个背包，总空间为$Val$,，单个物品空间为$C_i$，价值为$W_i$，可取次数为$W_i$（$W_i==0$时表示可取用无数次），用$F[v]$表示存储空间为$v$时所具有的价值的最大值，则可得：</p> <p>01背包问题状态转移方程为</p> <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int v &#x3D; val ; v &gt;&#x3D; c[i] ; v--)&#123; f[v] &#x3D; max(f[v], f[v - c[i]] + w[i]); &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre> <p>完全背包问题状态转移方程为</p> <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int v &#x3D...</code></pre>
             
             <span class="read-more"><a href="/2021/01/20/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
@@ -599,13 +599,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        27k
+                        42k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        24 mins.
+                        38 mins.
                     </span>
                 
                 
@@ -616,7 +616,7 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>下周一做这个实验，然而老师要求当场出结果www</p> <p>yysy 有点阴间</p> <p>以上海大学2020届这个大学物理实验数据为主</p> <p>输入格式（样例）</p> <p>data.yaml</p> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以下写入表格7.1数据，格式形如[t1,t2,t2&#x27;,t1&#x27;]</span></span><br><span class="line"><span class="attr">t11:</span> [ <span class="number">28.65</span>,<span class="number">29.07</span>,<span class="number">29.60</span>,<span class="number">30.12</span> ]</span><br><span class="line"><span class="attr">t12:</span> [ <span class="number">21.46</span>,<span class="number">21.87</span>,<span class="number">22.14</span>,<span class="number">22.52</span> ]</span><br><span class="line"><span class="attr">t13:</span> [ <span class="number">20.65</span>,<span class="number">21.05</span>,<span class="number">21.35</span>,<span class="number">21.62</span> ]</span><br><span class="line"><span class="comment">#以下写入表格7.2数据，...</span></span></pre></td></tr></table></figure>
+                <p>下周一做这个实验，然而老师要求当场出结果www</p> <p>yysy 有点阴间</p> <p>以上海大学2020届这个大学物理实验数据为主</p> <p>输入格式（样例）</p> <p>data.yaml</p> <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">#以下写入表格7.1数据，格式形如[t1,t2,t2',t1']</span> <span class="token key atrule">t11</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token number">28.65</span><span class="token punctuation">,</span><span class="token number">29.07</span><span class="token punctuation">,</span><span class="token number">29.60</span><span class="token punctuation">,</span><span class="token number">30.12</span> <span class="token punctuation">]</span> <span class="token key atrule">t12</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token number">21.46</span><span class="token punctuation">,</span><span class="token number">21.87</span><span class="token punctuation">,</span><span class="token number">22.14</span><span class="token punctuation">,</span><span class="token number">22.52</span> <span class="token punctuation">]</span> <span class="token key atrule">t13</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token number">20.65</span><span class="token punctuation">,</span><span class="token number">21.05</span><span class="token punctuation">,</span><span class="token number">21.35</span><span class="token punctuation">,</span><span class="token number">21.62</span> <span class="token punctuation">]</span> <span class="token comment">#以下写入表格7.2数据，格式形如[t1,t2,t2',t1']</span> <span class="token key atrule">t21</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token number">32...</span></code></pre>
             
             <span class="read-more"><a href="/2021/01/14/%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
@@ -645,13 +645,13 @@
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        2.4k
+                        1.6k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        2 mins.
+                        1 mins.
                     </span>
                 
                 

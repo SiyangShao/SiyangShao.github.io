@@ -127,13 +127,13 @@ C. 1D Sokoban题目链接
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    29k
+                    13k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    27 mins.
+                    12 mins.
                 </span>
                 
                 
@@ -175,28 +175,218 @@ C. 1D Sokoban题目链接
 <h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>当a和b都大于0时：</p>
 <p>可用一个数组表示从0~i，有多少个an与bm是初始重合的</p>
 <p>（p表示a，sp表示b，下同）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">map</span>&lt;<span class="keyword">long</span>,<span class="keyword">bool</span>&gt;mp;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">long</span> k:p) mp[k]=<span class="literal">true</span>;</span><br><span class="line"><span class="keyword">long</span> n = p.size() , m = sp.size();</span><br><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span>&gt; <span class="title">cum</span><span class="params">(m+<span class="number">1</span>,<span class="number">0</span>)</span></span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;= m ; i++)&#123;</span><br><span class="line">    cum[i]=cum[i<span class="number">-1</span>]+mp[sp[i<span class="number">-1</span>]];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">map&lt;long,bool&gt;mp;
+for(long k:p) mp[k]&#x3D;true;
+long n &#x3D; p.size() , m &#x3D; sp.size();
+vector&lt;long&gt; cum(m+1,0);
+for(int i &#x3D; 1; i&lt;&#x3D; m ; i++)&#123;
+    cum[i]&#x3D;cum[i-1]+mp[sp[i-1]];
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后接下来利用upper_bound函数查找出推箱子到b[i]点的最多连续个数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; m ;i++)&#123;</span><br><span class="line">    <span class="keyword">long</span> can = cum[m] - cum[i+<span class="number">1</span>];<span class="comment">//can初始化为后续点中本来就为特殊点的个数</span></span><br><span class="line">    <span class="keyword">auto</span> k = upper_boound(p.begin(),p.end(),sp[i]);</span><br><span class="line">    <span class="keyword">if</span>(k==p.end())&#123;</span><br><span class="line">        <span class="keyword">long</span> tot1 = n ;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">long</span> tot1 = k - p.begin();</span><br><span class="line">        <span class="comment">//tot1表示普通点中比第i个特殊点小的点的个数，即可推到的最长长度</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">auto</span> l = upper_bound(sp.begin(),sp.end(),sp[i]-tot1);</span><br><span class="line">    tot2 = l - sp.begin();<span class="comment">//tot2表示不在从b[i]往前推的这一长串中的点的数目</span></span><br><span class="line">    can += i + <span class="number">1</span> - tot2;<span class="comment">//can加上总共i+1个点，其中前tot2个不被覆盖</span></span><br><span class="line">    mx = max(mx,can);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for(int i &#x3D; 0 ; i &lt; m ;i++)&#123;
+    long can &#x3D; cum[m] - cum[i+1];&#x2F;&#x2F;can初始化为后续点中本来就为特殊点的个数
+    auto k &#x3D; upper_boound(p.begin(),p.end(),sp[i]);
+    if(k&#x3D;&#x3D;p.end())&#123;
+        long tot1 &#x3D; n ;
+    &#125;else&#123;
+        long tot1 &#x3D; k - p.begin();
+        &#x2F;&#x2F;tot1表示普通点中比第i个特殊点小的点的个数，即可推到的最长长度
+    &#125;
+    auto l &#x3D; upper_bound(sp.begin(),sp.end(),sp[i]-tot1);
+    tot2 &#x3D; l - sp.begin();&#x2F;&#x2F;tot2表示不在从b[i]往前推的这一长串中的点的数目
+    can +&#x3D; i + 1 - tot2;&#x2F;&#x2F;can加上总共i+1个点，其中前tot2个不被覆盖
+    mx &#x3D; max(mx,can);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="总代码："><a href="#总代码：" class="headerlink" title="总代码："></a>总代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="title">solve</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">long</span>&gt; &amp;p, <span class="built_in">vector</span>&lt;<span class="keyword">long</span>&gt; &amp;sp)</span> </span>&#123;</span><br><span class="line">    sort(p.begin(), p.end());</span><br><span class="line">    sort(sp.begin(), sp.end());</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">long</span>, <span class="keyword">bool</span>&gt; mp;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">long</span> k:p) mp[k] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">long</span> n = p.size(), m = sp.size(), i, mx = <span class="number">0</span>, can, tot1, tot2;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">long</span>&gt; <span class="title">cum</span><span class="params">(m + <span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        cum[i] = cum[i - <span class="number">1</span>] + mp[sp[i - <span class="number">1</span>]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        can = cum[m] - cum[i + <span class="number">1</span>];<span class="comment">//通过can算出后续列表中位于特殊点的</span></span><br><span class="line">        <span class="comment">//cout&lt;&lt;i&lt;&lt;&quot;  &quot;&lt;&lt;can&lt;&lt;endl;</span></span><br><span class="line">        <span class="keyword">auto</span> k = upper_bound(p.begin(), p.end(), sp[i]);<span class="comment">//比第i个特殊点更大</span></span><br><span class="line">        <span class="keyword">if</span> (k == p.end()) &#123; tot1 = n; &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123; tot1 = (k - p.begin()); &#125;<span class="comment">//tot:普通点中比第i个特殊点大的最小的点的数目</span></span><br><span class="line">        <span class="keyword">auto</span> l = upper_bound(sp.begin(), sp.end(), sp[i] - tot1);<span class="comment">//sp[i]-tot1为最长的理论值</span></span><br><span class="line">        tot2 = (l - sp.begin());<span class="comment">//不在这一序列中的点的数目</span></span><br><span class="line">        can += i + <span class="number">1</span> - tot2;<span class="comment">//结果</span></span><br><span class="line">        <span class="comment">//cout&lt;&lt;i&lt;&lt;&quot;  &quot;&lt;&lt;can&lt;&lt;endl;</span></span><br><span class="line">        mx = max(mx, can);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> mx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>),<span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">long</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        <span class="keyword">long</span> n, m, x;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">long</span>&gt; npos, pos, nspos, spos;</span><br><span class="line">        <span class="keyword">while</span> (n--) &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">            <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123; pos.push_back(x); &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123; npos.push_back(-x); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (m--) &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">            <span class="keyword">if</span> (x &gt; <span class="number">0</span>) &#123; spos.push_back(x); &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123; nspos.push_back(-x); &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; solve(pos, spos) + solve(npos, nspos) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="总代码："><a href="#总代码：" class="headerlink" title="总代码："></a>总代码：</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+
+using namespace std;
+
+long solve(vector&lt;long&gt; &amp;p, vector&lt;long&gt; &amp;sp) &#123;
+    sort(p.begin(), p.end());
+    sort(sp.begin(), sp.end());
+    map&lt;long, bool&gt; mp;
+    for (long k:p) mp[k] &#x3D; true;
+    long n &#x3D; p.size(), m &#x3D; sp.size(), i, mx &#x3D; 0, can, tot1, tot2;
+    vector&lt;long&gt; cum(m + 1, 0);
+    for (i &#x3D; 1; i &lt;&#x3D; m; i++) &#123;
+        cum[i] &#x3D; cum[i - 1] + mp[sp[i - 1]];
+    &#125;
+    for (i &#x3D; 0; i &lt; m; i++) &#123;
+        can &#x3D; cum[m] - cum[i + 1];&#x2F;&#x2F;通过can算出后续列表中位于特殊点的
+        &#x2F;&#x2F;cout&lt;&lt;i&lt;&lt;&quot;  &quot;&lt;&lt;can&lt;&lt;endl;
+        auto k &#x3D; upper_bound(p.begin(), p.end(), sp[i]);&#x2F;&#x2F;比第i个特殊点更大
+        if (k &#x3D;&#x3D; p.end()) &#123; tot1 &#x3D; n; &#125;
+        else &#123; tot1 &#x3D; (k - p.begin()); &#125;&#x2F;&#x2F;tot:普通点中比第i个特殊点大的最小的点的数目
+        auto l &#x3D; upper_bound(sp.begin(), sp.end(), sp[i] - tot1);&#x2F;&#x2F;sp[i]-tot1为最长的理论值
+        tot2 &#x3D; (l - sp.begin());&#x2F;&#x2F;不在这一序列中的点的数目
+        can +&#x3D; i + 1 - tot2;&#x2F;&#x2F;结果
+        &#x2F;&#x2F;cout&lt;&lt;i&lt;&lt;&quot;  &quot;&lt;&lt;can&lt;&lt;endl;
+        mx &#x3D; max(mx, can);
+    &#125;
+    return mx;
+&#125;
+
+int main() &#123;
+    ios::sync_with_stdio(false);
+    cin.tie(0),cout.tie(0);
+    long t;
+    cin &gt;&gt; t;
+    while (t--) &#123;
+        long n, m, x;
+        cin &gt;&gt; n &gt;&gt; m;
+        vector&lt;long&gt; npos, pos, nspos, spos;
+        while (n--) &#123;
+            cin &gt;&gt; x;
+            if (x &gt; 0) &#123; pos.push_back(x); &#125;
+            else &#123; npos.push_back(-x); &#125;
+        &#125;
+        while (m--) &#123;
+            cin &gt;&gt; x;
+            if (x &gt; 0) &#123; spos.push_back(x); &#125;
+            else &#123; nspos.push_back(-x); &#125;
+        &#125;
+        cout &lt;&lt; solve(pos, spos) + solve(npos, nspos) &lt;&lt; endl;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="D-Dogeforces"><a href="#D-Dogeforces" class="headerlink" title="D. Dogeforces"></a>D. Dogeforces</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1494/problem/D">题目链接</a></p>
 <h4 id="题意：-1"><a href="#题意：-1" class="headerlink" title="题意："></a>题意：</h4><p>给出所有子节点两个点之间的共有祖先的值，构造出原数</p>
 <h4 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h4><p>并查集+分治，对所有以值为i的点为根的点进行遍历，构造出子数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= mx - <span class="number">1</span>; i++) &#123; <span class="comment">//根节点的值一定大于总节点数目，遍历有同一根节点的点</span></span><br><span class="line">     <span class="keyword">if</span> (h[i].empty()) <span class="keyword">continue</span>;<span class="comment">//这个节点莫得</span></span><br><span class="line">     <span class="keyword">int</span> cur = k;<span class="comment">//当前的值</span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) fa[j.first] = find(j.first), fa[j.second] = find(j.second); <span class="comment">//初始化每一个的父节点</span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) f[find(fa[j.first])] = find(fa[j.second]);<span class="comment">//合并</span></span><br><span class="line">     <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) &#123;</span><br><span class="line">         <span class="keyword">int</span> x = find(j.first);</span><br><span class="line">         <span class="keyword">if</span> (x &lt;= cur) b[++k] = i, f[x] = f[k] = k, x = k;<span class="comment">//构造树</span></span><br><span class="line">         a[fa[j.first]] = a[fa[j.second]] = x;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">for (int i &#x3D; 1; i &lt;&#x3D; mx - 1; i++) &#123; &#x2F;&#x2F;根节点的值一定大于总节点数目，遍历有同一根节点的点
+     if (h[i].empty()) continue;&#x2F;&#x2F;这个节点莫得
+     int cur &#x3D; k;&#x2F;&#x2F;当前的值
+     for (auto &amp;j : h[i]) fa[j.first] &#x3D; find(j.first), fa[j.second] &#x3D; find(j.second); &#x2F;&#x2F;初始化每一个的父节点
+     for (auto &amp;j : h[i]) f[find(fa[j.first])] &#x3D; find(fa[j.second]);&#x2F;&#x2F;合并
+     for (auto &amp;j : h[i]) &#123;
+         int x &#x3D; find(j.first);
+         if (x &lt;&#x3D; cur) b[++k] &#x3D; i, f[x] &#x3D; f[k] &#x3D; k, x &#x3D; k;&#x2F;&#x2F;构造树
+         a[fa[j.first]] &#x3D; a[fa[j.second]] &#x3D; x;
+     &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">50000</span>;</span><br><span class="line"><span class="keyword">int</span> b[maxn], f[maxn], a[maxn], fa[maxn];</span><br><span class="line"><span class="keyword">int</span> k, n;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; h[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x == f[x] ? x : f[x] = find(f[x]); <span class="comment">//并查集</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    k = n; <span class="comment">//至少k个点</span></span><br><span class="line">    <span class="keyword">int</span> mx = <span class="number">0</span>; <span class="comment">//根节点的值</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) f[i] = i; <span class="comment">//并查集初始化</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) &#123;</span><br><span class="line">            <span class="keyword">int</span> m;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; m;</span><br><span class="line">            <span class="keyword">if</span> (i == j) &#123; b[i] = m; &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (i &lt; j) &#123;</span><br><span class="line">                h[m].emplace_back(i, j);</span><br><span class="line">                mx = max(mx, m);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= mx - <span class="number">1</span>; i++) &#123; </span><br><span class="line">        <span class="keyword">if</span> (h[i].empty()) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">int</span> cur = k;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) fa[j.first] = find(j.first), fa[j.second] = find(j.second); </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) f[find(fa[j.first])] = find(fa[j.second]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;j : h[i]) &#123;</span><br><span class="line">            <span class="keyword">int</span> x = find(j.first);</span><br><span class="line">            <span class="keyword">if</span> (x &lt;= cur) b[++k] = i, f[x] = f[k] = k, x = k;</span><br><span class="line">            a[fa[j.first]] = a[fa[j.second]] = x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    b[++k] = mx;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : h[mx]) &#123;</span><br><span class="line">        a[find(i.first)] = a[find(i.second)] = k;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; k &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k; i++) <span class="built_in">cout</span> &lt;&lt; b[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; k &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= k - <span class="number">1</span>; i++) <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; a[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits&#x2F;stdc++.h&gt;
+
+using namespace std;
+const int maxn &#x3D; 50000;
+int b[maxn], f[maxn], a[maxn], fa[maxn];
+int k, n;
+vector&lt;pair&lt;int, int&gt; &gt; h[maxn];
+
+int find(int x) &#123;
+    return x &#x3D;&#x3D; f[x] ? x : f[x] &#x3D; find(f[x]); &#x2F;&#x2F;并查集
+&#125;
+
+int main() &#123;
+    cin &gt;&gt; n;
+    k &#x3D; n; &#x2F;&#x2F;至少k个点
+    int mx &#x3D; 0; &#x2F;&#x2F;根节点的值
+    for (int i &#x3D; 1; i &lt;&#x3D; n; i++) f[i] &#x3D; i; &#x2F;&#x2F;并查集初始化
+    for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+        for (int j &#x3D; 1; j &lt;&#x3D; n; j++) &#123;
+            int m;
+            cin &gt;&gt; m;
+            if (i &#x3D;&#x3D; j) &#123; b[i] &#x3D; m; &#125;
+            else if (i &lt; j) &#123;
+                h[m].emplace_back(i, j);
+                mx &#x3D; max(mx, m);
+            &#125;
+        &#125;
+    &#125;
+    for (int i &#x3D; 1; i &lt;&#x3D; mx - 1; i++) &#123; 
+        if (h[i].empty()) continue;
+        int cur &#x3D; k;
+        for (auto &amp;j : h[i]) fa[j.first] &#x3D; find(j.first), fa[j.second] &#x3D; find(j.second); 
+        for (auto &amp;j : h[i]) f[find(fa[j.first])] &#x3D; find(fa[j.second]);
+        for (auto &amp;j : h[i]) &#123;
+            int x &#x3D; find(j.first);
+            if (x &lt;&#x3D; cur) b[++k] &#x3D; i, f[x] &#x3D; f[k] &#x3D; k, x &#x3D; k;
+            a[fa[j.first]] &#x3D; a[fa[j.second]] &#x3D; x;
+        &#125;
+    &#125;
+    b[++k] &#x3D; mx;
+    for (auto &amp;i : h[mx]) &#123;
+        a[find(i.first)] &#x3D; a[find(i.second)] &#x3D; k;
+    &#125;
+    cout &lt;&lt; k &lt;&lt; endl;
+    for (int i &#x3D; 1; i &lt;&#x3D; k; i++) cout &lt;&lt; b[i] &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; endl;
+    cout &lt;&lt; k &lt;&lt; endl;
+    for (int i &#x3D; 1; i &lt;&#x3D; k - 1; i++) cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; a[i] &lt;&lt; endl;
+
+    return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="E-A-Z-Graph"><a href="#E-A-Z-Graph" class="headerlink" title="E. A-Z Graph"></a>E. A-Z Graph</h3><p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1494/problem/E">题目链接</a></p>
 <h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>n个点，m次查询+修改。可令u-&gt;v=c，也可删去。查询是否能走出一个长度为k的回文路径（即从头到尾和从尾到头一样）</p>
 <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>本题目极水……早知道做题的时候就来写这道题目了….</p>
 <p>注意到k为奇数时走偶数次，即u-&gt;v-&gt;u，必然是回文路径</p>
 <p>k为偶数时需要u-&gt;v=v-&gt;u即可</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(c==<span class="string">&#x27;+&#x27;</span>)&#123;</span><br><span class="line">          <span class="keyword">int</span> u , v;</span><br><span class="line">          <span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v&gt;&gt;w;</span><br><span class="line">          e[mp(u,v)]=w;</span><br><span class="line">          pii g = mp(v,u);</span><br><span class="line">          p+=(e.find(g)!=e.end());</span><br><span class="line">          q+=(e.find(g)!=e.end()&amp;&amp;e[g]==w);</span><br><span class="line"></span><br><span class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)&#123;</span><br><span class="line">          <span class="keyword">int</span> u , v;</span><br><span class="line">          <span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v;</span><br><span class="line">          w=e[mp(u,v)];</span><br><span class="line">          e.erase(mp(u,v));</span><br><span class="line">          pii g = mp(v,u);</span><br><span class="line">          p-=(e.find(g)!=e.end());</span><br><span class="line">          q-=(e.find(g)!=e.end()&amp;&amp;e[g]==w);</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">//p和q分别表示u-&gt;v和v-&gt;u都存在的路径条数&amp;&amp;u-&gt;v==v-&gt;u的路径条数</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">if(c&#x3D;&#x3D;&#39;+&#39;)&#123;
+          int u , v;
+          cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+          e[mp(u,v)]&#x3D;w;
+          pii g &#x3D; mp(v,u);
+          p+&#x3D;(e.find(g)!&#x3D;e.end());
+          q+&#x3D;(e.find(g)!&#x3D;e.end()&amp;&amp;e[g]&#x3D;&#x3D;w);
 
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> pii pair<span class="meta-string">&lt;int,int&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mp make_pair</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n , m , q, p;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">pair</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;,<span class="keyword">char</span>&gt;e;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; m ; i++)&#123;</span><br><span class="line">        <span class="keyword">char</span> c,w;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;c;</span><br><span class="line">        <span class="keyword">if</span>(c==<span class="string">&#x27;+&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> u , v;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v&gt;&gt;w;</span><br><span class="line">            e[mp(u,v)]=w;</span><br><span class="line">            pii g = mp(v,u);</span><br><span class="line">            p+=(e.find(g)!=e.end());</span><br><span class="line">            q+=(e.find(g)!=e.end()&amp;&amp;e[g]==w);</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;-&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> u , v;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;u&gt;&gt;v;</span><br><span class="line">            w=e[mp(u,v)];</span><br><span class="line">            e.erase(mp(u,v));</span><br><span class="line">            pii g = mp(v,u);</span><br><span class="line">            p-=(e.find(g)!=e.end());</span><br><span class="line">            q-=(e.find(g)!=e.end()&amp;&amp;e[g]==w);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> k;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;k;</span><br><span class="line">            <span class="keyword">if</span>(k%<span class="number">2</span>==<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(p&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(q&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      &#125;else if(c&#x3D;&#x3D;&#39;-&#39;)&#123;
+          int u , v;
+          cin&gt;&gt;u&gt;&gt;v;
+          w&#x3D;e[mp(u,v)];
+          e.erase(mp(u,v));
+          pii g &#x3D; mp(v,u);
+          p-&#x3D;(e.find(g)!&#x3D;e.end());
+          q-&#x3D;(e.find(g)!&#x3D;e.end()&amp;&amp;e[g]&#x3D;&#x3D;w);
+      &#125;
+&#x2F;&#x2F;p和q分别表示u-&gt;v和v-&gt;u都存在的路径条数&amp;&amp;u-&gt;v&#x3D;&#x3D;v-&gt;u的路径条数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+#define pii pair&lt;int,int&gt;
+#define mp make_pair
+using namespace std;
+int n , m , q, p;
+map&lt;pair&lt;int,int&gt;,char&gt;e;
+int main()&#123;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i &#x3D; 0 ; i &lt; m ; i++)&#123;
+        char c,w;
+        cin&gt;&gt;c;
+        if(c&#x3D;&#x3D;&#39;+&#39;)&#123;
+            int u , v;
+            cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+            e[mp(u,v)]&#x3D;w;
+            pii g &#x3D; mp(v,u);
+            p+&#x3D;(e.find(g)!&#x3D;e.end());
+            q+&#x3D;(e.find(g)!&#x3D;e.end()&amp;&amp;e[g]&#x3D;&#x3D;w);
+
+        &#125;else if(c&#x3D;&#x3D;&#39;-&#39;)&#123;
+            int u , v;
+            cin&gt;&gt;u&gt;&gt;v;
+            w&#x3D;e[mp(u,v)];
+            e.erase(mp(u,v));
+            pii g &#x3D; mp(v,u);
+            p-&#x3D;(e.find(g)!&#x3D;e.end());
+            q-&#x3D;(e.find(g)!&#x3D;e.end()&amp;&amp;e[g]&#x3D;&#x3D;w);
+        &#125;else&#123;
+            int k;
+            cin&gt;&gt;k;
+            if(k%2&#x3D;&#x3D;1)&#123;
+                if(p&gt;0)&#123;
+                    cout&lt;&lt;&quot;YES\n&quot;;
+                &#125;else&#123;
+                    cout&lt;&lt;&quot;NO\n&quot;;
+                &#125;
+            &#125;else&#123;
+                if(q&gt;0)&#123;
+                    cout&lt;&lt;&quot;YES\n&quot;;
+                &#125;else&#123;
+                    cout&lt;&lt;&quot;NO\n&quot;;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
