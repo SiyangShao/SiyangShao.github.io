@@ -122,7 +122,7 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    8.7k
+                    8.8k
                 </span>
                 
                 
@@ -162,7 +162,7 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><h2 id="常见的泰勒级数"><a href="#常见的泰勒级数" class="headerlink" title="常见的泰勒级数"></a>常见的泰勒级数</h2><p>$$<br>e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}<br>$$<br>$$<br>\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}<br>$$<br>$$<br>\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}<br>$$</p>
+            <h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><h2 id="常见的泰勒级数"><a href="#常见的泰勒级数" class="headerlink" title="常见的泰勒级数"></a>常见的泰勒级数</h2><p>$$<br>e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}<br>$$<br>$$<br>\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}<br>$$<br>$$<br>\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}<br>$$<br>$$<br>\ln(1-x) = -\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}<br>$$<br>$$<br>\ln(1+x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n+1}}{n+1}<br>$$</p>
 <h2 id="傅里叶级数"><a href="#傅里叶级数" class="headerlink" title="傅里叶级数"></a>傅里叶级数</h2><p>$$<br>f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx))<br>$$<br>其中<br>$$<br>a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx<br>$$<br>$$<br>b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx<br>$$</p>
 <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:<br>$$<br>y = F(x)+C<br>$$</p>
 <h3 id="可分离变量的微分方程"><a href="#可分离变量的微分方程" class="headerlink" title="可分离变量的微分方程"></a>可分离变量的微分方程</h3><p>考虑方程<br>$$<br>\frac{dy}{dx} = f(x)g(y);<br>$$<br>则其可以改写为<br>$$<br>\frac{dy}{g(y)} = f(x)dx<br>$$<br>对其两端积分，于是有<br>$$<br>\int\frac{dy}{g(y)} = \int f(x)dx+C<br>$$<br>其所确定的隐式函数即为其通解</p>
@@ -184,7 +184,7 @@
 <h5 id="p-2-4q-0"><a href="#p-2-4q-0" class="headerlink" title="$p^2 -4q=0$"></a>$p^2 -4q=0$</h5><p>通解为<br>$$<br>y=(C_1+C_2x)e^{-\frac{p}{2}x}<br>$$</p>
 <h5 id="p-2-4q-lt-0"><a href="#p-2-4q-lt-0" class="headerlink" title="$p^2 -4q&lt;0$"></a>$p^2 -4q&lt;0$</h5><p>得到两个共轭复根<br>通解为<br>$$<br>y=e^{\alpha x}[(C_1+C_2)\cos{\beta x}+i(C_1-C_2)\sin{\beta x}]<br>$$<br>即<br>$$<br>y=e^{\alpha x}(C_1\cos{\beta x}+C_2\sin{\beta x})<br>$$<br>其中，$C_1$为实数，$C_2$为虚数</p>
 <h4 id="n阶常系数齐次线性微分方程"><a href="#n阶常系数齐次线性微分方程" class="headerlink" title="n阶常系数齐次线性微分方程"></a>n阶常系数齐次线性微分方程</h4><p>同样地，得到其特征方程<br>$$<br>r^n+p_1 r^{n-1}+p_2 r^{n-2}+…+p_{n-1} r + p_n = 0<br>$$<br>然后求解<br>对于第n项，解为$e^{r_n x}$</p>
-<h3 id="欧拉方程"><a href="#欧拉方程" class="headerlink" title="欧拉方程"></a>欧拉方程</h3><p>形如<br>$$<br>x^n \frac{d^ny}{dx^n}+p_1x^{n-1}\frac{d^{n-1}y}{dx^{n-1}}+\cdots +p_{n-1}x\frac{dy}{dx}+p_ny=0<br>$$<br>引入自变量代换<br>$$<br>t = \ln(x)\<br>D = \frac{d}{dy}<br>$$<br>则可得<br>$$<br>x^k\frac{d^ky}{dx^k}=D(D-1)(D-2)\cdots(D-k+1)y<br>$$<br>然后可通过n阶常系数齐次线性方程方法解出t，带入即可得到x的值</p>
+<h3 id="欧拉方程"><a href="#欧拉方程" class="headerlink" title="欧拉方程"></a>欧拉方程</h3><p>形如<br>$$<br>x^n \frac{d^ny}{dx^n}+p_1x^{n-1}\frac{d^{n-1}y}{dx^{n-1}}+\cdots +p_{n-1}x\frac{dy}{dx}+p_ny=0<br>$$<br>引入自变量代换<br>$$<br>t = \ln(x)\<br>D = \frac{d}{dt}<br>$$<br>则可得<br>$$<br>x^k\frac{d^ky}{dx^k}=D(D-1)(D-2)\cdots(D-k+1)y<br>$$<br>然后可通过n阶常系数齐次线性方程方法解出t，带入即可得到x的值</p>
 <h3 id="差分方程"><a href="#差分方程" class="headerlink" title="差分方程"></a>差分方程</h3>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
