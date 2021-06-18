@@ -12,7 +12,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>
-            大物1考卷公式 - shaosy&#39;s blog
+            codeforces202104-202105部分题解 - shaosy&#39;s blog
         </title>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -21,7 +21,8 @@
             <meta name="keywords" content="Personal Blog,">
             
                 
-                    <meta name="description" content="personal blog,动量，冲量，角动量$$m_1v_1=m_2v_2\I=mv-mv_0\F=\frac{GMm}{R^2}=\frac{mv^2}{2}\L=R\vec{m}\times\vec{v}（角动量）\mr,">
+                    <meta name="description" content="personal blog,前言这几个月事情很多 挑几道我觉得比较有意思的题目做一下题解
+CF1517D题意给出一张图，每相邻（上下、左右）两个点之间有一个权值。每一个点可以向它相邻的点移动，要求移动$k$步后回到原点，求对这,">
                     
                         
                             <meta name="author" content="Shaosy">
@@ -80,7 +81,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://siyangshao.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">大物1考卷公式</h3>
+        <h3 class="subtitle">codeforces202104-202105部分题解</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -110,25 +111,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/大学课程"><b>「
-                    </b>大学课程<b> 」</b></a>
+                <a href="/categories/算法"><b>「
+                    </b>算法<b> 」</b></a>
                 
-                March 17, 2021
+                June 18, 2021
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2021/03/17/%E5%A4%A7%E7%89%A91%E8%80%83%E5%8D%B7%E5%85%AC%E5%BC%8F/" title="大物1考卷公式" class="">大物1考卷公式</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2021/06/18/codeforces202104-202105%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/" title="codeforces202104-202105部分题解" class="">codeforces202104-202105部分题解</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    3.8k
+                    11k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    3 mins.
+                    10 mins.
                 </span>
                 
                 
@@ -141,7 +142,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/" rel="tag">大学物理</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%80%83%E5%89%8D%E5%A4%8D%E4%B9%A0/" rel="tag">考前复习</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/codeforces/" rel="tag">codeforces</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%A1%A5%E9%A2%98/" rel="tag">补题</a></li></ul>
             
         </div>
     </div>
@@ -162,33 +163,221 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h3 id="动量，冲量，角动量"><a href="#动量，冲量，角动量" class="headerlink" title="动量，冲量，角动量"></a>动量，冲量，角动量</h3><p>$$<br>m_1v_1=m_2v_2\<br>I=mv-mv_0\<br>F=\frac{GMm}{R^2}=\frac{mv^2}{2}\<br>L=R\vec{m}\times\vec{v}（角动量）\<br>mr_1v_1=mr_2v_2\<br>M=J\alpha, 合力矩<br>$$</p>
-<p>角动量守恒：$J_1\omega_1 =J_0\omega_0+mvl$，其中$mvl$表示系统中非旋转物体</p>
-<p>譬如，取棒上距离转动点长度为$dr$的棒，所受到的摩擦力，计算到停止转动要多久：<br>$$<br>df=\mu(dm)g=\mu\frac{m_1}{l}gdr\<br>dM=-rdf=-\mu\frac{m_1}{l}grdr\<br>M=\int dM=-\int_{0}^{l}\mu\frac{m_1}{l}grdr=-\frac{1}{2}\mu gm_1l\<br>由转动定律M=J\alpha得-\frac{1}{2}\mu gm_1l=J\frac{d\omega}{dt}\<br>即有\int_{0}^{t_1}-\frac{1}{2}\mu gm_1ldt=\int_{\omega_n}^{0}Jd\omega\<br>-\frac{\mu gm_1lt_1}{2}=-J\omega_0\<br>t_1=\frac{2m_2(u+v)}{\mu gm_1}+1<br>$$</p>
-<h4 id="曲率半径"><a href="#曲率半径" class="headerlink" title="曲率半径"></a>曲率半径</h4><p>由$g=\frac{v_x^2}{r}$可得，$r=\frac{v_x^2}{g}=\frac{(v\cos\alpha)^2}{g}$</p>
-<h3 id="简谐振动，波动"><a href="#简谐振动，波动" class="headerlink" title="简谐振动，波动"></a>简谐振动，波动</h3><p>对$A_1cos(\omega t+\phi_1)$和$A_2cos(\omega t+\phi_2)$复合振动$Acos(\omega t+\phi)$，有：<br>$$<br>A=\sqrt{A_1^2+A_2^2+2A_1A_2cos(\phi_2-\phi_1)}\<br>\phi=arctan\frac{A_1sin\phi_1+A_2sin\phi_2}{A_1cos\phi_1+A_2cos\phi_2}<br>$$</p>
-<h4 id="简谐振动的能量"><a href="#简谐振动的能量" class="headerlink" title="简谐振动的能量"></a>简谐振动的能量</h4><p>$$<br>E=\frac{1}{2}kA^2\<br>\omega = \sqrt{\frac{k}{m}}\<br>当\omega=2\pi f时\<br>f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\<br>T=2\pi\sqrt{\frac{m}{k}}<br>$$</p>
-<h4 id="波的能量"><a href="#波的能量" class="headerlink" title="波的能量"></a>波的能量</h4><h5 id="动能"><a href="#动能" class="headerlink" title="动能"></a>动能</h5><p>$$<br>\Delta W_k=\frac{1}{2}\Delta mv^2=\frac{1}{2}\rho \Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})<br>$$</p>
-<h5 id="势能"><a href="#势能" class="headerlink" title="势能"></a>势能</h5><p>$$<br>\Delta W_p=\frac{1}{2}E(\frac{\partial y}{\part x}^2)\Delta V=\frac{1}{2} \frac{E}{u^2}\omega^2A^2\sin^2\omega(t-\frac{x}{u})\Delta V<br>$$</p>
-<h5 id="弹性势能"><a href="#弹性势能" class="headerlink" title="弹性势能"></a>弹性势能</h5><p>$$<br>\Delta W_p=\frac{1}{2}k(\Delta l)^2=\frac{1}{2}\frac{ES}{l}(\Delta l)^2=\frac{1}{2}ESl(\frac{\Delta l}{l})^2=\frac{1}{2}E\Delta V(\frac{\Delta l}{l})^2\<br>\Delta W_p=\frac{1}{2}\rho\Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})<br>$$</p>
-<h5 id="总机械能"><a href="#总机械能" class="headerlink" title="总机械能"></a>总机械能</h5><p>$$<br>\Delta W=\Delta W_k+\Delta W_p = \rho \Delta V \omega^2A^2\sin^2\omega(t-\frac{x}{u})<br>$$</p>
-<p>波在传播过程中任一质元动能和势能都随时间t变化，同一时刻相位相同大小相等</p>
-<p><strong>动能最大值时势能也最大值</strong>，位于平衡位置</p>
-<p>动能为零时势能也为零，位于<strong>振幅最大位置</strong></p>
-<h4 id="反射波的计算"><a href="#反射波的计算" class="headerlink" title="反射波的计算"></a>反射波的计算</h4><p>对一表达式$y_1=A\cos[2\pi(\frac{t}{T}-\frac{x}{\lambda})+\phi]$在$L$处反射，带入$x=L$，然后减去$2\pi\frac{2(L-x)}{\lambda}$（相位落后法得到距$L$为$x$的点），计算是否有无半波损失</p>
-<h5 id="半波损失"><a href="#半波损失" class="headerlink" title="半波损失"></a>半波损失</h5><p>波的反射点为固定端时有，相位差为$\pm\pi$</p>
-<h4 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h4><blockquote>
-<p>两列沿相反方向传播，振幅相同频率相同的波的叠加</p>
-</blockquote>
-<p>$\lambda ：波长 \  v:频率,u:波速$</p>
-<p>$v=\frac{\lambda}{u}$</p>
-<h5 id="波节"><a href="#波节" class="headerlink" title="波节"></a>波节</h5><p>弦线上<strong>始终静止不动</strong>的点</p>
-<h5 id="波腹"><a href="#波腹" class="headerlink" title="波腹"></a>波腹</h5><p>波节和波节之间，<strong>振幅最大的点</strong></p>
-<h5 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h5><p>具有交替出现的波峰、波谷</p>
-<h5 id="方程"><a href="#方程" class="headerlink" title="方程"></a>方程</h5><p>对正向波$y_1=A\cos(\omega(t-\frac{x}{u}))$，反向波$y_2=A\cos(\omega(t-\frac{x}{u}))$</p>
-<p>驻波$y=y_1+y_2$<br>$$<br>y=A\cos2\pi (vt-\frac{x}{\lambda})+A\cos2\pi(vt+\frac{x}{\lambda})<br>\由和差化积\<br>y=(2A\cos2\pi\frac{x}{\lambda})\cos2\pi vt<br>$$<br>波腹处$x=\pm k\frac{\lambda}{2}$，波节处$x=\pm(2k+1)\frac{\lambda}{4}$</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><p>相邻两波节之间振动相位相同，波节两侧各质点振动相位相反 </p>
-
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这几个月事情很多 挑几道我觉得比较<em>有意思</em>的题目做一下题解</p>
+<h3 id="CF1517D"><a href="#CF1517D" class="headerlink" title="CF1517D"></a>CF1517D</h3><h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出一张图，每相邻（上下、左右）两个点之间有一个权值。每一个点可以向它相邻的点移动，要求移动$k$步后回到原点，求对这么一张图每一个点的移动路径权值最小和</p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h4><p>首先，显然的，当$k%2==1$时每一个点都无法回到原点，为$-1$<br>那么接下来考虑$k%2==0$时情况<br>此时，同样显然，每个点的权值即为其向外移动$\frac{k}{2}$时最小权值的值乘$2$<br>于是考虑每个点向外移动$n$次时权值最小值<br>考虑dp<br>那么令$dp[x][y][i]$表示点$(x,y)$在移动$i$次时最小权值<br>则有状态转移方程</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">dp[x][y][i] &#x3D;
+	min(dp[x][y][i], mp[x][y][0] + dp[x - 1][y][i - 1]);
+dp[x][y][i] &#x3D;
+	min(dp[x][y][i], mp[x][y][1] + dp[x + 1][y][i - 1]);
+dp[x][y][i] &#x3D;
+	min(dp[x][y][i], mp[x][y][2] + dp[x][y - 1][i - 1]);
+dp[x][y][i] &#x3D;
+	min(dp[x][y][i], mp[x][y][3] + dp[x][y + 1][i - 1]);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最后输出$dp[x][y][k]\cdot2$即为答案</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+int n, m, k;
+int dp[510][510][15];
+int mp[510][510][4];
+&#x2F;&#x2F; 0为上，1为下，2为左，3为右
+&#x2F;&#x2F; i行j列
+int main() &#123;
+	cin &gt;&gt; n &gt;&gt; m &gt;&gt; k;
+	memset(mp,0x3f,sizeof(mp));
+	int tmp;
+	for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+		for (int j &#x3D; 1; j &lt; m; j++) &#123;
+			cin &gt;&gt; tmp;
+			mp[i][j][3] &#x3D; tmp;
+			mp[i][j + 1][2] &#x3D; tmp;
+		&#125;
+	&#125;
+	for (int i &#x3D; 1; i &lt; n; i++) &#123;
+		for (int j &#x3D; 1; j &lt;&#x3D; m; j++) &#123;
+			cin &gt;&gt; tmp;
+			mp[i][j][1] &#x3D; tmp;
+			mp[i + 1][j][0] &#x3D; tmp;
+		&#125;
+	&#125;
+	if (k % 2 &#x3D;&#x3D; 1) &#123;
+		for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+			for (int j &#x3D; 1; j &lt;&#x3D; m; j++) &#123;
+				cout &lt;&lt; &quot;-1 &quot;;
+			&#125;
+			cout &lt;&lt; &quot;\n&quot;;
+		&#125;
+	&#125; else &#123;
+		k &#x2F;&#x3D; 2;
+		memset(dp, 0x3f, sizeof(dp));
+		for (int x &#x3D; 1; x &lt;&#x3D; n; x++) &#123;
+			for (int y &#x3D; 1; y &lt;&#x3D; m; y++) &#123;
+				dp[x][y][1] &#x3D;
+					min(mp[x][y][0],
+						min(mp[x][y][1], min(mp[x][y][2], mp[x][y][3])));
+			&#125;
+		&#125;
+		for (int i &#x3D; 2; i &lt;&#x3D; k; i++) &#123;
+			for (int x &#x3D; 1; x &lt;&#x3D; n; x++) &#123;
+				for (int y &#x3D; 1; y &lt;&#x3D; m; y++) &#123;
+					dp[x][y][i] &#x3D;
+						min(dp[x][y][i], mp[x][y][0] + dp[x - 1][y][i - 1]);
+					dp[x][y][i] &#x3D;
+						min(dp[x][y][i], mp[x][y][1] + dp[x + 1][y][i - 1]);
+					dp[x][y][i] &#x3D;
+						min(dp[x][y][i], mp[x][y][2] + dp[x][y - 1][i - 1]);
+					dp[x][y][i] &#x3D;
+						min(dp[x][y][i], mp[x][y][3] + dp[x][y + 1][i - 1]);
+				&#125;
+			&#125;
+		&#125;
+        for(int i &#x3D; 1 ; i&lt;&#x3D;n ; i++)&#123;
+            for(int j &#x3D; 1 ;j&lt;&#x3D; m ; j++)&#123;
+                cout&lt;&lt;dp[i][j][k]*2&lt;&lt;&quot; &quot;;
+            &#125;
+            cout&lt;&lt;&quot;\n&quot;;
+        &#125;
+	&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="CF1534C"><a href="#CF1534C" class="headerlink" title="CF1534C"></a>CF1534C</h3><h4 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h4><p>给出一个2行n列的数列。可以调换任意一列的上下两个数字。要求同行、同列的数字不能相同。问有多少种情况。</p>
+<h4 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h4><p>显然，当$a_i==b_i$时无解<br>其余情况时，对$i$而言，涉及到$a_i,b_i$的其他列与$i$列合并，视为一个环，这里可以用并查集维护。<br>最终的解答即为$2^{ans}$，ans为环的个数</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+#define int long long
+using namespace std;
+const int mod &#x3D; 1e9 + 7;
+int n, _, ans, fa[400010], vis[400010];
+int a[400010], b[400010];
+unordered_map&lt;int, int&gt; mpa, mpb;
+inline int binpow(int x, int y) &#123;
+    int res &#x3D; 1;
+    while (y &gt; 0) &#123;
+        if (y &amp; 1) &#123;
+            res *&#x3D; x;
+            res %&#x3D; mod;
+        &#125;
+        x *&#x3D; x;
+        x %&#x3D; mod;
+        y &gt;&gt;&#x3D; 1;
+    &#125;
+    return res;
+&#125;
+inline void init() &#123;
+    for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;
+        fa[i] &#x3D; i;
+        vis[i] &#x3D; 0;
+    &#125;
+&#125;
+int find(int x) &#123;
+    if (x !&#x3D; fa[x]) &#123;
+        fa[x] &#x3D; find(fa[x]);
+    &#125;
+    return fa[x];
+&#125;
+inline void unionSet(int x, int y) &#123;
+    x &#x3D; find(x);
+    y &#x3D; find(y);
+    fa[x] &#x3D; y;
+&#125;
+void dfs(int i) &#123;
+    vis[i] &#x3D; 1;
+    if (vis[mpb[a[i]]] &#x3D;&#x3D; 0) &#123;
+        unionSet(mpb[a[i]], i);
+        dfs(mpb[a[i]]);
+    &#125;
+    if (vis[mpa[b[i]]] &#x3D;&#x3D; 0) &#123;
+        unionSet(mpa[b[i]], i);
+        dfs(mpa[b[i]]);
+    &#125;
+&#125;
+signed main() &#123;
+    scanf(&quot;%lld&quot;, &amp;_);
+    while (_--) &#123;
+        scanf(&quot;%lld&quot;, &amp;n);
+        init();
+        for (int i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;
+            scanf(&quot;%lld&quot;, &amp;a[i]);
+            mpa[a[i]] &#x3D; i;
+        &#125;
+        for (int i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;
+            scanf(&quot;%lld&quot;, &amp;b[i]);
+            mpb[b[i]] &#x3D; i;
+        &#125;
+        ans &#x3D; 0;
+        for (int i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;
+            if (vis[i] &#x3D;&#x3D; 0) &#123;
+                dfs(i);
+            &#125;
+        &#125;
+        for (int i &#x3D; 1; i &lt;&#x3D; n; ++i) &#123;
+            if (fa[i] &#x3D;&#x3D; i) &#123;
+                ans++;
+            &#125;
+        &#125;
+        int tmp &#x3D; binpow(2, ans);
+        printf(&quot;%lld\n&quot;, tmp);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="CF1529D"><a href="#CF1529D" class="headerlink" title="CF1529D"></a>CF1529D</h3><h4 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h4><p>给出一个有n个点的线段，其中的点两两连线。要求任意两个线段的和相等或一个线段包含另一个线段。问有多少种情况</p>
+<h4 id="算法-2"><a href="#算法-2" class="headerlink" title="算法"></a>算法</h4><p>一开始，思索，模拟，tle<br>后来发现每一个线段的值均与约束个数相关<br>由于约数个数为积性函数，数字范围为1e6<br>于是采用线性筛</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void pre() &#123;
+    d[1] &#x3D; 1;
+    for (int i &#x3D; 2; i &lt;&#x3D; n; ++i) &#123;
+        if (!v[i]) v[i] &#x3D; 1, p[++tot] &#x3D; i, d[i] &#x3D; 2, num[i] &#x3D; 1;
+        for (int j &#x3D; 1; j &lt;&#x3D; tot &amp;&amp; i &lt;&#x3D; n &#x2F; p[j]; ++j) &#123;
+            v[p[j] * i] &#x3D; 1;
+            if (i % p[j] &#x3D;&#x3D; 0) &#123;
+                num[i * p[j]] &#x3D; num[i] + 1;
+                d[i * p[j]] &#x3D; (d[i] &#x2F; num[i * p[j]] * (num[i * p[j]] + 1))%mod;
+                break;
+            &#125; else &#123;
+                num[i * p[j]] &#x3D; 1;
+                d[i * p[j]] &#x3D; (d[i] * 2)%mod;
+            &#125;
+        &#125;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;bits&#x2F;stdc++.h&gt;
+#define int long long
+using namespace std;
+const int mod &#x3D; 998244353;
+int a[1000010] , d[1000010] , num[1000010] , tot , p[1000010] , v[1000010];
+int n;
+int sum&#x3D;1 , ans&#x3D;0;
+void pre() &#123;
+    d[1] &#x3D; 1;
+    for (int i &#x3D; 2; i &lt;&#x3D; n; ++i) &#123;
+        if (!v[i]) v[i] &#x3D; 1, p[++tot] &#x3D; i, d[i] &#x3D; 2, num[i] &#x3D; 1;
+        for (int j &#x3D; 1; j &lt;&#x3D; tot &amp;&amp; i &lt;&#x3D; n &#x2F; p[j]; ++j) &#123;
+            v[p[j] * i] &#x3D; 1;
+            if (i % p[j] &#x3D;&#x3D; 0) &#123;
+                num[i * p[j]] &#x3D; num[i] + 1;
+                d[i * p[j]] &#x3D; (d[i] &#x2F; num[i * p[j]] * (num[i * p[j]] + 1))%mod;
+                break;
+            &#125; else &#123;
+                num[i * p[j]] &#x3D; 1;
+                d[i * p[j]] &#x3D; (d[i] * 2)%mod;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+signed main()&#123;
+    cin&gt;&gt;n;
+    pre();
+    for(int i &#x3D; 2 ; i&lt;&#x3D;n ; i++)&#123;
+        a[i]&#x3D;1;
+        ans&#x3D;d[i];
+        a[i]%&#x3D;mod;
+        ans+&#x3D;sum;
+        sum+&#x3D;ans;
+        ans%&#x3D;mod;
+        sum%&#x3D;mod;
+    &#125;
+    if(n&#x3D;&#x3D;1)&#123;
+        cout&lt;&lt;&quot;1\n&quot;;
+        return 0;
+    &#125;
+    cout&lt;&lt;ans;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
@@ -233,7 +422,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E9%87%8F%EF%BC%8C%E5%86%B2%E9%87%8F%EF%BC%8C%E8%A7%92%E5%8A%A8%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text">动量，冲量，角动量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%EF%BC%8C%E6%B3%A2%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text">简谐振动，波动</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CF1517D"><span class="toc-number">2.</span> <span class="toc-text">CF1517D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CF1534C"><span class="toc-number">3.</span> <span class="toc-text">CF1534C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CF1529D"><span class="toc-number">4.</span> <span class="toc-text">CF1529D</span></a></li></ol>
                 </div>
             </div>
             
