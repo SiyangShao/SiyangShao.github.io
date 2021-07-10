@@ -24,10 +24,10 @@
 
 #waifu {
 	bottom: -1000px;
-	right: 0;
+	right: 5%;
 	line-height: 0;
-	margin-bottom: -10px;
-	position: fixed;
+	margin-bottom: 10px;
+	position: absolute;
 	transform: translateY(3px);
 	transition: transform .3s ease-in-out, bottom 3s ease-in-out;
 	z-index: 1;
@@ -50,7 +50,7 @@
 	opacity: 0;
 	overflow: hidden;
 	padding: 5px 10px;
-	position: absolute;
+	position: relative;
 	text-overflow: ellipsis;
 	transition: opacity 1s;
 	width: 250px;
