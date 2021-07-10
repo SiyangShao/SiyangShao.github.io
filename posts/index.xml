@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on shaosy&#39;s blog</title>
-    <link>http://siyangshao.github.io/posts/</link>
+    <link>https://siyangshao.github.io/posts/</link>
     <description>Recent content in Posts on shaosy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 15:59:52 +0800</lastBuildDate><atom:link href="http://siyangshao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 15:59:52 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Main</title>
-      <link>http://siyangshao.github.io/posts/main/</link>
+      <link>https://siyangshao.github.io/posts/main/</link>
       <pubDate>Sat, 10 Jul 2021 15:59:52 +0800</pubDate>
       
-      <guid>http://siyangshao.github.io/posts/main/</guid>
+      <guid>https://siyangshao.github.io/posts/main/</guid>
       <description>个人blog正在迁移中 由hexo迁移至hugo</description>
       <content>&lt;p&gt;个人blog正在迁移中
 由hexo迁移至hugo&lt;/p&gt;
