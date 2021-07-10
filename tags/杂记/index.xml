@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on shaosy&#39;s blog</title>
-    <link>https://siyangshao.github.io/posts/</link>
-    <description>Recent content in Posts on shaosy&#39;s blog</description>
+    <title>杂记 on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/%E6%9D%82%E8%AE%B0/</link>
+    <description>Recent content in 杂记 on shaosy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jul 2021 22:22:36 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jul 2021 22:22:36 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/%E6%9D%82%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>202105</title>
       <link>https://siyangshao.github.io/posts/202105/</link>
@@ -32,18 +32,6 @@
 去新加坡的机票已经买好了，是7月19日出发的。说来也巧，我是7月17号成年。正好卡在这个时间点。不过，或许是由于疫情原因，student pass的邮件仍然没有发过来——当然，当大家的student pass都遥遥无期的时候，我也算不上着急了。
 转眼间，我高中毕业，也已经快1年了啊。七月，八月，十二月，一月，三月，五月。这些月份里都产生了可以说是改变了我轨迹的事情。从这方面看的话，去年可以说是跌宕起伏了。但是，无论我日后发生什么，都改变不了17岁那年眼睛里失去的光芒。
 想了很多，但终究还是悲哀的发现，对我而言，高考，依然是永远的噩梦了。&lt;/p&gt;
-</content>
-    </item>
-    
-    <item>
-      <title>Main</title>
-      <link>https://siyangshao.github.io/posts/main/</link>
-      <pubDate>Sat, 10 Jul 2021 15:59:52 +0800</pubDate>
-      
-      <guid>https://siyangshao.github.io/posts/main/</guid>
-      <description>个人blog正在迁移中 由hexo迁移至hugo</description>
-      <content>&lt;p&gt;个人blog正在迁移中
-由hexo迁移至hugo&lt;/p&gt;
 </content>
     </item>
     
