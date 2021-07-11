@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>线性代数 on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+    <description>Recent content in 线性代数 on shaosy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Mar 2021 16:12:43 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>线性代数</title>
+      <link>https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Sat, 20 Mar 2021 16:12:43 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
+      <description>线性代数 知识点 行列式性质 对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {a_{21}} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a_{m 1}} &amp;amp; {a_{m 2}} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right] $的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {0} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {0} &amp;amp; {0} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]$，则行列式的值有 $$ A=a_{11}\cdot a_{22}\cdots a_{mn} $$</description>
+      <content>&lt;h1 id=&#34;线性代数&#34;&gt;线性代数&lt;/h1&gt;
+&lt;h2 id=&#34;知识点&#34;&gt;知识点&lt;/h2&gt;
+&lt;h3 id=&#34;行列式性质&#34;&gt;行列式性质&lt;/h3&gt;
+&lt;p&gt;对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {a_{21}} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a_{m 1}} &amp;amp; {a_{m 2}} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]
+$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {0} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {0} &amp;amp; {0} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]$，则行列式的值有
+$$
+A=a_{11}\cdot a_{22}\cdots a_{mn}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;tricks&#34;&gt;Tricks:&lt;/h4&gt;
+&lt;p&gt;1.某行（列）加上or减去某行（列）几倍，行列式值不变&lt;/p&gt;
+&lt;p&gt;2.某行（列）乘k，等于A*k&lt;/p&gt;
+&lt;p&gt;3.互换两行（列），行列式变号&lt;/p&gt;
+&lt;h3 id=&#34;行列式计算&#34;&gt;行列式计算&lt;/h3&gt;
+&lt;h4 id=&#34;1&#34;&gt;1&lt;/h4&gt;
+&lt;p&gt;$$
+A=\left[\begin{array}{cccc}{x} &amp;amp; {a} &amp;amp; {\cdots} &amp;amp; {a} \ {a} &amp;amp; {x} &amp;amp; {\cdots} &amp;amp; {a} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a} &amp;amp; {a} &amp;amp; {\cdots} &amp;amp; {x}\end{array}\right]=(x-a)^{n-1}[x+(n-1)a]
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2&#34;&gt;2&lt;/h4&gt;
+&lt;p&gt;$$
+A=\left[\begin{array}{cccc}{1} &amp;amp; {1} &amp;amp; {\cdots} &amp;amp; {1} \ {x_{1}} &amp;amp; {x_{2}} &amp;amp; {\cdots} &amp;amp; {x_n} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {x_1^{n-1}} &amp;amp; {x_2^{n-1}} &amp;amp; {\cdots} &amp;amp; {x_n^{n-1}}\end{array}\right] \begin{aligned}&amp;amp;= (x_n-x_{n-1})(x_n-x_{n-2})(x_n-x_{n-3})\cdots(x_n-x_1)\  &amp;amp;\times(x_{n-1}-x{n-2})(x_{n-1}-x_{n-3})\cdots (x_{n-1}-x_1)\&amp;amp;\times\cdots\&amp;amp;\times(x_2-x_1)\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3&#34;&gt;3&lt;/h4&gt;
+&lt;p&gt;两行（列）相同/成比例时，行列式值为0&lt;/p&gt;
+&lt;p&gt;两行（列）为两项相加减时，行列式可拆分为两个行列式相加减&lt;/p&gt;
+&lt;h4 id=&#34;4-余子式代数余子式&#34;&gt;4 余子式/代数余子式&lt;/h4&gt;
+&lt;p&gt;余子式：$M_{ab}$即抹掉a行b列，计算行列式值&lt;/p&gt;
+&lt;p&gt;代数余子式：$A_{ab}=(-1)^{a+b}*M_{ab}$&lt;/p&gt;
+&lt;h4 id=&#34;5&#34;&gt;5&lt;/h4&gt;
+&lt;p&gt;$$
+D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots +a_{in}A_{in}(第i行)\&lt;br&gt;
+D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A{nj}(第j列)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;6-多个a或m相加减&#34;&gt;6 多个A或M相加减&lt;/h4&gt;
+&lt;h5 id=&#34;多个a相加&#34;&gt;多个A相加&lt;/h5&gt;
+&lt;p&gt;对$x\cdot A_{ij}$而言，将$a_{ij}$替换为$x$，带入计算行列式的值即为结果&lt;/p&gt;
+&lt;h5 id=&#34;多个m相加&#34;&gt;多个M相加&lt;/h5&gt;
+&lt;p&gt;将M转化为A，而后替换&lt;/p&gt;
+&lt;h4 id=&#34;7-给一方程组-判断解的情况&#34;&gt;7 给一方程组 判断解的情况&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方程组&lt;/th&gt;
+&lt;th&gt;$D\not=0$&lt;/th&gt;
+&lt;th&gt;$D=0$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;齐次&lt;/td&gt;
+&lt;td&gt;只有一组零解&lt;/td&gt;
+&lt;td&gt;有零解与非零解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;非齐次&lt;/td&gt;
+&lt;td&gt;只有一组非零解&lt;/td&gt;
+&lt;td&gt;有多个解或无解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;齐次：方程组除了x与0，没有常数项&lt;/p&gt;
+&lt;p&gt;非齐次：有常数项&lt;/p&gt;
+&lt;p&gt;D：将$x_1,x_2\cdots x_n$前系数提取得到的行列式的值&lt;/p&gt;
+&lt;h3 id=&#34;矩阵的运算&#34;&gt;矩阵的运算&lt;/h3&gt;
+&lt;h4 id=&#34;1矩阵的加减&#34;&gt;1.矩阵的加减&lt;/h4&gt;
+&lt;p&gt;直接加&lt;/p&gt;
+&lt;h3 id=&#34;2矩阵相乘&#34;&gt;2.矩阵相乘&lt;/h3&gt;
+&lt;p&gt;方法：前行乘后列&lt;/p&gt;
+&lt;h4 id=&#34;特殊矩阵&#34;&gt;特殊矩阵&lt;/h4&gt;
+&lt;p&gt;$ \left{
+\begin{matrix}
+0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0
+\end{matrix}
+\right}=0 $&lt;/p&gt;
+&lt;p&gt;$ \left{
+\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right}=I $&lt;/p&gt;
+&lt;p&gt;$I\cdot A=A$		 $A\cdot I=A$ 		$I^2=I\cdot I = I$&lt;/p&gt;
+&lt;p&gt;矩阵乘法不满足交换律！！！（$E$除外）&lt;/p&gt;
+&lt;p&gt;相似矩阵：&lt;/p&gt;
+&lt;h4 id=&#34;3矩阵取绝对值&#34;&gt;3.矩阵取绝对值&lt;/h4&gt;
+&lt;p&gt;计算行列式$A$的值即为矩阵$A$的值&lt;/p&gt;
+&lt;p&gt;其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$&lt;/p&gt;
+&lt;h4 id=&#34;4矩阵转置&#34;&gt;4.矩阵转置&lt;/h4&gt;
+&lt;p&gt;$A^T$将A的行变为列，列变为行&lt;/p&gt;
+&lt;p&gt;注意：$1.(AB)^T=B^TA^T$	$2.\left|A^T\right|=\left|A\right|$&lt;/p&gt;
+&lt;h4 id=&#34;5证明矩阵可逆&#34;&gt;5.证明矩阵可逆&lt;/h4&gt;
+&lt;p&gt;条件：1.矩阵A为方阵（&lt;strong&gt;行数与列数相等&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;​			2. $\left|A\right|\not=0$或者存在一个方阵B，满足$AB=I$或者$BA=I$&lt;/p&gt;
+&lt;h4 id=&#34;6求逆矩阵&#34;&gt;6.求逆矩阵&lt;/h4&gt;
+&lt;p&gt;$$
+\left(A ,\vdots, I\right)\rightarrow\left(I ,\vdots, A^{-1}\right)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;7利用acdot-a-1i或a-1cdot-ai计算&#34;&gt;7.利用$A\cdot A^{-1}I=$或$A^{-1}\cdot A=I$计算&lt;/h4&gt;
+&lt;p&gt;利用该性质等号两边同时乘以逆矩阵而后做到除法效果&lt;/p&gt;
+&lt;h4 id=&#34;8伴随矩阵&#34;&gt;8.伴随矩阵&lt;/h4&gt;
+&lt;p&gt;$A^*$为$A$的伴随矩阵&lt;/p&gt;
+&lt;p&gt;其中，$A^*$的第$i$行$j$列是$$&lt;/p&gt;
+&lt;p&gt;$A\cdot A^&lt;em&gt;=\left|A\right| I$或$A^&lt;/em&gt; \cdot A=\left|A\right| I$&lt;/p&gt;
+&lt;h4 id=&#34;9求矩阵的秩&#34;&gt;9.求矩阵的秩&lt;/h4&gt;
+&lt;p&gt;将矩阵化简为行阶梯形，有几行有非零数，秩就是多少&lt;/p&gt;
+&lt;h5 id=&#34;trick&#34;&gt;Trick：&lt;/h5&gt;
+&lt;p&gt;以下内容等价&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$A$可逆&lt;/li&gt;
+&lt;li&gt;$A$的相抵标准型是$n$阶单位矩阵&lt;/li&gt;
+&lt;li&gt;$A$可以表示为若干初等矩阵的积&lt;/li&gt;
+&lt;li&gt;存在$n$阶矩阵$B$，使得$AB=I$&lt;/li&gt;
+&lt;li&gt;若$A$是$n$阶矩阵，则$A$可逆，$r(A)=n$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;向量组与线性空间&#34;&gt;向量组与线性空间&lt;/h3&gt;
+&lt;h4 id=&#34;判断某向量是否可以由某向量组线性表示&#34;&gt;判断某向量是否可以由某向量组线性表示&lt;/h4&gt;
+&lt;p&gt;若$\left(a_1,a_2\cdots b\right)$的秩和$(a_1,a_2\cdots a_m , b)$的秩相等，则$b$可以由$a_1,a_2,a_3\cdots a_m$线性表示&lt;/p&gt;
+&lt;h4 id=&#34;判断某个向量组是否线性相关&#34;&gt;判断某个向量组是否线性相关&lt;/h4&gt;
+&lt;p&gt;若$R$&amp;lt;向量个数，则线性相关；若R=向量个数，则线性无关&lt;/p&gt;
+&lt;h4 id=&#34;已知三维向量空间的一组基底求某一向量在此基地下的坐标&#34;&gt;已知三维向量空间的一组基底，求某一向量在此基地下的坐标&lt;/h4&gt;
+&lt;p&gt;对空间向量的一组基底$\alpha_1,\alpha_2,\alpha_3$，向量$\beta$的坐标$k_1,k_2,k_3$满足:
+$$
+\beta=k_1\alpha_1+k_2\alpha_2+k_3\alpha_c
+$$&lt;/p&gt;
+&lt;h4 id=&#34;求一组向量的极大无关组&#34;&gt;求一组向量的极大无关组&lt;/h4&gt;
+&lt;p&gt;对于行向量$a_1,a_2,a_3,a_4$求其极大无关组&lt;/p&gt;
+&lt;p&gt;将其写入矩阵，变换为最简行阶梯型。则非零行（由上至下）即为其极大无关组&lt;/p&gt;
+&lt;h3 id=&#34;解方程组&#34;&gt;解方程组&lt;/h3&gt;
+&lt;p&gt;齐次方程组：&lt;/p&gt;
+&lt;p&gt;​				$R(A)=未知数个数$ 唯一解（零解）&lt;/p&gt;
+&lt;p&gt;​				$R(A)&amp;lt;未知数个数$ 多个解（零解和多个非零解）&lt;/p&gt;
+&lt;p&gt;非齐次方程组：&lt;/p&gt;
+&lt;p&gt;​				$R(A)\not=R(A|b)$ 无解&lt;/p&gt;
+&lt;p&gt;​				$R(A)=R(A|b)=未知数个数$ 一个非零解&lt;/p&gt;
+&lt;p&gt;​				$R(A)=R(A|b)&amp;lt;未知数个数$ 多个非零解&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162138852.png&#34; alt=&#34;线性代数&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162726234.png&#34; alt=&#34;基础解系&#34;&gt;&lt;/p&gt;
+&lt;p&gt;集合中线性无关的解向量个数：&lt;/p&gt;
+&lt;p&gt;​		齐次：未知数个数减去秩&lt;/p&gt;
+&lt;p&gt;​		非齐次：未知数个数减去秩加一&lt;/p&gt;
+&lt;h4 id=&#34;矩阵特征值&#34;&gt;矩阵特征值&lt;/h4&gt;
+&lt;p&gt;满足$\left|A-\lambda E\right|=0$的$\lambda$为特征值&lt;/p&gt;
+&lt;h4 id=&#34;特征向量&#34;&gt;特征向量&lt;/h4&gt;
+&lt;p&gt;$(A-\lambda E)x=0$的通解&lt;/p&gt;
+&lt;h4 id=&#34;判断方阵是否与对角线相似是否满足p-1apa&#34;&gt;判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$&lt;/h4&gt;
+&lt;p&gt;方阵特征向量等于方阵阶数：相似/满足&lt;/p&gt;
+&lt;p&gt;不等于：不相似/不满足&lt;/p&gt;
+&lt;h4 id=&#34;求对角阵可逆变换矩阵&#34;&gt;求对角阵/可逆变换矩阵&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320180006361.png&#34; alt=&#34;image-20210320180006361&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;历年卷&#34;&gt;历年卷&lt;/h2&gt;
+&lt;p&gt;矩阵相抵定义：$存在可逆矩阵P,Q,使得PAQ=B$&lt;/p&gt;
+&lt;p&gt;矩阵相似定义：$存在实可逆矩阵P,是的P^{-1}AP=B$&lt;/p&gt;
+&lt;p&gt;由此：矩阵相似则必定相抵，反之不一定&lt;/p&gt;
+&lt;p&gt;矩阵可逆的充分必要条件：与单位矩阵相抵&lt;/p&gt;
+&lt;p&gt;矩阵可对角化（与对角阵相似）的&lt;strong&gt;充分&lt;/strong&gt;条件：有n个不同的特征值&lt;/p&gt;
+&lt;p&gt;n阶方阵与对角阵相似的充要条件：有n个线性无关的特征向量&lt;/p&gt;
+&lt;p&gt;充要条件：有n个线性无关特征向量&lt;/p&gt;
+&lt;p&gt;注意：相似矩阵的&lt;strong&gt;秩、行列式值、迹、特征值、特征多项式&lt;/strong&gt;均相等&lt;/p&gt;
+&lt;p&gt;正交一定线性无关，线性无关不一定正交（nmd 正交就是垂直&lt;/p&gt;
+&lt;p&gt;行满秩情况下$R(A)=R(A|B)$，但是列满秩情况下不一定&lt;/p&gt;
+&lt;p&gt;$AA^&lt;em&gt;=\left|A\right|I$
+$$
+A^&lt;/em&gt;=\left|A\right|A^{-1}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+|A||A^{-1}|=I\&lt;br&gt;
+|A^{-1}|=\frac{1}{|A|}\&lt;br&gt;
+|A^*|=|A|^{n-1}
+$$&lt;/p&gt;
+&lt;p&gt;对于$A=BC$，有$A^n=B(CB)^{n-1}C$&lt;/p&gt;
+&lt;h3 id=&#34;规范正交化&#34;&gt;规范正交化&lt;/h3&gt;
+&lt;p&gt;对线性无关$a_1,a_2,a_3:$
+$$
+b_1=a_1\&lt;br&gt;
+b_2=a_2-\frac{b_1\cdot a_2}{b_1 \cdot b_1}b_1\&lt;br&gt;
+b_3=a_3-\frac{b_1\cdot a_3}{b_1 \cdot b_1}b_1-\frac{b_2 \cdot a_3}{b_2 \cdot b_2}b2
+$$
+证明$r(A)=r(A^TA)$，证明$Ax=0$与$A^TAx=0$同解即可&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

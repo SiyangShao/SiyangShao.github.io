@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>AtCoder ARC 116 :: shaosy&#39;s blog</title>
+  
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AtCoder还是更加偏向于思维感觉，和codeforces不太一样" />
+<meta name="keywords" content="补题目题解" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://siyangshao.github.io/posts/atcoder-arc-116/" />
+
+
+
+
+<link rel="stylesheet" href="https://siyangshao.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://siyangshao.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://siyangshao.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://siyangshao.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AtCoder ARC 116">
+<meta property="og:description" content="AtCoder还是更加偏向于思维感觉，和codeforces不太一样" />
+<meta property="og:url" content="https://siyangshao.github.io/posts/atcoder-arc-116/" />
+<meta property="og:site_name" content="shaosy&#39;s blog" />
+
+  <meta property="og:image" content="https://siyangshao.github.io">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-04-18 16:13:36 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div style="position:absolute;right:3%;top:10%;">
+        <a id="logo" href="https://siyangshao.github.io"><img
+                src="https://firefoxusercontent.com/dbeb73f5ba7f9457d819fa358934828a" width="75%" height="75%" /></a>
+    </div>
+    <div style="position:absolute;right:3%;top:30%;">
+        <h1><a href="https://siyangshao.github.io">shaosy&#39;s blog</a></h1>
+    </div>
+    <div style="position:absolute;right:7%;top:40%;">
+        <h3> <a href="https://github.com/SiyangShao">Github</a>&#160<a href="https://twitter.com/ShaoSiyang">Twitter </a></h3>
+    </div>
+    <script src="https://siyangshao.github.io/live2d/autoload.js"></script>
+
+</body>
+</html>
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a
+  href="/">
+  <div class="logo">
+    Main Page
+  </div>
+</a>
+
+    </div>
+    
+    <div class="menu-trigger">menu</div>
+    
+    
+  </div>
+  
+  <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://siyangshao.github.io/posts/atcoder-arc-116/">AtCoder ARC 116</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-04-18 [Updated: 2021-04-18]
+      </span>
+    
+    
+    <span class="post-author">:: shaosy</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://siyangshao.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+    
+    #<a href="https://siyangshao.github.io/tags/atcoder/">AtCoder</a>&nbsp;
+    
+    #<a href="https://siyangshao.github.io/tags/%E8%A1%A5%E9%A2%98/">补题</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h3 id="a--odd-vs-evenhttpsatcoderjpcontestsarc116tasksarc116_a"><a href="https://atcoder.jp/contests/arc116/tasks/arc116_a">A- Odd vs Even</a><a href="#a--odd-vs-evenhttpsatcoderjpcontestsarc116tasksarc116_a" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="题意">题意<a href="#题意" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>给出一个数字N，问N的因数中奇数和偶数哪个多</p>
+<h4 id="算法">算法<a href="#算法" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>被4整除：偶数多</p>
+<p>被2整除：一样</p>
+<p>奇数：奇数多</p>
+<h4 id="代码">代码<a href="#代码" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> t;
+<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> n;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	cin <span style="color:#f92672">&gt;&gt;</span> t;
+	<span style="color:#66d9ef">while</span> (t<span style="color:#f92672">--</span>) {
+		cin <span style="color:#f92672">&gt;&gt;</span> n;
+		<span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+			<span style="color:#66d9ef">if</span> (n <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Even</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+			} <span style="color:#66d9ef">else</span> {
+				cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Same</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+			}
+		} <span style="color:#66d9ef">else</span> {
+			cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Odd</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+		}
+	}
+}
+</code></pre></div><h3 id="b--products-of-min-maxhttpsatcoderjpcontestsarc116tasksarc116_b"><a href="https://atcoder.jp/contests/arc116/tasks/arc116_b">B- Products of Min-Max</a><a href="#b--products-of-min-maxhttpsatcoderjpcontestsarc116tasksarc116_b" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="题意-1">题意<a href="#题意-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>给出一个序列，求其所有非空子序列中最大值与最小值积的和</p>
+<h4 id="算法-1">算法<a href="#算法-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>将其从小到大排序</p>
+<p>则对$A_iA_j$，其总共出现了$w^{j-i-1}$次</p>
+<p>于是可得：
+$$
+Sum = \sum_{i=1}^N{\sum_{j=i+1}^N{A_i\cdot A_j\cdot 2^{j-i-1}}}+\sum_{i=1}^{N}{A_i^2}
+$$
+对于$\sum_{j=i+1}^N{ A_j\cdot 2^{j-i-1}}$，有：
+$$
+\sum_{j=(i-1)+1}^{N}{A_j}\cdot 2^{j-(i-1)+1}
+$$
+即：
+$$
+\sum_{j=i+1}^{N}{A_j}\cdot 2^{j-i+1}=2\cdot\sum_{j=(i-1)+1}^{N}{A_j}\cdot 2^{j-(i-1)+1}+A_i
+$$
+于是由上而下预处理有</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">f[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> f[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> a[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</code></pre></div><p>而后从下至上累加即可。</p>
+<h4 id="代码-1">代码<a href="#代码-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">int</span> N;
+<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> a[<span style="color:#ae81ff">200010</span>], f[<span style="color:#ae81ff">200010</span>];
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> mod <span style="color:#f92672">=</span> <span style="color:#ae81ff">998244353</span>;
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+	cin <span style="color:#f92672">&gt;&gt;</span> N;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> N; i<span style="color:#f92672">++</span>) {
+		cin <span style="color:#f92672">&gt;&gt;</span> a[i];
+	}
+	sort(a <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, a <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> N);
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> N; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">--</span>) {
+		f[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> f[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> a[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+		f[i] <span style="color:#f92672">%=</span> mod;
+	}
+	<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> N; i<span style="color:#f92672">++</span>) {
+		sum <span style="color:#f92672">+=</span> a[i] <span style="color:#f92672">*</span> f[i];
+		sum <span style="color:#f92672">%=</span> mod;
+		sum <span style="color:#f92672">+=</span> a[i] <span style="color:#f92672">*</span> a[i];
+		sum <span style="color:#f92672">%=</span> mod;
+	}
+	cout <span style="color:#f92672">&lt;&lt;</span> sum;
+}
+</code></pre></div>
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://siyangshao.github.io/posts/202104/">
+                <span class="button__icon">←</span>
+                <span class="button__text">202104</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://siyangshao.github.io/posts/codeforces-round-714/">
+                <span class="button__text">CodeForces Round 714</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://siyangshao.github.io/assets/main.js"></script>
+<script src="https://siyangshao.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

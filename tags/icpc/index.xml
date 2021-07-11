@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ICPC on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/icpc/</link>
+    <description>Recent content in ICPC on shaosy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Apr 2021 16:04:05 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/icpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2020ICPC Kunming</title>
+      <link>https://siyangshao.github.io/posts/2020icpc-kunming/</link>
+      <pubDate>Fri, 02 Apr 2021 16:04:05 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/2020icpc-kunming/</guid>
+      <description>热身赛 A、B 略，B我dirt了两发	太丢人了
+C-Statues 题意 给出n个位置，k个节点（不重复的位置和可能重复的重量），其中将一个节点从i移动到j所消耗代价为$|i-j|\cdot w[i]$ ，求使其成为不递减序列所需要的最小代价
+算法 一开始以为是贪心，后来以为是区间，都错了
+考虑dp
+用$dp[i][j]$存储在前$i$个格子中存储$j$个值所需要的最小代价
+那么不去管每个节点原始的位置，其放入dp所需要的代价均为$|a[j].pos-i|\cdot a[j].val$
+将节点首先按val，其次按pos排序
+那么对前i个格子存储j个点而言，其min必然为$dp[i-1][j]$（若存在）和$dp[i-1][j-1]+cost$的最小值
+即可得到状态转移方程：
+if(i-1&amp;gt;=j) dp[i][j] = min(dp[i-1][j] , dp[i-1][j-1] + abs(a[j].pos - i)*a[j].val); else dp[i][j]=dp[i-1][j-1] + abs(a[j].pos - i)*a[j].val; 代码 #include &amp;lt;bits/stdc++.h&amp;gt;#define int long long using namespace std; int n , k ; struct node{ int val , pos; }a[5010]; int dp[5010][5010]; bool cmp(node x , node y){ if(x.val!=y.val){ return x.val &amp;lt; y.val; }else{ return x.</description>
+      <content>&lt;h2 id=&#34;热身赛&#34;&gt;热身赛&lt;/h2&gt;
+&lt;p&gt;A、B 	略，B我dirt了两发	太丢人了&lt;/p&gt;
+&lt;h4 id=&#34;c-statueshttpsacnowcodercomacmcontest13977c&#34;&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/13977/C&#34;&gt;C-Statues&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;题意&#34;&gt;题意&lt;/h4&gt;
+&lt;p&gt;给出n个位置，k个节点（不重复的位置和可能重复的重量），其中将一个节点从i移动到j所消耗代价为$|i-j|\cdot w[i]$ ，求使其成为不递减序列所需要的最小代价&lt;/p&gt;
+&lt;h4 id=&#34;算法&#34;&gt;算法&lt;/h4&gt;
+&lt;p&gt;一开始以为是贪心，后来以为是区间，都错了&lt;/p&gt;
+&lt;p&gt;考虑dp&lt;/p&gt;
+&lt;p&gt;用$dp[i][j]$存储在前$i$个格子中存储$j$个值所需要的最小代价&lt;/p&gt;
+&lt;p&gt;那么不去管每个节点原始的位置，其放入dp所需要的代价均为$|a[j].pos-i|\cdot a[j].val$&lt;/p&gt;
+&lt;p&gt;将节点首先按val，其次按pos排序&lt;/p&gt;
+&lt;p&gt;那么对前i个格子存储j个点而言，其min必然为$dp[i-1][j]$（若存在）和$dp[i-1][j-1]+cost$的最小值&lt;/p&gt;
+&lt;p&gt;即可得到状态转移方程：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt;j) dp[i][j] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; min(dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j] , dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; abs(a[j].pos &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; i)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a[j].val);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; dp[i][j]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; abs(a[j].pos &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; i)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a[j].val;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;代码&#34;&gt;代码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define int long long
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; std;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n , k ;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;node&lt;/span&gt;{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; val , pos;
+}a[&lt;span style=&#34;color:#ae81ff&#34;&gt;5010&lt;/span&gt;];
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; dp[&lt;span style=&#34;color:#ae81ff&#34;&gt;5010&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;5010&lt;/span&gt;];
+&lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;cmp&lt;/span&gt;(node x , node y){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(x.val&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;y.val){
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x.val &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; y.val;
+    }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x.pos &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; y.pos;
+    }
+}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;signed&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(){
+    cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;k;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; k ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+        cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;a[i].pos&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;a[i].val;
+    }
+    sort(a&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,a&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;k,cmp);
+    dp[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; j&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; k ; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; j ; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+            &lt;span style=&#34;color:#75715e&#34;&gt;// dp前i个格子中有j个数字
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt;j)dp[i][j] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; min(dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j] , dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; abs(a[j].pos &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; i)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a[j].val);
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; dp[i][j]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;dp[i&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][j&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; abs(a[j].pos &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; i)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;a[j].val;
+        }
+    }
+    cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;dp[n][k]&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;正式赛&#34;&gt;正式赛&lt;/h2&gt;
+&lt;p&gt;总的来说还是太dirt了，只过了三道题，以我个人的问题居多吧。队友算不上给力，几乎就是我输出的。罚时爆掉了，我在L上面dirt了太多发。&lt;/p&gt;
+&lt;p&gt;打比赛还是快乐的，感觉到了自己的很多不足，也有了很多收获。初步打算暑假前换队伍了，可是学校里面找不到肯定能一起打的队友有点伤心。&lt;/p&gt;
+&lt;p&gt;H略&lt;/p&gt;
+&lt;h3 id=&#34;l-simone-and-graph-coloringhttpsacnowcodercomacmcontest12548l&#34;&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/12548/L&#34;&gt;L-Simone and graph coloring&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;题意-1&#34;&gt;题意&lt;/h4&gt;
+&lt;p&gt;给出一串数字，其中满足$i&amp;lt;j$且$a_i&amp;gt;a_j$的数字之间有连接。&lt;/p&gt;
+&lt;p&gt;给这串数字涂色，有链接的数字不能用一样的颜色。&lt;/p&gt;
+&lt;p&gt;问最小使用的颜色数量和涂色方案&lt;/p&gt;
+&lt;h4 id=&#34;算法-1&#34;&gt;算法&lt;/h4&gt;
+&lt;p&gt;瞎鼓捣搞出来最小使用的涂色方案应如下：&lt;/p&gt;
+&lt;p&gt;对每个颜色，涂为该颜色的应为一个不下降子数组&lt;/p&gt;
+&lt;p&gt;对每次新的$a_i$，将其排在比他小的最大的不下降子数组的末尾，若均不满足，则开新的子数组&lt;/p&gt;
+&lt;p&gt;对此可以通过二分查找法减少时间复杂度&lt;/p&gt;
+&lt;p&gt;所以总的时间复杂度为$nlogn$，若不进行优化则会TLE&lt;/p&gt;
+&lt;h4 id=&#34;代码-1&#34;&gt;代码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; std;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; t&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, n;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a[&lt;span style=&#34;color:#ae81ff&#34;&gt;1000010&lt;/span&gt;], b[&lt;span style=&#34;color:#ae81ff&#34;&gt;1000010&lt;/span&gt;], c[&lt;span style=&#34;color:#ae81ff&#34;&gt;1000010&lt;/span&gt;];
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; C;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; l , r , mid;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+    ios&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;sync_with_stdio(false);
+    cin.tie(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;), cout.tie(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+    cin &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; t;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (t&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;) {
+        &lt;span style=&#34;color:#75715e&#34;&gt;/***
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        memset(a, 0, sizeof(a));
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        memset(b, 0, sizeof(b));
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        memset(c, 0, sizeof(c));
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         ***/&lt;/span&gt;
+        cin &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; n;
+        C &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+        b[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, b[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, b[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        c[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, c[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, c[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+            cin &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; a[i];
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (a[i] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; b[C]) {
+                C&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;;
+                b[C] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a[i];
+                c[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; C;
+            } &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+                l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; , r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; C;
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(l&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt;r){
+                    mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (l&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;r)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+                    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(b[mid]&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;a[i]){
+                        l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+                    }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+                        r&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid;
+                    }
+                }
+                b[r] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a[i];
+                c[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; r;
+            }
+        }
+        cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; C &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+            cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; c[i] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;;
+        }
+        cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;i--mrmain-and-windmillshttpsacnowcodercomacmcontest12548i&#34;&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/12548/I&#34;&gt;I- Mr.Main and Windmills&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;题意-2&#34;&gt;题意&lt;/h4&gt;
+&lt;p&gt;从s点到t点的过程中，有n个风车。询问看到每个风车和其他风车之间相对位置（左侧或右侧）第k次变化时所处地点&lt;/p&gt;
+&lt;h4 id=&#34;算法-2&#34;&gt;算法&lt;/h4&gt;
+&lt;p&gt;由题意可知，每个风车之间的变化应当为这两个风车的连线与st线段的焦点&lt;/p&gt;
+&lt;p&gt;考虑到总共有n个风车，$n&amp;lt;1000$，所以预处理并排序焦点&lt;/p&gt;
+&lt;p&gt;复杂度为$n^2logn$&lt;/p&gt;
+&lt;p&gt;具体怎么算就是板子了&lt;/p&gt;
+&lt;h4 id=&#34;代码-2&#34;&gt;代码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; eps &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pow(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;,&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;);
+&lt;span style=&#34;color:#75715e&#34;&gt;#define zero(x) ((fabs(x) &amp;lt; eps?1:0))
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define sgn(x)(fabs(x)&amp;lt;eps ? 0 :((x)&amp;lt;0?-1:1))
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; std;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;point&lt;/span&gt;
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; x,y;
+    point(&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; , &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;){
+        x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a , y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b;
+    }
+    point &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; point &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;b) &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;point&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;b.x , y&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;b.y);
+    }
+    point &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; point &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;b) &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;point&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;b.x , y&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;b.y);
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; (point &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; b) &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;zero&lt;/span&gt;(x&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;b.x)&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;zero(y&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;b.y);
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; point &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;b) &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;b.x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; y&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;b.y;
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;operator&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; point &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;b) &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt;{
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;b.y &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; y&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;b.x;
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;split&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; a , &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;b){
+        a&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;x,b&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;y;
+    }
+};
+point start , tend;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;line&lt;/span&gt;
+{
+    point s,e;
+    line(){}
+    line(point ss , point ee){
+        s&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ss,e&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;ee;
+    }
+};
+point h[&lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt;];
+vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;point&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;q[&lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt;];
+&lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;cmp&lt;/span&gt;(point a , point b){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; disa &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).x&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).x&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;(a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).y&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;(a&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).y;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; disb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ((b&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).x)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;((b&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).x)&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;((b&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).y)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;((b&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;start).y);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; disa &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; disb;
+}
+&lt;span style=&#34;color:#75715e&#34;&gt;//l1 zhixian l2 xianduan
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;segxline&lt;/span&gt;(line l1 , line l2){
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sgn((l2.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.e)&lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt;(l1.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.e))&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;sgn((l2.e&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.e)&lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt;(l1.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.e))&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+}
+point &lt;span style=&#34;color:#a6e22e&#34;&gt;spoint&lt;/span&gt;(line l1 , line l2){
+    point res &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; l1.s;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;double&lt;/span&gt; t &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ((l1.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l2.s)&lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt;(l2.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l2.e))&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;((l1.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.e)&lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt;(l2.s&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l2.e));
+    res.x&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;(l1.e.x&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.s.x)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;t;
+    res.y &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;(l1.e.y&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;l1.s.y)&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;t;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; res;
+}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;()
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n,m;
+    cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;n&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;m;
+    cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;start.x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;start.y&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;tend.x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;tend.y;
+    line base;
+    base.s&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;start , base.e &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tend;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt;n;i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+    {
+        cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;h[i].x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;h[i].y;
+    }
+    line tmp;
+    point tmpiont;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;  ; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; j&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+            tmp.s&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;h[i] , tmp.e&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;h[j];
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(segxline(tmp,base)){
+                tmpiont &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spoint(tmp,base);
+                q[i].push_back(tmpiont);
+                q[j].push_back(tmpiont);
+            }
+        }
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+        sort(q[i].begin() , q[i].end() , cmp);
+    }
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; hi , ki;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(m&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;){
+        cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;hi&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;ki;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(q[hi].size()&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;ki){
+            cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-1&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+        }&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+            cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;setiosflags(ios&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;fixed)&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;setprecision(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;);
+            cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;q[hi][ki&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;].x&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;q[hi][ki&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;].y&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;j-parallel-sorthttpsacnowcodercomacmcontest12548j&#34;&gt;&lt;a href=&#34;https://ac.nowcoder.com/acm/contest/12548/J&#34;&gt;J-Parallel Sort&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&#34;题意-3&#34;&gt;题意&lt;/h4&gt;
+&lt;p&gt;给出一串数组，保证每个数字都只出现一次。每一轮可以交换任意多组数字，问最少几轮使其为正序&lt;/p&gt;
+&lt;h4 id=&#34;算法-3&#34;&gt;算法&lt;/h4&gt;
+&lt;p&gt;考虑两种情况&lt;/p&gt;
+&lt;h5 id=&#34;情况一&#34;&gt;情况一&lt;/h5&gt;
+&lt;p&gt;$a[i]==a[a[i]]$ 此时，只用一轮即可，交换$a[i]$和$a[a[i]]$&lt;/p&gt;
+&lt;h5 id=&#34;情况2&#34;&gt;情况2&lt;/h5&gt;
+&lt;p&gt;$a[i]!=a[a[i]]$&lt;/p&gt;
+&lt;p&gt;此时需要两轮完成。将其考虑为一个序列12345&lt;/p&gt;
+&lt;p&gt;其中目前面临的数据为23451,需要将其轮换&lt;/p&gt;
+&lt;p&gt;则第一轮交换14,23，第二轮则交换15,24&lt;/p&gt;
+&lt;p&gt;可见，第一轮为a[i]与a[n-i-1]交换，第二轮为a[i]与a[n-i]交换&lt;/p&gt;
+&lt;h4 id=&#34;代码-3&#34;&gt;代码&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;bits/stdc++.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;namespace&lt;/span&gt; std;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a[&lt;span style=&#34;color:#ae81ff&#34;&gt;100001&lt;/span&gt;], vis[&lt;span style=&#34;color:#ae81ff&#34;&gt;100001&lt;/span&gt;];
+vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; swa;
+vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;vector&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; turn;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+	ios&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;sync_with_stdio(false);
+	cin.tie(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;), cout.tie(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+	cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;n;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; i&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+		cin&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt;a[i];
+	}
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; n ; i &lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(vis[i]&lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt;a[i]&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;i) &lt;span style=&#34;color:#66d9ef&#34;&gt;continue&lt;/span&gt;;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(a[a[i]]&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;i){
+			swa.push_back(i);
+			swa.push_back(a[i]);
+			vis[i]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+			vis[a[i]]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+		}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+			turn.push_back({});
+			&lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;{
+				turn[turn.size()&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;].push_back(k);
+				vis[k]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+				k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;a[k];
+			}&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(k&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;i);
+			vis[a[k]]&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+		}
+	}
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(swa.size()&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;turn.size()&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;){
+		cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+	}
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(swa.size()&lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;turn.size()&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;){
+		cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+		cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;swa.size()&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : swa){
+			cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i;
+		}
+		cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+	}
+	cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : turn){
+		num&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;(i.size()&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+	}
+	cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;num&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;swa.size()&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : swa){
+		cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i;
+	}
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : turn){
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; ,k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;i.size()&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;j&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;k;j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;,k&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt; ){
+			cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i[j]&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i[k];
+		}
+	}
+	cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+	num&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : turn){
+		num&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;i.size()&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+	}
+	cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;num;
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt; i : turn){
+		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; ,k&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;i.size()&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;j&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;k;j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;,k&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt; ){
+			cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i[j]&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;i[k];
+		}
+	}
+	cout&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

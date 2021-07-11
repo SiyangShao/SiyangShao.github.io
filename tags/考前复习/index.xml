@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>考前复习 on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/%E8%80%83%E5%89%8D%E5%A4%8D%E4%B9%A0/</link>
+    <description>Recent content in 考前复习 on shaosy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jun 2021 16:09:00 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/%E8%80%83%E5%89%8D%E5%A4%8D%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大学物理2</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/</link>
+      <pubDate>Wed, 09 Jun 2021 16:09:00 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/</guid>
+      <description>场强 半径为$R$ 电量为$q$均匀带电球体
+球内 $$ E=\frac{q}{4\pi\varepsilon_0R^3}r $$ 球外 $$ E=\frac{q}{4\pi\varepsilon_0r^2} $$ 线密度为$\lambda$的无限长均匀带电直线 $$ E=\frac{\lambda}{2\pi\varepsilon_0r} $$ 面密度为$\sigma$无限大均匀带电平面 $$ E=\frac{\sigma}{2\varepsilon_0} $$
+电容 $$ C=\frac{Q}{U} $$ $$ C=\frac{\varepsilon_0 \varepsilon_r S}{d} $$ $$ Q=CU $$ $$ E=\frac{q}{\varepsilon_0\varepsilon_r} $$ $$ E = \frac{U}{d} $$ $$ E = \frac{2F}{Q} $$ $$ U = \frac{Q}{C} $$ $$ U = Ed $$ $$ F = \frac{EQ}{2} $$ 若两金属板之间有多种东西，厚度为$d_1,d_2,d_3$，相对介电常数为$\varepsilon_1 , \varepsilon_2,\varepsilon_3$，则 $$ C = \frac{\varepsilon_0S}{\frac{d_1}{\varepsilon_1}+\frac{d_2}{\varepsilon_2}+\cdots} $$ 圆柱形电容器 $$ C=\frac{Q}{U} $$ $$ C=\frac{2\pi\varepsilon_0\varepsilon_r L}{\ln\frac{R_2}{R_1}} $$ 球形电容器 $$ C=\frac{Q}{U} $$ $$ C=\frac{4\pi\varepsilon_9\varepsilon_rR_1R_2}{R_2-R_1} $$ 电场能 $$ W=\frac{Q^2}{2C}=\frac{1}{2}QU=\frac{1}{2}CU^@ $$ 两板间位移电流 $$ I_d=\varepsilon_0 \varepsilon_r \frac{dE}{dt}S $$ $$ I_d=C\frac{dU}{dt} $$</description>
+      <content>&lt;h2 id=&#34;场强&#34;&gt;场强&lt;/h2&gt;
+&lt;p&gt;半径为$R$ 电量为$q$均匀带电球体&lt;/p&gt;
+&lt;p&gt;球内
+$$
+E=\frac{q}{4\pi\varepsilon_0R^3}r
+$$
+球外
+$$
+E=\frac{q}{4\pi\varepsilon_0r^2}
+$$
+线密度为$\lambda$的无限长均匀带电直线
+$$
+E=\frac{\lambda}{2\pi\varepsilon_0r}
+$$
+面密度为$\sigma$无限大均匀带电平面
+$$
+E=\frac{\sigma}{2\varepsilon_0}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;电容&#34;&gt;电容&lt;/h2&gt;
+&lt;p&gt;$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{\varepsilon_0 \varepsilon_r S}{d}
+$$
+$$
+Q=CU
+$$
+$$
+E=\frac{q}{\varepsilon_0\varepsilon_r}
+$$
+$$ E = \frac{U}{d} $$
+$$ E = \frac{2F}{Q} $$
+$$ U = \frac{Q}{C} $$
+$$ U = Ed $$
+$$ F = \frac{EQ}{2} $$
+若两金属板之间有多种东西，厚度为$d_1,d_2,d_3$，相对介电常数为$\varepsilon_1 , \varepsilon_2,\varepsilon_3$，则
+$$
+C = \frac{\varepsilon_0S}{\frac{d_1}{\varepsilon_1}+\frac{d_2}{\varepsilon_2}+\cdots}
+$$
+圆柱形电容器
+$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{2\pi\varepsilon_0\varepsilon_r L}{\ln\frac{R_2}{R_1}}
+$$
+球形电容器
+$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{4\pi\varepsilon_9\varepsilon_rR_1R_2}{R_2-R_1}
+$$
+电场能
+$$
+W=\frac{Q^2}{2C}=\frac{1}{2}QU=\frac{1}{2}CU^@
+$$
+两板间位移电流
+$$
+I_d=\varepsilon_0 \varepsilon_r \frac{dE}{dt}S
+$$
+$$
+I_d=C\frac{dU}{dt}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;磁场&#34;&gt;磁场&lt;/h2&gt;
+&lt;p&gt;无限长磁导线
+$$
+B=\frac{\mu_0I}{2\pi r}
+$$
+半径为R的圆形线圈
+$$
+B=\frac{\mu_0I}{2R}
+$$
+单位长度上电流为nI的无限长/环形磁螺旋管
+$$
+B=\mu_0 n I
+$$&lt;/p&gt;
+&lt;h3 id=&#34;求通电导线段射线磁感应强度&#34;&gt;求通电导线段/射线磁感应强度&lt;/h3&gt;
+&lt;p&gt;若所求点在导线上/延长线上，则磁感应强度为0
+若不在
+$$
+B=\frac{\mu_0 I}{4\pi r}(cos\theta_1 - cos\theta_2)
+$$
+其中 $\theta_1$为点与导线起点连线与导线夹角，$\theta_2$为点与导线终点连线与导线延长线夹角
+令$\theta$为$dl$为l方向与r的夹角
+$$
+B=\frac{\mu_0 Idl\sin\theta}{4\pi r^2}
+$$&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>微积分3</title>
+      <link>https://siyangshao.github.io/posts/%E5%BE%AE%E7%A7%AF%E5%88%863/</link>
+      <pubDate>Thu, 03 Jun 2021 16:11:46 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%BE%AE%E7%A7%AF%E5%88%863/</guid>
+      <description>级数 判断级数条件收敛的方法 $$ \lim_{n \to \infty}a_n=0 $$ 且 $$ a_n&amp;gt;a_{n-1} $$ 有级数条件收敛
+阿贝尔定理 对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$收敛，则对$|x|&amp;lt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$收敛 对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$发散，则对$|x|&amp;gt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$发散
+常见的泰勒级数 $$ e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!} $$ $$ \sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}} $$ $$ \cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}} $$ $$ \ln(1-x) = -\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1} $$ $$ \ln(1+x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n+1}}{n+1} $$ $$ \frac{1}{1-x} = \sum_{n=0}^{\infty}x^n\quad x\in(-1,1) $$ $$ (1+x)^\alpha=1+\alpha x+\cdots +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+\cdots\quad x\in(-1,1) $$
+傅里叶级数 $$ f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx)) $$ 其中 $$ a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx $$ $$ b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx $$
+微分方程 对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得: $$ y = F(x)+C $$</description>
+      <content>&lt;h1 id=&#34;级数&#34;&gt;级数&lt;/h1&gt;
+&lt;h2 id=&#34;判断级数条件收敛的方法&#34;&gt;判断级数条件收敛的方法&lt;/h2&gt;
+&lt;p&gt;$$
+\lim_{n \to \infty}a_n=0
+$$
+且
+$$
+a_n&amp;gt;a_{n-1}
+$$
+有级数条件收敛&lt;/p&gt;
+&lt;h2 id=&#34;阿贝尔定理&#34;&gt;阿贝尔定理&lt;/h2&gt;
+&lt;p&gt;对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$收敛，则对$|x|&amp;lt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$收敛
+对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$发散，则对$|x|&amp;gt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$发散&lt;/p&gt;
+&lt;h2 id=&#34;常见的泰勒级数&#34;&gt;常见的泰勒级数&lt;/h2&gt;
+&lt;p&gt;$$
+e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}
+$$
+$$
+\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}
+$$
+$$
+\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}
+$$
+$$
+\ln(1-x) = -\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}
+$$
+$$
+\ln(1+x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n+1}}{n+1}
+$$
+$$
+\frac{1}{1-x} = \sum_{n=0}^{\infty}x^n\quad x\in(-1,1)
+$$
+$$
+(1+x)^\alpha=1+\alpha x+\cdots +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+\cdots\quad x\in(-1,1)
+$$&lt;/p&gt;
+&lt;h2 id=&#34;傅里叶级数&#34;&gt;傅里叶级数&lt;/h2&gt;
+&lt;p&gt;$$
+f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx))
+$$
+其中
+$$
+a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx
+$$
+$$
+b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx
+$$&lt;/p&gt;
+&lt;h1 id=&#34;微分方程&#34;&gt;微分方程&lt;/h1&gt;
+&lt;p&gt;对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:
+$$
+y = F(x)+C
+$$&lt;/p&gt;
+&lt;h3 id=&#34;可分离变量的微分方程&#34;&gt;可分离变量的微分方程&lt;/h3&gt;
+&lt;p&gt;考虑方程
+$$
+\frac{dy}{dx} = f(x)g(y);
+$$
+则其可以改写为
+$$
+\frac{dy}{g(y)} = f(x)dx
+$$
+对其两端积分，于是有
+$$
+\int\frac{dy}{g(y)} = \int f(x)dx+C
+$$
+其所确定的隐式函数即为其通解&lt;/p&gt;
+&lt;h3 id=&#34;齐次方程&#34;&gt;齐次方程&lt;/h3&gt;
+&lt;p&gt;对方程$$ \frac{dy}{dx}=f(x,y)$$
+若$f(x,y)$可以表现为$\frac{y}{x}$的一元函数，即有
+$$
+f(x,y) = g(\frac{y}{x})
+$$
+可以得到方程
+$$
+\frac{dy}{dx} = g(\frac{y}{x})
+$$
+被称之为齐次方程
+对此，令$u = \frac{y}{x}$，则可得：
+$$
+\frac{dy}{dx} = u+x\frac{du}{dx}
+$$
+带入，可得
+$$
+u + x\frac{du}{dx} = g(u)
+$$
+分离变量，可以得到
+$$
+\frac{du}{g(u)-u} = \frac{dx}{x}
+$$
+积分可得通解
+$$
+\int \frac{du}{g(u)-u}=ln|x|+C
+$$
+用$\frac{y}{x}$替换$u$，即可得到通解&lt;/p&gt;
+&lt;h4 id=&#34;可化为齐次的微分方程&#34;&gt;可化为齐次的微分方程&lt;/h4&gt;
+&lt;p&gt;对于方程
+$$
+\frac{dy}{dx} = \frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}
+$$
+当$c_1=c_2=0$时为齐次方程
+当其为非齐次时
+为消元，令$x=X+h,y=Y+k$
+于是有$dx=dX , dy=dY$
+带入原式，可得
+$$
+\frac{dY}{dX} = \frac{a_1X+b_1Y+a_1h+b_1k+c_1}{a_2X+b_2Y+a_2h+b_2k+c_2}
+$$
+如果选取$h$和$k$，使得$a_1h+b_1k+c_1=0$,$a_2h+b_2k+c_2=0$
+于是得到齐次方程
+$$\frac{dY}{dX}=\frac{a_1X+b_1Y}{a_2X+b_2Y}$$
+接下来可用齐次方程解法，令$u=\frac{Y}{X}$求出通解&lt;/p&gt;
+&lt;h3 id=&#34;一阶线性微分方程&#34;&gt;一阶线性微分方程&lt;/h3&gt;
+&lt;p&gt;形如
+$$
+\frac{dy}{dx}+P(x)y=Q(x)
+$$
+的方程称为一阶线性微分方程
+当$Q(x)\not=0$时，称为一阶非齐次线性微分方程
+为求出一阶非齐次线性微分方程的解，先考虑一阶齐次线性微分方程的解
+将其化简，得
+$$
+\frac{dy}{y} = -P(x)dx
+$$
+两端积分并化简，可以得到其通解
+$$
+y=Ce^{-\int P(x)dx}
+$$
+其中，$C$是任意常数
+为求出非齐次线性微分方程的解，将$C$替换为有关$x$的函数$C(x)$
+为使其满足非齐次线性微分方程
+有
+$$
+\frac{dy}{dx} = \frac{dC(x)}{dx}e^{-\int P(x)dx}-P(x)C(x)e^{-\int P(x)dx}
+$$
+将其带入，得
+$$
+\frac{dC(x)}{dx}=Q(x)e^{\int P(x)dx}
+$$
+积分得
+$$
+C(x)=\int Q(x)e^{\int P(x)dx}dx+C
+$$
+于是一阶非齐次线性微分方程通解为
+$$
+y = e^{-\int P(x)dx}(\int{Q(x)e^{\int P(x)dx}dx}+C)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;伯努利方程&#34;&gt;伯努利方程&lt;/h4&gt;
+&lt;p&gt;伯努利方程形如
+$$
+\frac{dy}{dx} +P(x)y = Q(x)y^n (n\not= 0,1)
+$$
+对其而言，在方程两边同时除$y^n$，则
+$$
+y^{-n}\frac{dy}{dx}+P(x)y^{1-n} = Q(x)
+$$
+即有
+$$
+\frac{1}{1-n} \frac{d(y^{1-n})}{dx} + P(x)y^{1-n} = Q(x)
+$$
+将$y^{1-n}$用$z$代替，即可化作一阶非齐次线性方程求解&lt;/p&gt;
+&lt;h3 id=&#34;全微分方程&#34;&gt;全微分方程&lt;/h3&gt;
+&lt;p&gt;对于一阶微分方程而言，其可以写成对成形式
+即
+$$
+P(x,y) dx + Q(x,y)dy = 0
+$$
+若其为&lt;strong&gt;全微分方程&lt;/strong&gt;,即其满足
+$$
+\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}
+$$
+时，$u(x,y)$有计算公式，
+$$
+u(x,y) = \int_{x_0}^x P(x,y) dx + \int_{y_0}^y Q(x_0,y)dy
+$$
+$$
+u(x,y) = C
+$$
+即为该微分方程的通解&lt;/p&gt;
+&lt;h3 id=&#34;可降阶数的高维微分方程&#34;&gt;可降阶数的高维微分方程&lt;/h3&gt;
+&lt;p&gt;以二阶方程为例
+$$
+\frac{d^2 y}{dx^2} = f(x,y,\frac{dx}{dy})
+$$&lt;/p&gt;
+&lt;h4 id=&#34;1-fracd2-y-d-x2--fx型微分方程&#34;&gt;1. $\frac{d^2 y }{d x^2} = f(x)$型微分方程&lt;/h4&gt;
+&lt;p&gt;令$\frac{dy}{dx} = p$，该方程即可转化为一阶微分方程
+$$
+\frac{dp}{dx} = f(x)
+$$
+积分得
+$$
+p = \int f(x) dx + C_1
+$$
+即有
+$$
+\frac{dy} {dx} = \int f(x) dx + C_1
+$$
+再对上式积分，即可得到该方程通解
+$$
+y = \int(\int f(x) dx) dx + C_1 x + C_2
+$$
+以此类推，对n阶微分方程，积分n次可以求得通解&lt;/p&gt;
+&lt;h4 id=&#34;2fracd2-yd-x2--fxfracdydx型微分方程&#34;&gt;2.$\frac{d^2 y}{d x^2} = f(x,\frac{dy}{dx})$型微分方程&lt;/h4&gt;
+&lt;p&gt;同样，令$\frac{dy}{dx}= p$,方程变为
+$$
+\frac{dp}{dx}= f(x,p)
+$$
+设此方程通解为$p = \varphi(x,C_1)$
+则可由方程
+$$
+\frac{dy}{dx} = \varphi(x,C_1)
+$$
+求出原方程的通解
+$$
+y = \int \varphi(x,C_1)dx + C_2
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3fracd2-ydx-2--fyfracdydx型微分方程&#34;&gt;3.$\frac{d^2 y}{dx ^2} = f(y,\frac{dy}{dx})$型微分方程&lt;/h4&gt;
+&lt;p&gt;同样的，令$\frac{dy}{dx}=p$，可以得到
+$$
+\frac{d^2 y}{dx^2} = p\frac{dp}{dy}=f(y,p)
+$$
+若该方程的通解为$p=\varphi(y,C_1)$，将$P$用$\frac{dy}{dx}$带入，有
+$$
+\frac{dy}{dx} = \varphi(y,C_1)
+$$
+对其分离变量并积分，可得原方程通解
+$$
+\int \frac{dy}{\varphi(y,C_1)} = x + C_2
+$$
+注意：对形如
+$$
+\frac{d^{n-2}y}{dx^{n-2}}=f(\frac{d^{n-2}y}{dx^{n-2}},\frac{d^{n-1}y}{dx^{n-1}})
+$$
+的微分方程，若令$\frac{d^{n-2}y}{dx^{n-2}}=z$，则有$\frac{d^2 z}{dx^2}=f(z,\frac{dz}{dx})$
+求出$z$后积分$n-2$次，可以得到原方程通解&lt;/p&gt;
+&lt;h3 id=&#34;高阶线性微分方程解的结构&#34;&gt;高阶线性微分方程解的结构&lt;/h3&gt;
+&lt;p&gt;对于形如
+$$
+\frac{d^2 y}{dx^2} + P(x)\frac{dy}{dx}+ Q(x)y = f(x)
+$$
+的二阶线性微分方程，若$P(x)$和$Q(x)$都为常数，则其为&lt;strong&gt;二阶常系数线性微分方程&lt;/strong&gt;。$f(x)$称为方程的&lt;strong&gt;自由项&lt;/strong&gt;，若$f(x)=0$，则其称为&lt;strong&gt;二阶齐次线性微分方程&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;齐次线性微分方程&#34;&gt;齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;对于方程
+$$
+\frac{d^2 y}{dx^2}+P(x) \frac{dy}{dx}+Q(x)y=0
+$$
+&lt;strong&gt;定理11.1&lt;/strong&gt;
+若$y_1(x)$和$y_2(x)$都是该齐次线性微分方程的解，则$y=C_1y_1(x)+C_2y_2(x)$也是该方程的解
+即齐次线性微分方程的解满足&lt;strong&gt;叠加性&lt;/strong&gt;
+&lt;strong&gt;定理11.2&lt;/strong&gt;
+设$y_1(x),y_2(x),y_3(x)&amp;hellip;y_n(x)$为定义在区间$I$上的n个函数，若存在不全为零的n个常数，使得：$$
+k_1y_1(x)+k_2y_2(x)+k_3y_3(x)+&amp;hellip;k_ny_n(x)=0
+$$
+则称这n个函数在$I$上&lt;strong&gt;线性相关&lt;/strong&gt;，否则&lt;strong&gt;线性无关&lt;/strong&gt;
+若$y_1(x)$和$y_2(x)$是齐次线性微分方程的两个线性无关的解，则该方程通解为
+$$
+y = C_1y_1(x)+C_2y_2(x)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;非齐次线性微分方程&#34;&gt;非齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;定理11.3&lt;/strong&gt;
+设$y^* (x)$是二阶非齐次线性微分方程
+$$
+\frac{d^2 y}{dx^2}+P(x)\frac{dy}{dx}+Q(x)y=f(x)
+$$
+的一个特解，$Y(x)$是其对应齐次线性微分方程的特解，则
+$$
+y = Y(x)+y^*(x)
+$$
+是其通解&lt;/p&gt;
+&lt;h4 id=&#34;常数变易法&#34;&gt;常数变易法&lt;/h4&gt;
+&lt;p&gt;对于微分方程
+$$
+\frac{d^2 y}{dx^2}+P(x)\frac{dy}{dx}+Q(x)y=f(x)
+$$
+而言，设其对应齐次线性方程通解为
+$$
+y=C_1 y_1(x)+C_2 y_2(x)
+$$
+则其通解为
+$$
+y^*(x) = y_1(x)\int \frac{-y_2(x)f(x)}{W(y_1(x),y_2(x))}+y_2(x)\int\frac{y_1(x)f(x)}{W(y_1(x),y_2(x))}
+$$
+其中，$W(y_1(x),y_2(x))$有朗斯基行列式得出，具体值为
+$$
+W(y_1(x),y_2(x)) = y_1(x)\frac{dy_2(x)}{dx}-y_2(x)\frac{dy_1(x)}{dx}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;常系数齐次线性微分方程&#34;&gt;常系数齐次线性微分方程&lt;/h3&gt;
+&lt;h4 id=&#34;二阶常系数齐次线性微分方程&#34;&gt;二阶常系数齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;$$
+\frac{d^2 y}{dx^2}+p\frac{dy}{dx}+qy=0
+$$
+尝试用$e^{rx}$作为解
+则可以得到特征方程
+$$
+r_{1,2} = \frac{-p\pm\sqrt{p^2 -4q}}{2}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0&#34;&gt;$p^2 -4q&amp;gt;0$&lt;/h5&gt;
+&lt;p&gt;有两个特解，该方程通解为
+$$
+y=C_1e^{r_1 x} +   C_2e^{r_2 x}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0-1&#34;&gt;$p^2 -4q=0$&lt;/h5&gt;
+&lt;p&gt;通解为
+$$
+y=(C_1+C_2x)e^{-\frac{p}{2}x}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0-2&#34;&gt;$p^2 -4q&amp;lt;0$&lt;/h5&gt;
+&lt;p&gt;得到两个共轭复根
+通解为
+$$
+y=e^{\alpha x}[(C_1+C_2)\cos{\beta x}+i(C_1-C_2)\sin{\beta x}]
+$$
+即
+$$
+y=e^{\alpha x}(C_1\cos{\beta x}+C_2\sin{\beta x})
+$$
+其中，$C_1$为实数，$C_2$为虚数&lt;/p&gt;
+&lt;h4 id=&#34;n阶常系数齐次线性微分方程&#34;&gt;n阶常系数齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;同样地，得到其特征方程
+$$
+r^n+p_1 r^{n-1}+p_2 r^{n-2}+&amp;hellip;+p_{n-1} r + p_n = 0
+$$
+然后求解
+对于第n项，解为$e^{r_n x}$&lt;/p&gt;
+&lt;h3 id=&#34;欧拉方程&#34;&gt;欧拉方程&lt;/h3&gt;
+&lt;p&gt;形如
+$$
+x^n \frac{d^ny}{dx^n}+p_1x^{n-1}\frac{d^{n-1}y}{dx^{n-1}}+\cdots +p_{n-1}x\frac{dy}{dx}+p_ny=0
+$$
+引入自变量代换
+$$
+t = \ln(x)\&lt;br&gt;
+D = \frac{d}{dt}
+$$
+则可得
+$$
+x^k\frac{d^ky}{dx^k}=D(D-1)(D-2)\cdots(D-k+1)y
+$$
+然后可通过n阶常系数齐次线性方程方法解出t，带入即可得到x&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>线性代数</title>
+      <link>https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</link>
+      <pubDate>Sat, 20 Mar 2021 16:12:43 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</guid>
+      <description>线性代数 知识点 行列式性质 对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {a_{21}} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a_{m 1}} &amp;amp; {a_{m 2}} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right] $的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {0} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {0} &amp;amp; {0} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]$，则行列式的值有 $$ A=a_{11}\cdot a_{22}\cdots a_{mn} $$</description>
+      <content>&lt;h1 id=&#34;线性代数&#34;&gt;线性代数&lt;/h1&gt;
+&lt;h2 id=&#34;知识点&#34;&gt;知识点&lt;/h2&gt;
+&lt;h3 id=&#34;行列式性质&#34;&gt;行列式性质&lt;/h3&gt;
+&lt;p&gt;对$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {a_{21}} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a_{m 1}} &amp;amp; {a_{m 2}} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]
+$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp;amp; {a_{12}} &amp;amp; {\cdots} &amp;amp; {a_{1 n}} \ {0} &amp;amp; {a_{22}} &amp;amp; {\cdots} &amp;amp; {a_{2 n}} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {0} &amp;amp; {0} &amp;amp; {\cdots} &amp;amp; {a_{m n}}\end{array}\right]$，则行列式的值有
+$$
+A=a_{11}\cdot a_{22}\cdots a_{mn}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;tricks&#34;&gt;Tricks:&lt;/h4&gt;
+&lt;p&gt;1.某行（列）加上or减去某行（列）几倍，行列式值不变&lt;/p&gt;
+&lt;p&gt;2.某行（列）乘k，等于A*k&lt;/p&gt;
+&lt;p&gt;3.互换两行（列），行列式变号&lt;/p&gt;
+&lt;h3 id=&#34;行列式计算&#34;&gt;行列式计算&lt;/h3&gt;
+&lt;h4 id=&#34;1&#34;&gt;1&lt;/h4&gt;
+&lt;p&gt;$$
+A=\left[\begin{array}{cccc}{x} &amp;amp; {a} &amp;amp; {\cdots} &amp;amp; {a} \ {a} &amp;amp; {x} &amp;amp; {\cdots} &amp;amp; {a} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {a} &amp;amp; {a} &amp;amp; {\cdots} &amp;amp; {x}\end{array}\right]=(x-a)^{n-1}[x+(n-1)a]
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2&#34;&gt;2&lt;/h4&gt;
+&lt;p&gt;$$
+A=\left[\begin{array}{cccc}{1} &amp;amp; {1} &amp;amp; {\cdots} &amp;amp; {1} \ {x_{1}} &amp;amp; {x_{2}} &amp;amp; {\cdots} &amp;amp; {x_n} \ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\vdots} \ {x_1^{n-1}} &amp;amp; {x_2^{n-1}} &amp;amp; {\cdots} &amp;amp; {x_n^{n-1}}\end{array}\right] \begin{aligned}&amp;amp;= (x_n-x_{n-1})(x_n-x_{n-2})(x_n-x_{n-3})\cdots(x_n-x_1)\  &amp;amp;\times(x_{n-1}-x{n-2})(x_{n-1}-x_{n-3})\cdots (x_{n-1}-x_1)\&amp;amp;\times\cdots\&amp;amp;\times(x_2-x_1)\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3&#34;&gt;3&lt;/h4&gt;
+&lt;p&gt;两行（列）相同/成比例时，行列式值为0&lt;/p&gt;
+&lt;p&gt;两行（列）为两项相加减时，行列式可拆分为两个行列式相加减&lt;/p&gt;
+&lt;h4 id=&#34;4-余子式代数余子式&#34;&gt;4 余子式/代数余子式&lt;/h4&gt;
+&lt;p&gt;余子式：$M_{ab}$即抹掉a行b列，计算行列式值&lt;/p&gt;
+&lt;p&gt;代数余子式：$A_{ab}=(-1)^{a+b}*M_{ab}$&lt;/p&gt;
+&lt;h4 id=&#34;5&#34;&gt;5&lt;/h4&gt;
+&lt;p&gt;$$
+D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots +a_{in}A_{in}(第i行)\&lt;br&gt;
+D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A{nj}(第j列)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;6-多个a或m相加减&#34;&gt;6 多个A或M相加减&lt;/h4&gt;
+&lt;h5 id=&#34;多个a相加&#34;&gt;多个A相加&lt;/h5&gt;
+&lt;p&gt;对$x\cdot A_{ij}$而言，将$a_{ij}$替换为$x$，带入计算行列式的值即为结果&lt;/p&gt;
+&lt;h5 id=&#34;多个m相加&#34;&gt;多个M相加&lt;/h5&gt;
+&lt;p&gt;将M转化为A，而后替换&lt;/p&gt;
+&lt;h4 id=&#34;7-给一方程组-判断解的情况&#34;&gt;7 给一方程组 判断解的情况&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方程组&lt;/th&gt;
+&lt;th&gt;$D\not=0$&lt;/th&gt;
+&lt;th&gt;$D=0$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;齐次&lt;/td&gt;
+&lt;td&gt;只有一组零解&lt;/td&gt;
+&lt;td&gt;有零解与非零解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;非齐次&lt;/td&gt;
+&lt;td&gt;只有一组非零解&lt;/td&gt;
+&lt;td&gt;有多个解或无解&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;齐次：方程组除了x与0，没有常数项&lt;/p&gt;
+&lt;p&gt;非齐次：有常数项&lt;/p&gt;
+&lt;p&gt;D：将$x_1,x_2\cdots x_n$前系数提取得到的行列式的值&lt;/p&gt;
+&lt;h3 id=&#34;矩阵的运算&#34;&gt;矩阵的运算&lt;/h3&gt;
+&lt;h4 id=&#34;1矩阵的加减&#34;&gt;1.矩阵的加减&lt;/h4&gt;
+&lt;p&gt;直接加&lt;/p&gt;
+&lt;h3 id=&#34;2矩阵相乘&#34;&gt;2.矩阵相乘&lt;/h3&gt;
+&lt;p&gt;方法：前行乘后列&lt;/p&gt;
+&lt;h4 id=&#34;特殊矩阵&#34;&gt;特殊矩阵&lt;/h4&gt;
+&lt;p&gt;$ \left{
+\begin{matrix}
+0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 0
+\end{matrix}
+\right}=0 $&lt;/p&gt;
+&lt;p&gt;$ \left{
+\begin{matrix}
+1 &amp;amp; 0 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 1 &amp;amp; 0 \&lt;br&gt;
+0 &amp;amp; 0 &amp;amp; 1
+\end{matrix}
+\right}=I $&lt;/p&gt;
+&lt;p&gt;$I\cdot A=A$		 $A\cdot I=A$ 		$I^2=I\cdot I = I$&lt;/p&gt;
+&lt;p&gt;矩阵乘法不满足交换律！！！（$E$除外）&lt;/p&gt;
+&lt;p&gt;相似矩阵：&lt;/p&gt;
+&lt;h4 id=&#34;3矩阵取绝对值&#34;&gt;3.矩阵取绝对值&lt;/h4&gt;
+&lt;p&gt;计算行列式$A$的值即为矩阵$A$的值&lt;/p&gt;
+&lt;p&gt;其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$&lt;/p&gt;
+&lt;h4 id=&#34;4矩阵转置&#34;&gt;4.矩阵转置&lt;/h4&gt;
+&lt;p&gt;$A^T$将A的行变为列，列变为行&lt;/p&gt;
+&lt;p&gt;注意：$1.(AB)^T=B^TA^T$	$2.\left|A^T\right|=\left|A\right|$&lt;/p&gt;
+&lt;h4 id=&#34;5证明矩阵可逆&#34;&gt;5.证明矩阵可逆&lt;/h4&gt;
+&lt;p&gt;条件：1.矩阵A为方阵（&lt;strong&gt;行数与列数相等&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;​			2. $\left|A\right|\not=0$或者存在一个方阵B，满足$AB=I$或者$BA=I$&lt;/p&gt;
+&lt;h4 id=&#34;6求逆矩阵&#34;&gt;6.求逆矩阵&lt;/h4&gt;
+&lt;p&gt;$$
+\left(A ,\vdots, I\right)\rightarrow\left(I ,\vdots, A^{-1}\right)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;7利用acdot-a-1i或a-1cdot-ai计算&#34;&gt;7.利用$A\cdot A^{-1}I=$或$A^{-1}\cdot A=I$计算&lt;/h4&gt;
+&lt;p&gt;利用该性质等号两边同时乘以逆矩阵而后做到除法效果&lt;/p&gt;
+&lt;h4 id=&#34;8伴随矩阵&#34;&gt;8.伴随矩阵&lt;/h4&gt;
+&lt;p&gt;$A^*$为$A$的伴随矩阵&lt;/p&gt;
+&lt;p&gt;其中，$A^*$的第$i$行$j$列是$$&lt;/p&gt;
+&lt;p&gt;$A\cdot A^&lt;em&gt;=\left|A\right| I$或$A^&lt;/em&gt; \cdot A=\left|A\right| I$&lt;/p&gt;
+&lt;h4 id=&#34;9求矩阵的秩&#34;&gt;9.求矩阵的秩&lt;/h4&gt;
+&lt;p&gt;将矩阵化简为行阶梯形，有几行有非零数，秩就是多少&lt;/p&gt;
+&lt;h5 id=&#34;trick&#34;&gt;Trick：&lt;/h5&gt;
+&lt;p&gt;以下内容等价&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$A$可逆&lt;/li&gt;
+&lt;li&gt;$A$的相抵标准型是$n$阶单位矩阵&lt;/li&gt;
+&lt;li&gt;$A$可以表示为若干初等矩阵的积&lt;/li&gt;
+&lt;li&gt;存在$n$阶矩阵$B$，使得$AB=I$&lt;/li&gt;
+&lt;li&gt;若$A$是$n$阶矩阵，则$A$可逆，$r(A)=n$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;向量组与线性空间&#34;&gt;向量组与线性空间&lt;/h3&gt;
+&lt;h4 id=&#34;判断某向量是否可以由某向量组线性表示&#34;&gt;判断某向量是否可以由某向量组线性表示&lt;/h4&gt;
+&lt;p&gt;若$\left(a_1,a_2\cdots b\right)$的秩和$(a_1,a_2\cdots a_m , b)$的秩相等，则$b$可以由$a_1,a_2,a_3\cdots a_m$线性表示&lt;/p&gt;
+&lt;h4 id=&#34;判断某个向量组是否线性相关&#34;&gt;判断某个向量组是否线性相关&lt;/h4&gt;
+&lt;p&gt;若$R$&amp;lt;向量个数，则线性相关；若R=向量个数，则线性无关&lt;/p&gt;
+&lt;h4 id=&#34;已知三维向量空间的一组基底求某一向量在此基地下的坐标&#34;&gt;已知三维向量空间的一组基底，求某一向量在此基地下的坐标&lt;/h4&gt;
+&lt;p&gt;对空间向量的一组基底$\alpha_1,\alpha_2,\alpha_3$，向量$\beta$的坐标$k_1,k_2,k_3$满足:
+$$
+\beta=k_1\alpha_1+k_2\alpha_2+k_3\alpha_c
+$$&lt;/p&gt;
+&lt;h4 id=&#34;求一组向量的极大无关组&#34;&gt;求一组向量的极大无关组&lt;/h4&gt;
+&lt;p&gt;对于行向量$a_1,a_2,a_3,a_4$求其极大无关组&lt;/p&gt;
+&lt;p&gt;将其写入矩阵，变换为最简行阶梯型。则非零行（由上至下）即为其极大无关组&lt;/p&gt;
+&lt;h3 id=&#34;解方程组&#34;&gt;解方程组&lt;/h3&gt;
+&lt;p&gt;齐次方程组：&lt;/p&gt;
+&lt;p&gt;​				$R(A)=未知数个数$ 唯一解（零解）&lt;/p&gt;
+&lt;p&gt;​				$R(A)&amp;lt;未知数个数$ 多个解（零解和多个非零解）&lt;/p&gt;
+&lt;p&gt;非齐次方程组：&lt;/p&gt;
+&lt;p&gt;​				$R(A)\not=R(A|b)$ 无解&lt;/p&gt;
+&lt;p&gt;​				$R(A)=R(A|b)=未知数个数$ 一个非零解&lt;/p&gt;
+&lt;p&gt;​				$R(A)=R(A|b)&amp;lt;未知数个数$ 多个非零解&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162138852.png&#34; alt=&#34;线性代数&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162726234.png&#34; alt=&#34;基础解系&#34;&gt;&lt;/p&gt;
+&lt;p&gt;集合中线性无关的解向量个数：&lt;/p&gt;
+&lt;p&gt;​		齐次：未知数个数减去秩&lt;/p&gt;
+&lt;p&gt;​		非齐次：未知数个数减去秩加一&lt;/p&gt;
+&lt;h4 id=&#34;矩阵特征值&#34;&gt;矩阵特征值&lt;/h4&gt;
+&lt;p&gt;满足$\left|A-\lambda E\right|=0$的$\lambda$为特征值&lt;/p&gt;
+&lt;h4 id=&#34;特征向量&#34;&gt;特征向量&lt;/h4&gt;
+&lt;p&gt;$(A-\lambda E)x=0$的通解&lt;/p&gt;
+&lt;h4 id=&#34;判断方阵是否与对角线相似是否满足p-1apa&#34;&gt;判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$&lt;/h4&gt;
+&lt;p&gt;方阵特征向量等于方阵阶数：相似/满足&lt;/p&gt;
+&lt;p&gt;不等于：不相似/不满足&lt;/p&gt;
+&lt;h4 id=&#34;求对角阵可逆变换矩阵&#34;&gt;求对角阵/可逆变换矩阵&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320180006361.png&#34; alt=&#34;image-20210320180006361&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;历年卷&#34;&gt;历年卷&lt;/h2&gt;
+&lt;p&gt;矩阵相抵定义：$存在可逆矩阵P,Q,使得PAQ=B$&lt;/p&gt;
+&lt;p&gt;矩阵相似定义：$存在实可逆矩阵P,是的P^{-1}AP=B$&lt;/p&gt;
+&lt;p&gt;由此：矩阵相似则必定相抵，反之不一定&lt;/p&gt;
+&lt;p&gt;矩阵可逆的充分必要条件：与单位矩阵相抵&lt;/p&gt;
+&lt;p&gt;矩阵可对角化（与对角阵相似）的&lt;strong&gt;充分&lt;/strong&gt;条件：有n个不同的特征值&lt;/p&gt;
+&lt;p&gt;n阶方阵与对角阵相似的充要条件：有n个线性无关的特征向量&lt;/p&gt;
+&lt;p&gt;充要条件：有n个线性无关特征向量&lt;/p&gt;
+&lt;p&gt;注意：相似矩阵的&lt;strong&gt;秩、行列式值、迹、特征值、特征多项式&lt;/strong&gt;均相等&lt;/p&gt;
+&lt;p&gt;正交一定线性无关，线性无关不一定正交（nmd 正交就是垂直&lt;/p&gt;
+&lt;p&gt;行满秩情况下$R(A)=R(A|B)$，但是列满秩情况下不一定&lt;/p&gt;
+&lt;p&gt;$AA^&lt;em&gt;=\left|A\right|I$
+$$
+A^&lt;/em&gt;=\left|A\right|A^{-1}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+|A||A^{-1}|=I\&lt;br&gt;
+|A^{-1}|=\frac{1}{|A|}\&lt;br&gt;
+|A^*|=|A|^{n-1}
+$$&lt;/p&gt;
+&lt;p&gt;对于$A=BC$，有$A^n=B(CB)^{n-1}C$&lt;/p&gt;
+&lt;h3 id=&#34;规范正交化&#34;&gt;规范正交化&lt;/h3&gt;
+&lt;p&gt;对线性无关$a_1,a_2,a_3:$
+$$
+b_1=a_1\&lt;br&gt;
+b_2=a_2-\frac{b_1\cdot a_2}{b_1 \cdot b_1}b_1\&lt;br&gt;
+b_3=a_3-\frac{b_1\cdot a_3}{b_1 \cdot b_1}b_1-\frac{b_2 \cdot a_3}{b_2 \cdot b_2}b2
+$$
+证明$r(A)=r(A^TA)$，证明$Ax=0$与$A^TAx=0$同解即可&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>大学物理1</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/</link>
+      <pubDate>Wed, 17 Mar 2021 16:08:07 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/</guid>
+      <description>动量，冲量，角动量 $$ m_1v_1=m_2v_2\
+I=mv-mv_0\
+F=\frac{GMm}{R^2}=\frac{mv^2}{2}\
+L=R\vec{m}\times\vec{v}（角动量）\
+mr_1v_1=mr_2v_2\
+M=J\alpha, 合力矩 $$
+角动量守恒：$J_1\omega_1 =J_0\omega_0+mvl$，其中$mvl$表示系统中非旋转物体
+譬如，取棒上距离转动点长度为$dr$的棒，所受到的摩擦力，计算到停止转动要多久： $$ df=\mu(dm)g=\mu\frac{m_1}{l}gdr\
+dM=-rdf=-\mu\frac{m_1}{l}grdr\
+M=\int dM=-\int_{0}^{l}\mu\frac{m_1}{l}grdr=-\frac{1}{2}\mu gm_1l\
+由转动定律M=J\alpha得-\frac{1}{2}\mu gm_1l=J\frac{d\omega}{dt}\
+即有\int_{0}^{t_1}-\frac{1}{2}\mu gm_1ldt=\int_{\omega_n}^{0}Jd\omega\
+-\frac{\mu gm_1lt_1}{2}=-J\omega_0\
+t_1=\frac{2m_2(u+v)}{\mu gm_1}+1 $$
+曲率半径 由$g=\frac{v_x^2}{r}$可得，$r=\frac{v_x^2}{g}=\frac{(v\cos\alpha)^2}{g}$
+简谐振动，波动 对$A_1cos(\omega t+\phi_1)$和$A_2cos(\omega t+\phi_2)$复合振动$Acos(\omega t+\phi)$，有： $$ A=\sqrt{A_1^2+A_2^2+2A_1A_2cos(\phi_2-\phi_1)}\
+\phi=arctan\frac{A_1sin\phi_1+A_2sin\phi_2}{A_1cos\phi_1+A_2cos\phi_2} $$
+简谐振动的能量 $$ E=\frac{1}{2}kA^2\
+\omega = \sqrt{\frac{k}{m}}\
+当\omega=2\pi f时\
+f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\
+T=2\pi\sqrt{\frac{m}{k}} $$
+波的能量 动能 $$ \Delta W_k=\frac{1}{2}\Delta mv^2=\frac{1}{2}\rho \Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u}) $$
+势能 $$ \Delta W_p=\frac{1}{2}E(\frac{\partial y}{\part x}^2)\Delta V=\frac{1}{2} \frac{E}{u^2}\omega^2A^2\sin^2\omega(t-\frac{x}{u})\Delta V $$
+弹性势能 $$ \Delta W_p=\frac{1}{2}k(\Delta l)^2=\frac{1}{2}\frac{ES}{l}(\Delta l)^2=\frac{1}{2}ESl(\frac{\Delta l}{l})^2=\frac{1}{2}E\Delta V(\frac{\Delta l}{l})^2\</description>
+      <content>&lt;h3 id=&#34;动量冲量角动量&#34;&gt;动量，冲量，角动量&lt;/h3&gt;
+&lt;p&gt;$$
+m_1v_1=m_2v_2\&lt;br&gt;
+I=mv-mv_0\&lt;br&gt;
+F=\frac{GMm}{R^2}=\frac{mv^2}{2}\&lt;br&gt;
+L=R\vec{m}\times\vec{v}（角动量）\&lt;br&gt;
+mr_1v_1=mr_2v_2\&lt;br&gt;
+M=J\alpha, 合力矩
+$$&lt;/p&gt;
+&lt;p&gt;角动量守恒：$J_1\omega_1 =J_0\omega_0+mvl$，其中$mvl$表示系统中非旋转物体&lt;/p&gt;
+&lt;p&gt;譬如，取棒上距离转动点长度为$dr$的棒，所受到的摩擦力，计算到停止转动要多久：
+$$
+df=\mu(dm)g=\mu\frac{m_1}{l}gdr\&lt;br&gt;
+dM=-rdf=-\mu\frac{m_1}{l}grdr\&lt;br&gt;
+M=\int dM=-\int_{0}^{l}\mu\frac{m_1}{l}grdr=-\frac{1}{2}\mu gm_1l\&lt;br&gt;
+由转动定律M=J\alpha得-\frac{1}{2}\mu gm_1l=J\frac{d\omega}{dt}\&lt;br&gt;
+即有\int_{0}^{t_1}-\frac{1}{2}\mu gm_1ldt=\int_{\omega_n}^{0}Jd\omega\&lt;br&gt;
+-\frac{\mu gm_1lt_1}{2}=-J\omega_0\&lt;br&gt;
+t_1=\frac{2m_2(u+v)}{\mu gm_1}+1
+$$&lt;/p&gt;
+&lt;h4 id=&#34;曲率半径&#34;&gt;曲率半径&lt;/h4&gt;
+&lt;p&gt;由$g=\frac{v_x^2}{r}$可得，$r=\frac{v_x^2}{g}=\frac{(v\cos\alpha)^2}{g}$&lt;/p&gt;
+&lt;h3 id=&#34;简谐振动波动&#34;&gt;简谐振动，波动&lt;/h3&gt;
+&lt;p&gt;对$A_1cos(\omega t+\phi_1)$和$A_2cos(\omega t+\phi_2)$复合振动$Acos(\omega t+\phi)$，有：
+$$
+A=\sqrt{A_1^2+A_2^2+2A_1A_2cos(\phi_2-\phi_1)}\&lt;br&gt;
+\phi=arctan\frac{A_1sin\phi_1+A_2sin\phi_2}{A_1cos\phi_1+A_2cos\phi_2}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;简谐振动的能量&#34;&gt;简谐振动的能量&lt;/h4&gt;
+&lt;p&gt;$$
+E=\frac{1}{2}kA^2\&lt;br&gt;
+\omega = \sqrt{\frac{k}{m}}\&lt;br&gt;
+当\omega=2\pi f时\&lt;br&gt;
+f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\&lt;br&gt;
+T=2\pi\sqrt{\frac{m}{k}}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;波的能量&#34;&gt;波的能量&lt;/h4&gt;
+&lt;h5 id=&#34;动能&#34;&gt;动能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_k=\frac{1}{2}\Delta mv^2=\frac{1}{2}\rho \Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;h5 id=&#34;势能&#34;&gt;势能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_p=\frac{1}{2}E(\frac{\partial y}{\part x}^2)\Delta V=\frac{1}{2} \frac{E}{u^2}\omega^2A^2\sin^2\omega(t-\frac{x}{u})\Delta V
+$$&lt;/p&gt;
+&lt;h5 id=&#34;弹性势能&#34;&gt;弹性势能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_p=\frac{1}{2}k(\Delta l)^2=\frac{1}{2}\frac{ES}{l}(\Delta l)^2=\frac{1}{2}ESl(\frac{\Delta l}{l})^2=\frac{1}{2}E\Delta V(\frac{\Delta l}{l})^2\&lt;br&gt;
+\Delta W_p=\frac{1}{2}\rho\Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;h5 id=&#34;总机械能&#34;&gt;总机械能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W=\Delta W_k+\Delta W_p = \rho \Delta V \omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;p&gt;波在传播过程中任一质元动能和势能都随时间t变化，同一时刻相位相同大小相等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;动能最大值时势能也最大值&lt;/strong&gt;，位于平衡位置&lt;/p&gt;
+&lt;p&gt;动能为零时势能也为零，位于&lt;strong&gt;振幅最大位置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;反射波的计算&#34;&gt;反射波的计算&lt;/h4&gt;
+&lt;p&gt;对一表达式$y_1=A\cos[2\pi(\frac{t}{T}-\frac{x}{\lambda})+\phi]$在$L$处反射，带入$x=L$，然后减去$2\pi\frac{2(L-x)}{\lambda}$（相位落后法得到距$L$为$x$的点），计算是否有无半波损失&lt;/p&gt;
+&lt;h5 id=&#34;半波损失&#34;&gt;半波损失&lt;/h5&gt;
+&lt;p&gt;波的反射点为固定端时有，相位差为$\pm\pi$&lt;/p&gt;
+&lt;h4 id=&#34;驻波&#34;&gt;驻波&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;两列沿相反方向传播，振幅相同频率相同的波的叠加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;$\lambda ：波长 \  v:频率,u:波速$&lt;/p&gt;
+&lt;p&gt;$v=\frac{\lambda}{u}$&lt;/p&gt;
+&lt;h5 id=&#34;波节&#34;&gt;波节&lt;/h5&gt;
+&lt;p&gt;弦线上&lt;strong&gt;始终静止不动&lt;/strong&gt;的点&lt;/p&gt;
+&lt;h5 id=&#34;波腹&#34;&gt;波腹&lt;/h5&gt;
+&lt;p&gt;波节和波节之间，&lt;strong&gt;振幅最大的点&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;特征&#34;&gt;特征&lt;/h5&gt;
+&lt;p&gt;具有交替出现的波峰、波谷&lt;/p&gt;
+&lt;h5 id=&#34;方程&#34;&gt;方程&lt;/h5&gt;
+&lt;p&gt;对正向波$y_1=A\cos(\omega(t-\frac{x}{u}))$，反向波$y_2=A\cos(\omega(t-\frac{x}{u}))$&lt;/p&gt;
+&lt;p&gt;驻波$y=y_1+y_2$
+$$
+y=A\cos2\pi (vt-\frac{x}{\lambda})+A\cos2\pi(vt+\frac{x}{\lambda})
+\由和差化积\&lt;br&gt;
+y=(2A\cos2\pi\frac{x}{\lambda})\cos2\pi vt
+$$
+波腹处$x=\pm k\frac{\lambda}{2}$，波节处$x=\pm(2k+1)\frac{\lambda}{4}$&lt;/p&gt;
+&lt;h5 id=&#34;特点&#34;&gt;特点&lt;/h5&gt;
+&lt;p&gt;相邻两波节之间振动相位相同，波节两侧各质点振动相位相反&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

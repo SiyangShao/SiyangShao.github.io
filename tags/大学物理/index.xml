@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大学物理 on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</link>
+    <description>Recent content in 大学物理 on shaosy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jul 2021 16:09:52 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>大学物理实验_气垫导轨</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</link>
+      <pubDate>Sun, 11 Jul 2021 16:09:52 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</guid>
+      <description>气垫导轨法测重力加速度 下周一做这个实验，然而老师要求当场出结果www
+yysy 有点阴间
+以上海大学2020届这个大学物理实验数据为主
+输入格式（样例）
+data.yaml
+#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t11: [ 28.65,29.07,29.60,30.12 ] t12: [ 21.46,21.87,22.14,22.52 ] t13: [ 20.65,21.05,21.35,21.62 ] #以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t21: [ 32.81,21.37,21.90,38.16 ] t22: [ 32.34,21.26,21.70,37.17 ] t23: [ 32.17,21.13,21.53,36.76 ] t24: [ 32.52,21.16,21.56,36.51 ] t25: [ 32.52,21.23,21.61,37.71 ] t26: [ 32.15,20.96,21.37,36.15 ] #以下为表格7.3数据，不需要改动！！！！！！ #算了 这段不调用23333 放着罢 t31: [ 1,86,60,1 ] t32: [ 0.002,0.05,0.05,0.002 ] 输出格式（样例）
+answer.yaml
+table1 answer --- t1-t2(%) --- - 1.47 - 1.91 - 1.94 --- dt1-dt2(%) --- - 1.</description>
+      <content>&lt;h2 id=&#34;气垫导轨法测重力加速度&#34;&gt;气垫导轨法测重力加速度&lt;/h2&gt;
+&lt;p&gt;下周一做这个实验，然而老师要求当场出结果www&lt;/p&gt;
+&lt;p&gt;yysy 有点阴间&lt;/p&gt;
+&lt;p&gt;以上海大学2020届这个大学物理实验数据为主&lt;/p&gt;
+&lt;p&gt;输入格式（样例）&lt;/p&gt;
+&lt;p&gt;data.yaml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t11&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;28.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.07&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;30.12&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t12&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;21.46&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.87&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.14&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.52&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t13&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;20.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.35&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.62&lt;/span&gt; ]
+&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t21&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.81&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.90&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;38.16&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t22&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.34&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.26&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.70&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.17&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t23&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.17&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.13&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.53&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.76&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t24&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.16&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.56&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.51&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t25&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.23&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.61&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.71&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t26&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.15&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20.96&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.15&lt;/span&gt; ]
+&lt;span style=&#34;color:#75715e&#34;&gt;#以下为表格7.3数据，不需要改动！！！！！！&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#算了 这段不调用23333 放着罢&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t31&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t32&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt; ]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出格式（样例）&lt;/p&gt;
+&lt;p&gt;answer.yaml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;table1 answer
+--- t1-t2(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.47&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.91&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.94&lt;/span&gt;
+--- dt1-dt2(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.73&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.69&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.25&lt;/span&gt;
+table2 answer
+--- dt
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;32.4183&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.185&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.6117&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;37.0767&lt;/span&gt;
+--- st
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2506&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1387&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1781&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7568&lt;/span&gt;
+--- ut
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2555&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1474&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.185&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7584&lt;/span&gt;
+table &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+--- E(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.06&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.08&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
+Else
+--- T
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0027&lt;/span&gt;
+--- g
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;9.675&lt;/span&gt;
+--- Eg
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0221&lt;/span&gt;
+--- Ug
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2138&lt;/span&gt;
+...
+Ag
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.22&lt;/span&gt;
+...
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;源代码（python3.8）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;数据填写于data.yaml中，填写格式参照data.yaml中注释
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;由于yaml原因（因为作者懒且菜）
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;仅输出需要输入的数据，顺序均为按照填写顺序（即由1到n），其中d均为delta之意，后有%均代表为百分数
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;均输出于answer.yaml中
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;data.yaml中原始数据为作者舍友手测，answer.yaml中数据为作者由本程序算的结果，经检验与作者舍友手算数据无明显偏差
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;python版本为3.8
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;使用方式：填写数据完后python3(或者python?) main.py
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;或者直接采用pycharm打开本文件并点击运行
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;标准编码格式为UTF-8
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;不保证在其他环境下仍可运行
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;作者:shaosy
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;邮箱:siyang.shao@outlook.com
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;日期:2021/1/14
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; yaml
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 由于python3 round函数存在精度丢失问题，故实现四舍五入,默认均保留四位小数：&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;round_up&lt;/span&gt;(number, power&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    实现精确四舍五入，包含正、负小数多种场景
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param number: 需要四舍五入的小数
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param power: 四舍五入位数，支持0-∞
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :return: 返回四舍五入后的结果
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    digit &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; power
+    num2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; float(int(number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit))
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power不为0的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power为0取整的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power为0取整的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power不为0的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data.yaml&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; file:
+    data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_load(file)
+answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;answer.yaml&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格1数据处理，根据老师要求增加两次相差百分比计算&lt;/span&gt;
+t71 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t11&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t12&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t13&amp;#39;&lt;/span&gt;]]
+d1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+d2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;):
+    d1[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+    d2[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table1 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;t1-t2(%)&amp;#34;&lt;/span&gt;, d1, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt1-dt2(%)&amp;#34;&lt;/span&gt;, d2], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格2数据处理&lt;/span&gt;
+t72 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t21&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t22&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t23&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t24&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t25&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t26&amp;#39;&lt;/span&gt;]]
+dt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+st &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+ut &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
+        dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; t72[j][i]
+    dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
+        st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i])
+    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i]), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+    ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table2 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt&amp;#34;&lt;/span&gt;, dt, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;st&amp;#34;&lt;/span&gt;, st, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ut&amp;#34;&lt;/span&gt;, ut], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格3数据处理&lt;/span&gt;
+t31 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]
+t32 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;]
+E &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    E[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(t32[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t31[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table 3&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;E(%)&amp;#34;&lt;/span&gt;, E], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 第三小问&lt;/span&gt;
+Tb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+g &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    Eg &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(dt[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;))) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb)
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(Eg), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+Ug &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(g &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Eg, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Else&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T&amp;#34;&lt;/span&gt;, Tb, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;g&amp;#34;&lt;/span&gt;, g, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Eg&amp;#34;&lt;/span&gt;, Eg, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ug&amp;#34;&lt;/span&gt;, Ug], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 实验结果&lt;/span&gt;
+Ag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(abs(g &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(Eg &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ag&amp;#34;&lt;/span&gt;, Ag], answer)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;www&lt;/p&gt;
+&lt;p&gt;大概就是这样&lt;/p&gt;
+&lt;p&gt;算是我的第一段为了摸鱼的代码？&lt;/p&gt;
+&lt;p&gt;在马原上写的2333&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>大学物理2</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/</link>
+      <pubDate>Wed, 09 Jun 2021 16:09:00 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/</guid>
+      <description>场强 半径为$R$ 电量为$q$均匀带电球体
+球内 $$ E=\frac{q}{4\pi\varepsilon_0R^3}r $$ 球外 $$ E=\frac{q}{4\pi\varepsilon_0r^2} $$ 线密度为$\lambda$的无限长均匀带电直线 $$ E=\frac{\lambda}{2\pi\varepsilon_0r} $$ 面密度为$\sigma$无限大均匀带电平面 $$ E=\frac{\sigma}{2\varepsilon_0} $$
+电容 $$ C=\frac{Q}{U} $$ $$ C=\frac{\varepsilon_0 \varepsilon_r S}{d} $$ $$ Q=CU $$ $$ E=\frac{q}{\varepsilon_0\varepsilon_r} $$ $$ E = \frac{U}{d} $$ $$ E = \frac{2F}{Q} $$ $$ U = \frac{Q}{C} $$ $$ U = Ed $$ $$ F = \frac{EQ}{2} $$ 若两金属板之间有多种东西，厚度为$d_1,d_2,d_3$，相对介电常数为$\varepsilon_1 , \varepsilon_2,\varepsilon_3$，则 $$ C = \frac{\varepsilon_0S}{\frac{d_1}{\varepsilon_1}+\frac{d_2}{\varepsilon_2}+\cdots} $$ 圆柱形电容器 $$ C=\frac{Q}{U} $$ $$ C=\frac{2\pi\varepsilon_0\varepsilon_r L}{\ln\frac{R_2}{R_1}} $$ 球形电容器 $$ C=\frac{Q}{U} $$ $$ C=\frac{4\pi\varepsilon_9\varepsilon_rR_1R_2}{R_2-R_1} $$ 电场能 $$ W=\frac{Q^2}{2C}=\frac{1}{2}QU=\frac{1}{2}CU^@ $$ 两板间位移电流 $$ I_d=\varepsilon_0 \varepsilon_r \frac{dE}{dt}S $$ $$ I_d=C\frac{dU}{dt} $$</description>
+      <content>&lt;h2 id=&#34;场强&#34;&gt;场强&lt;/h2&gt;
+&lt;p&gt;半径为$R$ 电量为$q$均匀带电球体&lt;/p&gt;
+&lt;p&gt;球内
+$$
+E=\frac{q}{4\pi\varepsilon_0R^3}r
+$$
+球外
+$$
+E=\frac{q}{4\pi\varepsilon_0r^2}
+$$
+线密度为$\lambda$的无限长均匀带电直线
+$$
+E=\frac{\lambda}{2\pi\varepsilon_0r}
+$$
+面密度为$\sigma$无限大均匀带电平面
+$$
+E=\frac{\sigma}{2\varepsilon_0}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;电容&#34;&gt;电容&lt;/h2&gt;
+&lt;p&gt;$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{\varepsilon_0 \varepsilon_r S}{d}
+$$
+$$
+Q=CU
+$$
+$$
+E=\frac{q}{\varepsilon_0\varepsilon_r}
+$$
+$$ E = \frac{U}{d} $$
+$$ E = \frac{2F}{Q} $$
+$$ U = \frac{Q}{C} $$
+$$ U = Ed $$
+$$ F = \frac{EQ}{2} $$
+若两金属板之间有多种东西，厚度为$d_1,d_2,d_3$，相对介电常数为$\varepsilon_1 , \varepsilon_2,\varepsilon_3$，则
+$$
+C = \frac{\varepsilon_0S}{\frac{d_1}{\varepsilon_1}+\frac{d_2}{\varepsilon_2}+\cdots}
+$$
+圆柱形电容器
+$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{2\pi\varepsilon_0\varepsilon_r L}{\ln\frac{R_2}{R_1}}
+$$
+球形电容器
+$$
+C=\frac{Q}{U}
+$$
+$$
+C=\frac{4\pi\varepsilon_9\varepsilon_rR_1R_2}{R_2-R_1}
+$$
+电场能
+$$
+W=\frac{Q^2}{2C}=\frac{1}{2}QU=\frac{1}{2}CU^@
+$$
+两板间位移电流
+$$
+I_d=\varepsilon_0 \varepsilon_r \frac{dE}{dt}S
+$$
+$$
+I_d=C\frac{dU}{dt}
+$$&lt;/p&gt;
+&lt;h2 id=&#34;磁场&#34;&gt;磁场&lt;/h2&gt;
+&lt;p&gt;无限长磁导线
+$$
+B=\frac{\mu_0I}{2\pi r}
+$$
+半径为R的圆形线圈
+$$
+B=\frac{\mu_0I}{2R}
+$$
+单位长度上电流为nI的无限长/环形磁螺旋管
+$$
+B=\mu_0 n I
+$$&lt;/p&gt;
+&lt;h3 id=&#34;求通电导线段射线磁感应强度&#34;&gt;求通电导线段/射线磁感应强度&lt;/h3&gt;
+&lt;p&gt;若所求点在导线上/延长线上，则磁感应强度为0
+若不在
+$$
+B=\frac{\mu_0 I}{4\pi r}(cos\theta_1 - cos\theta_2)
+$$
+其中 $\theta_1$为点与导线起点连线与导线夹角，$\theta_2$为点与导线终点连线与导线延长线夹角
+令$\theta$为$dl$为l方向与r的夹角
+$$
+B=\frac{\mu_0 Idl\sin\theta}{4\pi r^2}
+$$&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>大学物理1</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/</link>
+      <pubDate>Wed, 17 Mar 2021 16:08:07 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/</guid>
+      <description>动量，冲量，角动量 $$ m_1v_1=m_2v_2\
+I=mv-mv_0\
+F=\frac{GMm}{R^2}=\frac{mv^2}{2}\
+L=R\vec{m}\times\vec{v}（角动量）\
+mr_1v_1=mr_2v_2\
+M=J\alpha, 合力矩 $$
+角动量守恒：$J_1\omega_1 =J_0\omega_0+mvl$，其中$mvl$表示系统中非旋转物体
+譬如，取棒上距离转动点长度为$dr$的棒，所受到的摩擦力，计算到停止转动要多久： $$ df=\mu(dm)g=\mu\frac{m_1}{l}gdr\
+dM=-rdf=-\mu\frac{m_1}{l}grdr\
+M=\int dM=-\int_{0}^{l}\mu\frac{m_1}{l}grdr=-\frac{1}{2}\mu gm_1l\
+由转动定律M=J\alpha得-\frac{1}{2}\mu gm_1l=J\frac{d\omega}{dt}\
+即有\int_{0}^{t_1}-\frac{1}{2}\mu gm_1ldt=\int_{\omega_n}^{0}Jd\omega\
+-\frac{\mu gm_1lt_1}{2}=-J\omega_0\
+t_1=\frac{2m_2(u+v)}{\mu gm_1}+1 $$
+曲率半径 由$g=\frac{v_x^2}{r}$可得，$r=\frac{v_x^2}{g}=\frac{(v\cos\alpha)^2}{g}$
+简谐振动，波动 对$A_1cos(\omega t+\phi_1)$和$A_2cos(\omega t+\phi_2)$复合振动$Acos(\omega t+\phi)$，有： $$ A=\sqrt{A_1^2+A_2^2+2A_1A_2cos(\phi_2-\phi_1)}\
+\phi=arctan\frac{A_1sin\phi_1+A_2sin\phi_2}{A_1cos\phi_1+A_2cos\phi_2} $$
+简谐振动的能量 $$ E=\frac{1}{2}kA^2\
+\omega = \sqrt{\frac{k}{m}}\
+当\omega=2\pi f时\
+f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\
+T=2\pi\sqrt{\frac{m}{k}} $$
+波的能量 动能 $$ \Delta W_k=\frac{1}{2}\Delta mv^2=\frac{1}{2}\rho \Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u}) $$
+势能 $$ \Delta W_p=\frac{1}{2}E(\frac{\partial y}{\part x}^2)\Delta V=\frac{1}{2} \frac{E}{u^2}\omega^2A^2\sin^2\omega(t-\frac{x}{u})\Delta V $$
+弹性势能 $$ \Delta W_p=\frac{1}{2}k(\Delta l)^2=\frac{1}{2}\frac{ES}{l}(\Delta l)^2=\frac{1}{2}ESl(\frac{\Delta l}{l})^2=\frac{1}{2}E\Delta V(\frac{\Delta l}{l})^2\</description>
+      <content>&lt;h3 id=&#34;动量冲量角动量&#34;&gt;动量，冲量，角动量&lt;/h3&gt;
+&lt;p&gt;$$
+m_1v_1=m_2v_2\&lt;br&gt;
+I=mv-mv_0\&lt;br&gt;
+F=\frac{GMm}{R^2}=\frac{mv^2}{2}\&lt;br&gt;
+L=R\vec{m}\times\vec{v}（角动量）\&lt;br&gt;
+mr_1v_1=mr_2v_2\&lt;br&gt;
+M=J\alpha, 合力矩
+$$&lt;/p&gt;
+&lt;p&gt;角动量守恒：$J_1\omega_1 =J_0\omega_0+mvl$，其中$mvl$表示系统中非旋转物体&lt;/p&gt;
+&lt;p&gt;譬如，取棒上距离转动点长度为$dr$的棒，所受到的摩擦力，计算到停止转动要多久：
+$$
+df=\mu(dm)g=\mu\frac{m_1}{l}gdr\&lt;br&gt;
+dM=-rdf=-\mu\frac{m_1}{l}grdr\&lt;br&gt;
+M=\int dM=-\int_{0}^{l}\mu\frac{m_1}{l}grdr=-\frac{1}{2}\mu gm_1l\&lt;br&gt;
+由转动定律M=J\alpha得-\frac{1}{2}\mu gm_1l=J\frac{d\omega}{dt}\&lt;br&gt;
+即有\int_{0}^{t_1}-\frac{1}{2}\mu gm_1ldt=\int_{\omega_n}^{0}Jd\omega\&lt;br&gt;
+-\frac{\mu gm_1lt_1}{2}=-J\omega_0\&lt;br&gt;
+t_1=\frac{2m_2(u+v)}{\mu gm_1}+1
+$$&lt;/p&gt;
+&lt;h4 id=&#34;曲率半径&#34;&gt;曲率半径&lt;/h4&gt;
+&lt;p&gt;由$g=\frac{v_x^2}{r}$可得，$r=\frac{v_x^2}{g}=\frac{(v\cos\alpha)^2}{g}$&lt;/p&gt;
+&lt;h3 id=&#34;简谐振动波动&#34;&gt;简谐振动，波动&lt;/h3&gt;
+&lt;p&gt;对$A_1cos(\omega t+\phi_1)$和$A_2cos(\omega t+\phi_2)$复合振动$Acos(\omega t+\phi)$，有：
+$$
+A=\sqrt{A_1^2+A_2^2+2A_1A_2cos(\phi_2-\phi_1)}\&lt;br&gt;
+\phi=arctan\frac{A_1sin\phi_1+A_2sin\phi_2}{A_1cos\phi_1+A_2cos\phi_2}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;简谐振动的能量&#34;&gt;简谐振动的能量&lt;/h4&gt;
+&lt;p&gt;$$
+E=\frac{1}{2}kA^2\&lt;br&gt;
+\omega = \sqrt{\frac{k}{m}}\&lt;br&gt;
+当\omega=2\pi f时\&lt;br&gt;
+f=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\&lt;br&gt;
+T=2\pi\sqrt{\frac{m}{k}}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;波的能量&#34;&gt;波的能量&lt;/h4&gt;
+&lt;h5 id=&#34;动能&#34;&gt;动能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_k=\frac{1}{2}\Delta mv^2=\frac{1}{2}\rho \Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;h5 id=&#34;势能&#34;&gt;势能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_p=\frac{1}{2}E(\frac{\partial y}{\part x}^2)\Delta V=\frac{1}{2} \frac{E}{u^2}\omega^2A^2\sin^2\omega(t-\frac{x}{u})\Delta V
+$$&lt;/p&gt;
+&lt;h5 id=&#34;弹性势能&#34;&gt;弹性势能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W_p=\frac{1}{2}k(\Delta l)^2=\frac{1}{2}\frac{ES}{l}(\Delta l)^2=\frac{1}{2}ESl(\frac{\Delta l}{l})^2=\frac{1}{2}E\Delta V(\frac{\Delta l}{l})^2\&lt;br&gt;
+\Delta W_p=\frac{1}{2}\rho\Delta V\omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;h5 id=&#34;总机械能&#34;&gt;总机械能&lt;/h5&gt;
+&lt;p&gt;$$
+\Delta W=\Delta W_k+\Delta W_p = \rho \Delta V \omega^2A^2\sin^2\omega(t-\frac{x}{u})
+$$&lt;/p&gt;
+&lt;p&gt;波在传播过程中任一质元动能和势能都随时间t变化，同一时刻相位相同大小相等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;动能最大值时势能也最大值&lt;/strong&gt;，位于平衡位置&lt;/p&gt;
+&lt;p&gt;动能为零时势能也为零，位于&lt;strong&gt;振幅最大位置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;反射波的计算&#34;&gt;反射波的计算&lt;/h4&gt;
+&lt;p&gt;对一表达式$y_1=A\cos[2\pi(\frac{t}{T}-\frac{x}{\lambda})+\phi]$在$L$处反射，带入$x=L$，然后减去$2\pi\frac{2(L-x)}{\lambda}$（相位落后法得到距$L$为$x$的点），计算是否有无半波损失&lt;/p&gt;
+&lt;h5 id=&#34;半波损失&#34;&gt;半波损失&lt;/h5&gt;
+&lt;p&gt;波的反射点为固定端时有，相位差为$\pm\pi$&lt;/p&gt;
+&lt;h4 id=&#34;驻波&#34;&gt;驻波&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;两列沿相反方向传播，振幅相同频率相同的波的叠加&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;$\lambda ：波长 \  v:频率,u:波速$&lt;/p&gt;
+&lt;p&gt;$v=\frac{\lambda}{u}$&lt;/p&gt;
+&lt;h5 id=&#34;波节&#34;&gt;波节&lt;/h5&gt;
+&lt;p&gt;弦线上&lt;strong&gt;始终静止不动&lt;/strong&gt;的点&lt;/p&gt;
+&lt;h5 id=&#34;波腹&#34;&gt;波腹&lt;/h5&gt;
+&lt;p&gt;波节和波节之间，&lt;strong&gt;振幅最大的点&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;特征&#34;&gt;特征&lt;/h5&gt;
+&lt;p&gt;具有交替出现的波峰、波谷&lt;/p&gt;
+&lt;h5 id=&#34;方程&#34;&gt;方程&lt;/h5&gt;
+&lt;p&gt;对正向波$y_1=A\cos(\omega(t-\frac{x}{u}))$，反向波$y_2=A\cos(\omega(t-\frac{x}{u}))$&lt;/p&gt;
+&lt;p&gt;驻波$y=y_1+y_2$
+$$
+y=A\cos2\pi (vt-\frac{x}{\lambda})+A\cos2\pi(vt+\frac{x}{\lambda})
+\由和差化积\&lt;br&gt;
+y=(2A\cos2\pi\frac{x}{\lambda})\cos2\pi vt
+$$
+波腹处$x=\pm k\frac{\lambda}{2}$，波节处$x=\pm(2k+1)\frac{\lambda}{4}$&lt;/p&gt;
+&lt;h5 id=&#34;特点&#34;&gt;特点&lt;/h5&gt;
+&lt;p&gt;相邻两波节之间振动相位相同，波节两侧各质点振动相位相反&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

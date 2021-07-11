@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>线性代数 :: shaosy&#39;s blog</title>
+  
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="线代公式总结" />
+<meta name="keywords" content="线代, 公式" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
+
+
+
+
+<link rel="stylesheet" href="https://siyangshao.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://siyangshao.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://siyangshao.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://siyangshao.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="线性代数">
+<meta property="og:description" content="线代公式总结" />
+<meta property="og:url" content="https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" />
+<meta property="og:site_name" content="shaosy&#39;s blog" />
+
+  <meta property="og:image" content="https://siyangshao.github.io">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-03-20 16:12:43 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div style="position:absolute;right:3%;top:10%;">
+        <a id="logo" href="https://siyangshao.github.io"><img
+                src="https://firefoxusercontent.com/dbeb73f5ba7f9457d819fa358934828a" width="75%" height="75%" /></a>
+    </div>
+    <div style="position:absolute;right:3%;top:30%;">
+        <h1><a href="https://siyangshao.github.io">shaosy&#39;s blog</a></h1>
+    </div>
+    <div style="position:absolute;right:7%;top:40%;">
+        <h3> <a href="https://github.com/SiyangShao">Github</a>&#160<a href="https://twitter.com/ShaoSiyang">Twitter </a></h3>
+    </div>
+    <script src="https://siyangshao.github.io/live2d/autoload.js"></script>
+
+</body>
+</html>
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a
+  href="/">
+  <div class="logo">
+    Main Page
+  </div>
+</a>
+
+    </div>
+    
+    <div class="menu-trigger">menu</div>
+    
+    
+  </div>
+  
+  <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-03-20 [Updated: 2021-03-20]
+      </span>
+    
+    
+    <span class="post-author">:: shaosy</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://siyangshao.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>&nbsp;
+    
+    #<a href="https://siyangshao.github.io/tags/%E8%80%83%E5%89%8D%E5%A4%8D%E4%B9%A0/">考前复习</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="线性代数">线性代数<a href="#线性代数" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<h2 id="知识点">知识点<a href="#知识点" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<h3 id="行列式性质">行列式性质<a href="#行列式性质" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>对$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a_{m 1}} &amp; {a_{m 2}} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]
+$的行列式A，将其化简为$A=\left[\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {0} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {0} &amp; {0} &amp; {\cdots} &amp; {a_{m n}}\end{array}\right]$，则行列式的值有
+$$
+A=a_{11}\cdot a_{22}\cdots a_{mn}
+$$</p>
+<h4 id="tricks">Tricks:<a href="#tricks" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>1.某行（列）加上or减去某行（列）几倍，行列式值不变</p>
+<p>2.某行（列）乘k，等于A*k</p>
+<p>3.互换两行（列），行列式变号</p>
+<h3 id="行列式计算">行列式计算<a href="#行列式计算" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1">1<a href="#1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$$
+A=\left[\begin{array}{cccc}{x} &amp; {a} &amp; {\cdots} &amp; {a} \ {a} &amp; {x} &amp; {\cdots} &amp; {a} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {a} &amp; {a} &amp; {\cdots} &amp; {x}\end{array}\right]=(x-a)^{n-1}[x+(n-1)a]
+$$</p>
+<h4 id="2">2<a href="#2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$$
+A=\left[\begin{array}{cccc}{1} &amp; {1} &amp; {\cdots} &amp; {1} \ {x_{1}} &amp; {x_{2}} &amp; {\cdots} &amp; {x_n} \ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\vdots} \ {x_1^{n-1}} &amp; {x_2^{n-1}} &amp; {\cdots} &amp; {x_n^{n-1}}\end{array}\right] \begin{aligned}&amp;= (x_n-x_{n-1})(x_n-x_{n-2})(x_n-x_{n-3})\cdots(x_n-x_1)\  &amp;\times(x_{n-1}-x{n-2})(x_{n-1}-x_{n-3})\cdots (x_{n-1}-x_1)\&amp;\times\cdots\&amp;\times(x_2-x_1)\end{aligned}
+$$</p>
+<h4 id="3">3<a href="#3" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>两行（列）相同/成比例时，行列式值为0</p>
+<p>两行（列）为两项相加减时，行列式可拆分为两个行列式相加减</p>
+<h4 id="4-余子式代数余子式">4 余子式/代数余子式<a href="#4-余子式代数余子式" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>余子式：$M_{ab}$即抹掉a行b列，计算行列式值</p>
+<p>代数余子式：$A_{ab}=(-1)^{a+b}*M_{ab}$</p>
+<h4 id="5">5<a href="#5" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$$
+D=a_{i1}A_{i1}+a_{i2}A_{i2}+\cdots +a_{in}A_{in}(第i行)\<br>
+D=a_{1j}A_{1j}+a_{2j}A_{2j}+\cdots+a_{nj}A{nj}(第j列)
+$$</p>
+<h4 id="6-多个a或m相加减">6 多个A或M相加减<a href="#6-多个a或m相加减" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<h5 id="多个a相加">多个A相加<a href="#多个a相加" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>对$x\cdot A_{ij}$而言，将$a_{ij}$替换为$x$，带入计算行列式的值即为结果</p>
+<h5 id="多个m相加">多个M相加<a href="#多个m相加" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>将M转化为A，而后替换</p>
+<h4 id="7-给一方程组-判断解的情况">7 给一方程组 判断解的情况<a href="#7-给一方程组-判断解的情况" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<table>
+<thead>
+<tr>
+<th>方程组</th>
+<th>$D\not=0$</th>
+<th>$D=0$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>齐次</td>
+<td>只有一组零解</td>
+<td>有零解与非零解</td>
+</tr>
+<tr>
+<td>非齐次</td>
+<td>只有一组非零解</td>
+<td>有多个解或无解</td>
+</tr>
+</tbody>
+</table>
+<p>齐次：方程组除了x与0，没有常数项</p>
+<p>非齐次：有常数项</p>
+<p>D：将$x_1,x_2\cdots x_n$前系数提取得到的行列式的值</p>
+<h3 id="矩阵的运算">矩阵的运算<a href="#矩阵的运算" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="1矩阵的加减">1.矩阵的加减<a href="#1矩阵的加减" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>直接加</p>
+<h3 id="2矩阵相乘">2.矩阵相乘<a href="#2矩阵相乘" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>方法：前行乘后列</p>
+<h4 id="特殊矩阵">特殊矩阵<a href="#特殊矩阵" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$ \left{
+\begin{matrix}
+0 &amp; 0 &amp; 0 \<br>
+0 &amp; 0 &amp; 0 \<br>
+0 &amp; 0 &amp; 0
+\end{matrix}
+\right}=0 $</p>
+<p>$ \left{
+\begin{matrix}
+1 &amp; 0 &amp; 0 \<br>
+0 &amp; 1 &amp; 0 \<br>
+0 &amp; 0 &amp; 1
+\end{matrix}
+\right}=I $</p>
+<p>$I\cdot A=A$		 $A\cdot I=A$ 		$I^2=I\cdot I = I$</p>
+<p>矩阵乘法不满足交换律！！！（$E$除外）</p>
+<p>相似矩阵：</p>
+<h4 id="3矩阵取绝对值">3.矩阵取绝对值<a href="#3矩阵取绝对值" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>计算行列式$A$的值即为矩阵$A$的值</p>
+<p>其中，$\left|\lambda A\right|=\lambda^n\left|A\right|$</p>
+<h4 id="4矩阵转置">4.矩阵转置<a href="#4矩阵转置" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$A^T$将A的行变为列，列变为行</p>
+<p>注意：$1.(AB)^T=B^TA^T$	$2.\left|A^T\right|=\left|A\right|$</p>
+<h4 id="5证明矩阵可逆">5.证明矩阵可逆<a href="#5证明矩阵可逆" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>条件：1.矩阵A为方阵（<strong>行数与列数相等</strong>）</p>
+<p>​			2. $\left|A\right|\not=0$或者存在一个方阵B，满足$AB=I$或者$BA=I$</p>
+<h4 id="6求逆矩阵">6.求逆矩阵<a href="#6求逆矩阵" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$$
+\left(A ,\vdots, I\right)\rightarrow\left(I ,\vdots, A^{-1}\right)
+$$</p>
+<h4 id="7利用acdot-a-1i或a-1cdot-ai计算">7.利用$A\cdot A^{-1}I=$或$A^{-1}\cdot A=I$计算<a href="#7利用acdot-a-1i或a-1cdot-ai计算" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>利用该性质等号两边同时乘以逆矩阵而后做到除法效果</p>
+<h4 id="8伴随矩阵">8.伴随矩阵<a href="#8伴随矩阵" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$A^*$为$A$的伴随矩阵</p>
+<p>其中，$A^*$的第$i$行$j$列是$$</p>
+<p>$A\cdot A^<em>=\left|A\right| I$或$A^</em> \cdot A=\left|A\right| I$</p>
+<h4 id="9求矩阵的秩">9.求矩阵的秩<a href="#9求矩阵的秩" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>将矩阵化简为行阶梯形，有几行有非零数，秩就是多少</p>
+<h5 id="trick">Trick：<a href="#trick" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h5>
+<p>以下内容等价</p>
+<ol>
+<li>$A$可逆</li>
+<li>$A$的相抵标准型是$n$阶单位矩阵</li>
+<li>$A$可以表示为若干初等矩阵的积</li>
+<li>存在$n$阶矩阵$B$，使得$AB=I$</li>
+<li>若$A$是$n$阶矩阵，则$A$可逆，$r(A)=n$</li>
+</ol>
+<h3 id="向量组与线性空间">向量组与线性空间<a href="#向量组与线性空间" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<h4 id="判断某向量是否可以由某向量组线性表示">判断某向量是否可以由某向量组线性表示<a href="#判断某向量是否可以由某向量组线性表示" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>若$\left(a_1,a_2\cdots b\right)$的秩和$(a_1,a_2\cdots a_m , b)$的秩相等，则$b$可以由$a_1,a_2,a_3\cdots a_m$线性表示</p>
+<h4 id="判断某个向量组是否线性相关">判断某个向量组是否线性相关<a href="#判断某个向量组是否线性相关" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>若$R$&lt;向量个数，则线性相关；若R=向量个数，则线性无关</p>
+<h4 id="已知三维向量空间的一组基底求某一向量在此基地下的坐标">已知三维向量空间的一组基底，求某一向量在此基地下的坐标<a href="#已知三维向量空间的一组基底求某一向量在此基地下的坐标" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>对空间向量的一组基底$\alpha_1,\alpha_2,\alpha_3$，向量$\beta$的坐标$k_1,k_2,k_3$满足:
+$$
+\beta=k_1\alpha_1+k_2\alpha_2+k_3\alpha_c
+$$</p>
+<h4 id="求一组向量的极大无关组">求一组向量的极大无关组<a href="#求一组向量的极大无关组" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>对于行向量$a_1,a_2,a_3,a_4$求其极大无关组</p>
+<p>将其写入矩阵，变换为最简行阶梯型。则非零行（由上至下）即为其极大无关组</p>
+<h3 id="解方程组">解方程组<a href="#解方程组" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>齐次方程组：</p>
+<p>​				$R(A)=未知数个数$ 唯一解（零解）</p>
+<p>​				$R(A)&lt;未知数个数$ 多个解（零解和多个非零解）</p>
+<p>非齐次方程组：</p>
+<p>​				$R(A)\not=R(A|b)$ 无解</p>
+<p>​				$R(A)=R(A|b)=未知数个数$ 一个非零解</p>
+<p>​				$R(A)=R(A|b)&lt;未知数个数$ 多个非零解</p>
+<p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162138852.png" alt="线性代数"></p>
+<p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320162726234.png" alt="基础解系"></p>
+<p>集合中线性无关的解向量个数：</p>
+<p>​		齐次：未知数个数减去秩</p>
+<p>​		非齐次：未知数个数减去秩加一</p>
+<h4 id="矩阵特征值">矩阵特征值<a href="#矩阵特征值" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>满足$\left|A-\lambda E\right|=0$的$\lambda$为特征值</p>
+<h4 id="特征向量">特征向量<a href="#特征向量" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>$(A-\lambda E)x=0$的通解</p>
+<h4 id="判断方阵是否与对角线相似是否满足p-1apa">判断方阵是否与对角线相似/是否满足$P^{-1}AP=A$<a href="#判断方阵是否与对角线相似是否满足p-1apa" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>方阵特征向量等于方阵阶数：相似/满足</p>
+<p>不等于：不相似/不满足</p>
+<h4 id="求对角阵可逆变换矩阵">求对角阵/可逆变换矩阵<a href="#求对角阵可逆变换矩阵" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p><img src="../images/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B01/image-20210320180006361.png" alt="image-20210320180006361"></p>
+<h2 id="历年卷">历年卷<a href="#历年卷" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>矩阵相抵定义：$存在可逆矩阵P,Q,使得PAQ=B$</p>
+<p>矩阵相似定义：$存在实可逆矩阵P,是的P^{-1}AP=B$</p>
+<p>由此：矩阵相似则必定相抵，反之不一定</p>
+<p>矩阵可逆的充分必要条件：与单位矩阵相抵</p>
+<p>矩阵可对角化（与对角阵相似）的<strong>充分</strong>条件：有n个不同的特征值</p>
+<p>n阶方阵与对角阵相似的充要条件：有n个线性无关的特征向量</p>
+<p>充要条件：有n个线性无关特征向量</p>
+<p>注意：相似矩阵的<strong>秩、行列式值、迹、特征值、特征多项式</strong>均相等</p>
+<p>正交一定线性无关，线性无关不一定正交（nmd 正交就是垂直</p>
+<p>行满秩情况下$R(A)=R(A|B)$，但是列满秩情况下不一定</p>
+<p>$AA^<em>=\left|A\right|I$
+$$
+A^</em>=\left|A\right|A^{-1}
+$$</p>
+<p>$$
+|A||A^{-1}|=I\<br>
+|A^{-1}|=\frac{1}{|A|}\<br>
+|A^*|=|A|^{n-1}
+$$</p>
+<p>对于$A=BC$，有$A^n=B(CB)^{n-1}C$</p>
+<h3 id="规范正交化">规范正交化<a href="#规范正交化" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>对线性无关$a_1,a_2,a_3:$
+$$
+b_1=a_1\<br>
+b_2=a_2-\frac{b_1\cdot a_2}{b_1 \cdot b_1}b_1\<br>
+b_3=a_3-\frac{b_1\cdot a_3}{b_1 \cdot b_1}b_1-\frac{b_2 \cdot a_3}{b_2 \cdot b_2}b2
+$$
+证明$r(A)=r(A^TA)$，证明$Ax=0$与$A^TAx=0$同解即可</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://siyangshao.github.io/posts/codeforces-educational-round-106/">
+                <span class="button__icon">←</span>
+                <span class="button__text">CodeForces Educational Round 106</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/">
+                <span class="button__text">大学物理1</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://siyangshao.github.io/assets/main.js"></script>
+<script src="https://siyangshao.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

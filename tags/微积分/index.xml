@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>微积分 on shaosy&#39;s blog</title>
+    <link>https://siyangshao.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/</link>
+    <description>Recent content in 微积分 on shaosy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Jun 2021 16:11:46 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微积分3</title>
+      <link>https://siyangshao.github.io/posts/%E5%BE%AE%E7%A7%AF%E5%88%863/</link>
+      <pubDate>Thu, 03 Jun 2021 16:11:46 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%BE%AE%E7%A7%AF%E5%88%863/</guid>
+      <description>级数 判断级数条件收敛的方法 $$ \lim_{n \to \infty}a_n=0 $$ 且 $$ a_n&amp;gt;a_{n-1} $$ 有级数条件收敛
+阿贝尔定理 对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$收敛，则对$|x|&amp;lt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$收敛 对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$发散，则对$|x|&amp;gt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$发散
+常见的泰勒级数 $$ e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!} $$ $$ \sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}} $$ $$ \cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}} $$ $$ \ln(1-x) = -\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1} $$ $$ \ln(1+x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n+1}}{n+1} $$ $$ \frac{1}{1-x} = \sum_{n=0}^{\infty}x^n\quad x\in(-1,1) $$ $$ (1+x)^\alpha=1+\alpha x+\cdots +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+\cdots\quad x\in(-1,1) $$
+傅里叶级数 $$ f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx)) $$ 其中 $$ a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx $$ $$ b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx $$
+微分方程 对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得: $$ y = F(x)+C $$</description>
+      <content>&lt;h1 id=&#34;级数&#34;&gt;级数&lt;/h1&gt;
+&lt;h2 id=&#34;判断级数条件收敛的方法&#34;&gt;判断级数条件收敛的方法&lt;/h2&gt;
+&lt;p&gt;$$
+\lim_{n \to \infty}a_n=0
+$$
+且
+$$
+a_n&amp;gt;a_{n-1}
+$$
+有级数条件收敛&lt;/p&gt;
+&lt;h2 id=&#34;阿贝尔定理&#34;&gt;阿贝尔定理&lt;/h2&gt;
+&lt;p&gt;对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$收敛，则对$|x|&amp;lt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$收敛
+对$x_0\not=0$，常数项级数$\sum_{n=0}^{\infty}a_nx_0^n$发散，则对$|x|&amp;gt;|x_0|$，$\sum_{n=0}^{\infty}a_nx^n$发散&lt;/p&gt;
+&lt;h2 id=&#34;常见的泰勒级数&#34;&gt;常见的泰勒级数&lt;/h2&gt;
+&lt;p&gt;$$
+e^x = \sum_{n=0}^{\infty}\frac{x^n}{n!}
+$$
+$$
+\sin(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}
+$$
+$$
+\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n)!}x^{2n}}
+$$
+$$
+\ln(1-x) = -\sum_{n=0}^{\infty}\frac{x^{n+1}}{n+1}
+$$
+$$
+\ln(1+x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}x^{n+1}}{n+1}
+$$
+$$
+\frac{1}{1-x} = \sum_{n=0}^{\infty}x^n\quad x\in(-1,1)
+$$
+$$
+(1+x)^\alpha=1+\alpha x+\cdots +\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}+\cdots\quad x\in(-1,1)
+$$&lt;/p&gt;
+&lt;h2 id=&#34;傅里叶级数&#34;&gt;傅里叶级数&lt;/h2&gt;
+&lt;p&gt;$$
+f(x) = \frac{a_0}{2} + \sum_{n-1}^{\infty}(a_n \cos(nx)+b_n\sin(nx))
+$$
+其中
+$$
+a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\cos(nx)dx
+$$
+$$
+b_n=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)\sin(nx)dx
+$$&lt;/p&gt;
+&lt;h1 id=&#34;微分方程&#34;&gt;微分方程&lt;/h1&gt;
+&lt;p&gt;对于方程$\frac{dy}{dx}=f(x,y)$，两边积分即可求解得:
+$$
+y = F(x)+C
+$$&lt;/p&gt;
+&lt;h3 id=&#34;可分离变量的微分方程&#34;&gt;可分离变量的微分方程&lt;/h3&gt;
+&lt;p&gt;考虑方程
+$$
+\frac{dy}{dx} = f(x)g(y);
+$$
+则其可以改写为
+$$
+\frac{dy}{g(y)} = f(x)dx
+$$
+对其两端积分，于是有
+$$
+\int\frac{dy}{g(y)} = \int f(x)dx+C
+$$
+其所确定的隐式函数即为其通解&lt;/p&gt;
+&lt;h3 id=&#34;齐次方程&#34;&gt;齐次方程&lt;/h3&gt;
+&lt;p&gt;对方程$$ \frac{dy}{dx}=f(x,y)$$
+若$f(x,y)$可以表现为$\frac{y}{x}$的一元函数，即有
+$$
+f(x,y) = g(\frac{y}{x})
+$$
+可以得到方程
+$$
+\frac{dy}{dx} = g(\frac{y}{x})
+$$
+被称之为齐次方程
+对此，令$u = \frac{y}{x}$，则可得：
+$$
+\frac{dy}{dx} = u+x\frac{du}{dx}
+$$
+带入，可得
+$$
+u + x\frac{du}{dx} = g(u)
+$$
+分离变量，可以得到
+$$
+\frac{du}{g(u)-u} = \frac{dx}{x}
+$$
+积分可得通解
+$$
+\int \frac{du}{g(u)-u}=ln|x|+C
+$$
+用$\frac{y}{x}$替换$u$，即可得到通解&lt;/p&gt;
+&lt;h4 id=&#34;可化为齐次的微分方程&#34;&gt;可化为齐次的微分方程&lt;/h4&gt;
+&lt;p&gt;对于方程
+$$
+\frac{dy}{dx} = \frac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}
+$$
+当$c_1=c_2=0$时为齐次方程
+当其为非齐次时
+为消元，令$x=X+h,y=Y+k$
+于是有$dx=dX , dy=dY$
+带入原式，可得
+$$
+\frac{dY}{dX} = \frac{a_1X+b_1Y+a_1h+b_1k+c_1}{a_2X+b_2Y+a_2h+b_2k+c_2}
+$$
+如果选取$h$和$k$，使得$a_1h+b_1k+c_1=0$,$a_2h+b_2k+c_2=0$
+于是得到齐次方程
+$$\frac{dY}{dX}=\frac{a_1X+b_1Y}{a_2X+b_2Y}$$
+接下来可用齐次方程解法，令$u=\frac{Y}{X}$求出通解&lt;/p&gt;
+&lt;h3 id=&#34;一阶线性微分方程&#34;&gt;一阶线性微分方程&lt;/h3&gt;
+&lt;p&gt;形如
+$$
+\frac{dy}{dx}+P(x)y=Q(x)
+$$
+的方程称为一阶线性微分方程
+当$Q(x)\not=0$时，称为一阶非齐次线性微分方程
+为求出一阶非齐次线性微分方程的解，先考虑一阶齐次线性微分方程的解
+将其化简，得
+$$
+\frac{dy}{y} = -P(x)dx
+$$
+两端积分并化简，可以得到其通解
+$$
+y=Ce^{-\int P(x)dx}
+$$
+其中，$C$是任意常数
+为求出非齐次线性微分方程的解，将$C$替换为有关$x$的函数$C(x)$
+为使其满足非齐次线性微分方程
+有
+$$
+\frac{dy}{dx} = \frac{dC(x)}{dx}e^{-\int P(x)dx}-P(x)C(x)e^{-\int P(x)dx}
+$$
+将其带入，得
+$$
+\frac{dC(x)}{dx}=Q(x)e^{\int P(x)dx}
+$$
+积分得
+$$
+C(x)=\int Q(x)e^{\int P(x)dx}dx+C
+$$
+于是一阶非齐次线性微分方程通解为
+$$
+y = e^{-\int P(x)dx}(\int{Q(x)e^{\int P(x)dx}dx}+C)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;伯努利方程&#34;&gt;伯努利方程&lt;/h4&gt;
+&lt;p&gt;伯努利方程形如
+$$
+\frac{dy}{dx} +P(x)y = Q(x)y^n (n\not= 0,1)
+$$
+对其而言，在方程两边同时除$y^n$，则
+$$
+y^{-n}\frac{dy}{dx}+P(x)y^{1-n} = Q(x)
+$$
+即有
+$$
+\frac{1}{1-n} \frac{d(y^{1-n})}{dx} + P(x)y^{1-n} = Q(x)
+$$
+将$y^{1-n}$用$z$代替，即可化作一阶非齐次线性方程求解&lt;/p&gt;
+&lt;h3 id=&#34;全微分方程&#34;&gt;全微分方程&lt;/h3&gt;
+&lt;p&gt;对于一阶微分方程而言，其可以写成对成形式
+即
+$$
+P(x,y) dx + Q(x,y)dy = 0
+$$
+若其为&lt;strong&gt;全微分方程&lt;/strong&gt;,即其满足
+$$
+\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}
+$$
+时，$u(x,y)$有计算公式，
+$$
+u(x,y) = \int_{x_0}^x P(x,y) dx + \int_{y_0}^y Q(x_0,y)dy
+$$
+$$
+u(x,y) = C
+$$
+即为该微分方程的通解&lt;/p&gt;
+&lt;h3 id=&#34;可降阶数的高维微分方程&#34;&gt;可降阶数的高维微分方程&lt;/h3&gt;
+&lt;p&gt;以二阶方程为例
+$$
+\frac{d^2 y}{dx^2} = f(x,y,\frac{dx}{dy})
+$$&lt;/p&gt;
+&lt;h4 id=&#34;1-fracd2-y-d-x2--fx型微分方程&#34;&gt;1. $\frac{d^2 y }{d x^2} = f(x)$型微分方程&lt;/h4&gt;
+&lt;p&gt;令$\frac{dy}{dx} = p$，该方程即可转化为一阶微分方程
+$$
+\frac{dp}{dx} = f(x)
+$$
+积分得
+$$
+p = \int f(x) dx + C_1
+$$
+即有
+$$
+\frac{dy} {dx} = \int f(x) dx + C_1
+$$
+再对上式积分，即可得到该方程通解
+$$
+y = \int(\int f(x) dx) dx + C_1 x + C_2
+$$
+以此类推，对n阶微分方程，积分n次可以求得通解&lt;/p&gt;
+&lt;h4 id=&#34;2fracd2-yd-x2--fxfracdydx型微分方程&#34;&gt;2.$\frac{d^2 y}{d x^2} = f(x,\frac{dy}{dx})$型微分方程&lt;/h4&gt;
+&lt;p&gt;同样，令$\frac{dy}{dx}= p$,方程变为
+$$
+\frac{dp}{dx}= f(x,p)
+$$
+设此方程通解为$p = \varphi(x,C_1)$
+则可由方程
+$$
+\frac{dy}{dx} = \varphi(x,C_1)
+$$
+求出原方程的通解
+$$
+y = \int \varphi(x,C_1)dx + C_2
+$$&lt;/p&gt;
+&lt;h4 id=&#34;3fracd2-ydx-2--fyfracdydx型微分方程&#34;&gt;3.$\frac{d^2 y}{dx ^2} = f(y,\frac{dy}{dx})$型微分方程&lt;/h4&gt;
+&lt;p&gt;同样的，令$\frac{dy}{dx}=p$，可以得到
+$$
+\frac{d^2 y}{dx^2} = p\frac{dp}{dy}=f(y,p)
+$$
+若该方程的通解为$p=\varphi(y,C_1)$，将$P$用$\frac{dy}{dx}$带入，有
+$$
+\frac{dy}{dx} = \varphi(y,C_1)
+$$
+对其分离变量并积分，可得原方程通解
+$$
+\int \frac{dy}{\varphi(y,C_1)} = x + C_2
+$$
+注意：对形如
+$$
+\frac{d^{n-2}y}{dx^{n-2}}=f(\frac{d^{n-2}y}{dx^{n-2}},\frac{d^{n-1}y}{dx^{n-1}})
+$$
+的微分方程，若令$\frac{d^{n-2}y}{dx^{n-2}}=z$，则有$\frac{d^2 z}{dx^2}=f(z,\frac{dz}{dx})$
+求出$z$后积分$n-2$次，可以得到原方程通解&lt;/p&gt;
+&lt;h3 id=&#34;高阶线性微分方程解的结构&#34;&gt;高阶线性微分方程解的结构&lt;/h3&gt;
+&lt;p&gt;对于形如
+$$
+\frac{d^2 y}{dx^2} + P(x)\frac{dy}{dx}+ Q(x)y = f(x)
+$$
+的二阶线性微分方程，若$P(x)$和$Q(x)$都为常数，则其为&lt;strong&gt;二阶常系数线性微分方程&lt;/strong&gt;。$f(x)$称为方程的&lt;strong&gt;自由项&lt;/strong&gt;，若$f(x)=0$，则其称为&lt;strong&gt;二阶齐次线性微分方程&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;齐次线性微分方程&#34;&gt;齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;对于方程
+$$
+\frac{d^2 y}{dx^2}+P(x) \frac{dy}{dx}+Q(x)y=0
+$$
+&lt;strong&gt;定理11.1&lt;/strong&gt;
+若$y_1(x)$和$y_2(x)$都是该齐次线性微分方程的解，则$y=C_1y_1(x)+C_2y_2(x)$也是该方程的解
+即齐次线性微分方程的解满足&lt;strong&gt;叠加性&lt;/strong&gt;
+&lt;strong&gt;定理11.2&lt;/strong&gt;
+设$y_1(x),y_2(x),y_3(x)&amp;hellip;y_n(x)$为定义在区间$I$上的n个函数，若存在不全为零的n个常数，使得：$$
+k_1y_1(x)+k_2y_2(x)+k_3y_3(x)+&amp;hellip;k_ny_n(x)=0
+$$
+则称这n个函数在$I$上&lt;strong&gt;线性相关&lt;/strong&gt;，否则&lt;strong&gt;线性无关&lt;/strong&gt;
+若$y_1(x)$和$y_2(x)$是齐次线性微分方程的两个线性无关的解，则该方程通解为
+$$
+y = C_1y_1(x)+C_2y_2(x)
+$$&lt;/p&gt;
+&lt;h4 id=&#34;非齐次线性微分方程&#34;&gt;非齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;定理11.3&lt;/strong&gt;
+设$y^* (x)$是二阶非齐次线性微分方程
+$$
+\frac{d^2 y}{dx^2}+P(x)\frac{dy}{dx}+Q(x)y=f(x)
+$$
+的一个特解，$Y(x)$是其对应齐次线性微分方程的特解，则
+$$
+y = Y(x)+y^*(x)
+$$
+是其通解&lt;/p&gt;
+&lt;h4 id=&#34;常数变易法&#34;&gt;常数变易法&lt;/h4&gt;
+&lt;p&gt;对于微分方程
+$$
+\frac{d^2 y}{dx^2}+P(x)\frac{dy}{dx}+Q(x)y=f(x)
+$$
+而言，设其对应齐次线性方程通解为
+$$
+y=C_1 y_1(x)+C_2 y_2(x)
+$$
+则其通解为
+$$
+y^*(x) = y_1(x)\int \frac{-y_2(x)f(x)}{W(y_1(x),y_2(x))}+y_2(x)\int\frac{y_1(x)f(x)}{W(y_1(x),y_2(x))}
+$$
+其中，$W(y_1(x),y_2(x))$有朗斯基行列式得出，具体值为
+$$
+W(y_1(x),y_2(x)) = y_1(x)\frac{dy_2(x)}{dx}-y_2(x)\frac{dy_1(x)}{dx}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;常系数齐次线性微分方程&#34;&gt;常系数齐次线性微分方程&lt;/h3&gt;
+&lt;h4 id=&#34;二阶常系数齐次线性微分方程&#34;&gt;二阶常系数齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;$$
+\frac{d^2 y}{dx^2}+p\frac{dy}{dx}+qy=0
+$$
+尝试用$e^{rx}$作为解
+则可以得到特征方程
+$$
+r_{1,2} = \frac{-p\pm\sqrt{p^2 -4q}}{2}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0&#34;&gt;$p^2 -4q&amp;gt;0$&lt;/h5&gt;
+&lt;p&gt;有两个特解，该方程通解为
+$$
+y=C_1e^{r_1 x} +   C_2e^{r_2 x}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0-1&#34;&gt;$p^2 -4q=0$&lt;/h5&gt;
+&lt;p&gt;通解为
+$$
+y=(C_1+C_2x)e^{-\frac{p}{2}x}
+$$&lt;/p&gt;
+&lt;h5 id=&#34;p2--4q0-2&#34;&gt;$p^2 -4q&amp;lt;0$&lt;/h5&gt;
+&lt;p&gt;得到两个共轭复根
+通解为
+$$
+y=e^{\alpha x}[(C_1+C_2)\cos{\beta x}+i(C_1-C_2)\sin{\beta x}]
+$$
+即
+$$
+y=e^{\alpha x}(C_1\cos{\beta x}+C_2\sin{\beta x})
+$$
+其中，$C_1$为实数，$C_2$为虚数&lt;/p&gt;
+&lt;h4 id=&#34;n阶常系数齐次线性微分方程&#34;&gt;n阶常系数齐次线性微分方程&lt;/h4&gt;
+&lt;p&gt;同样地，得到其特征方程
+$$
+r^n+p_1 r^{n-1}+p_2 r^{n-2}+&amp;hellip;+p_{n-1} r + p_n = 0
+$$
+然后求解
+对于第n项，解为$e^{r_n x}$&lt;/p&gt;
+&lt;h3 id=&#34;欧拉方程&#34;&gt;欧拉方程&lt;/h3&gt;
+&lt;p&gt;形如
+$$
+x^n \frac{d^ny}{dx^n}+p_1x^{n-1}\frac{d^{n-1}y}{dx^{n-1}}+\cdots +p_{n-1}x\frac{dy}{dx}+p_ny=0
+$$
+引入自变量代换
+$$
+t = \ln(x)\&lt;br&gt;
+D = \frac{d}{dt}
+$$
+则可得
+$$
+x^k\frac{d^ky}{dx^k}=D(D-1)(D-2)\cdots(D-k+1)y
+$$
+然后可通过n阶常系数齐次线性方程方法解出t，带入即可得到x&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

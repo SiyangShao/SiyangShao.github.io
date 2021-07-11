@@ -3,28 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://siyangshao.github.io/tags/just-a-test/</loc>
-    <lastmod>2021-07-10T15:59:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://siyangshao.github.io/posts/main/</loc>
-    <lastmod>2021-07-10T15:59:52+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://siyangshao.github.io/posts/</loc>
-    <lastmod>2021-07-10T15:59:52+08:00</lastmod>
+    <lastmod>2021-07-11T16:09:52+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://siyangshao.github.io/tags/</loc>
-    <lastmod>2021-07-10T15:59:52+08:00</lastmod>
+    <lastmod>2021-07-11T16:09:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://siyangshao.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2021-07-10T15:59:52+08:00</lastmod>
+    <loc>https://siyangshao.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</loc>
+    <lastmod>2021-07-11T16:09:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</loc>
+    <lastmod>2021-07-11T16:09:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2021-07-11T16:09:52+08:00</lastmod>
   </url>
   
   <url>
@@ -53,6 +53,46 @@
   </url>
   
   <url>
+    <loc>https://siyangshao.github.io/tags/codeforces/</loc>
+    <lastmod>2021-06-18T16:18:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/codeforces202104-202105%E9%83%A8%E5%88%86%E9%A2%98%E8%A7%A3/</loc>
+    <lastmod>2021-06-18T16:18:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-06-18T16:18:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2021-06-18T16:18:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%862/</loc>
+    <lastmod>2021-06-09T16:09:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E8%80%83%E5%89%8D%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2021-06-09T16:09:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/</loc>
+    <lastmod>2021-06-03T16:11:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E5%BE%AE%E7%A7%AF%E5%88%863/</loc>
+    <lastmod>2021-06-03T16:11:46+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://siyangshao.github.io/posts/202105/</loc>
     <lastmod>2021-05-16T22:22:36+08:00</lastmod>
   </url>
@@ -63,8 +103,63 @@
   </url>
   
   <url>
+    <loc>https://siyangshao.github.io/tags/atcoder/</loc>
+    <lastmod>2021-04-18T16:13:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/atcoder-arc-116/</loc>
+    <lastmod>2021-04-18T16:13:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/codeforces-round-714/</loc>
+    <lastmod>2021-04-12T16:17:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/2020icpc-kunming/</loc>
+    <lastmod>2021-04-02T16:04:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/icpc/</loc>
+    <lastmod>2021-04-02T16:04:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/gdut15th/</loc>
+    <lastmod>2021-03-28T16:20:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/codeforces-educational-round-106/</loc>
+    <lastmod>2021-03-28T16:16:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2021-03-20T16:12:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2021-03-20T16:12:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%861/</loc>
+    <lastmod>2021-03-17T16:08:07+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://siyangshao.github.io/posts/202103/</loc>
     <lastmod>2021-03-13T22:22:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/codeforces-educational-round-105/</loc>
+    <lastmod>2021-03-03T16:15:19+08:00</lastmod>
   </url>
   
   <url>
@@ -73,8 +168,23 @@
   </url>
   
   <url>
+    <loc>https://siyangshao.github.io/posts/%E5%9B%BE%E8%AE%BA%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-01-31T16:06:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E5%8D%9A%E5%BC%88%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-01-26T16:06:52+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://siyangshao.github.io/posts/202101/</loc>
     <lastmod>2021-01-21T22:19:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://siyangshao.github.io/posts/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2021-01-20T16:05:35+08:00</lastmod>
   </url>
   
   <url>

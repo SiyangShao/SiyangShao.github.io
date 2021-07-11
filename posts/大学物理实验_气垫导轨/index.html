@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>大学物理实验_气垫导轨 :: shaosy&#39;s blog</title>
+  
+  <script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="气垫导轨数据太多了，进行一波推" />
+<meta name="keywords" content="大雾, 数据处理" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/" />
+
+
+
+
+<link rel="stylesheet" href="https://siyangshao.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://siyangshao.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://siyangshao.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://siyangshao.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="大学物理实验_气垫导轨">
+<meta property="og:description" content="气垫导轨数据太多了，进行一波推" />
+<meta property="og:url" content="https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/" />
+<meta property="og:site_name" content="shaosy&#39;s blog" />
+
+  <meta property="og:image" content="https://siyangshao.github.io">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-07-11 16:09:52 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div style="position:absolute;right:3%;top:10%;">
+        <a id="logo" href="https://siyangshao.github.io"><img
+                src="https://firefoxusercontent.com/dbeb73f5ba7f9457d819fa358934828a" width="75%" height="75%" /></a>
+    </div>
+    <div style="position:absolute;right:3%;top:30%;">
+        <h1><a href="https://siyangshao.github.io">shaosy&#39;s blog</a></h1>
+    </div>
+    <div style="position:absolute;right:7%;top:40%;">
+        <h3> <a href="https://github.com/SiyangShao">Github</a>&#160<a href="https://twitter.com/ShaoSiyang">Twitter </a></h3>
+    </div>
+    <script src="https://siyangshao.github.io/live2d/autoload.js"></script>
+
+</body>
+</html>
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a
+  href="/">
+  <div class="logo">
+    Main Page
+  </div>
+</a>
+
+    </div>
+    
+    <div class="menu-trigger">menu</div>
+    
+    
+  </div>
+  
+  <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/archive">Archive</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/archive">Archive</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/">大学物理实验_气垫导轨</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-07-11 [Updated: 2021-07-11]
+      </span>
+    
+    
+    <span class="post-author">:: shaosy</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://siyangshao.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">大学物理</a>&nbsp;
+    
+    #<a href="https://siyangshao.github.io/tags/%E5%AE%9E%E9%AA%8C%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">实验数据处理</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="气垫导轨法测重力加速度">气垫导轨法测重力加速度<a href="#气垫导轨法测重力加速度" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>下周一做这个实验，然而老师要求当场出结果www</p>
+<p>yysy 有点阴间</p>
+<p>以上海大学2020届这个大学物理实验数据为主</p>
+<p>输入格式（样例）</p>
+<p>data.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e">#以下写入表格7.1数据，格式形如[t1,t2,t2&#39;,t1&#39;]</span>
+<span style="color:#66d9ef">t11</span>: [ <span style="color:#ae81ff">28.65</span>,<span style="color:#ae81ff">29.07</span>,<span style="color:#ae81ff">29.60</span>,<span style="color:#ae81ff">30.12</span> ]
+<span style="color:#66d9ef">t12</span>: [ <span style="color:#ae81ff">21.46</span>,<span style="color:#ae81ff">21.87</span>,<span style="color:#ae81ff">22.14</span>,<span style="color:#ae81ff">22.52</span> ]
+<span style="color:#66d9ef">t13</span>: [ <span style="color:#ae81ff">20.65</span>,<span style="color:#ae81ff">21.05</span>,<span style="color:#ae81ff">21.35</span>,<span style="color:#ae81ff">21.62</span> ]
+<span style="color:#75715e">#以下写入表格7.2数据，格式形如[t1,t2,t2&#39;,t1&#39;]</span>
+<span style="color:#66d9ef">t21</span>: [ <span style="color:#ae81ff">32.81</span>,<span style="color:#ae81ff">21.37</span>,<span style="color:#ae81ff">21.90</span>,<span style="color:#ae81ff">38.16</span> ]
+<span style="color:#66d9ef">t22</span>: [ <span style="color:#ae81ff">32.34</span>,<span style="color:#ae81ff">21.26</span>,<span style="color:#ae81ff">21.70</span>,<span style="color:#ae81ff">37.17</span> ]
+<span style="color:#66d9ef">t23</span>: [ <span style="color:#ae81ff">32.17</span>,<span style="color:#ae81ff">21.13</span>,<span style="color:#ae81ff">21.53</span>,<span style="color:#ae81ff">36.76</span> ]
+<span style="color:#66d9ef">t24</span>: [ <span style="color:#ae81ff">32.52</span>,<span style="color:#ae81ff">21.16</span>,<span style="color:#ae81ff">21.56</span>,<span style="color:#ae81ff">36.51</span> ]
+<span style="color:#66d9ef">t25</span>: [ <span style="color:#ae81ff">32.52</span>,<span style="color:#ae81ff">21.23</span>,<span style="color:#ae81ff">21.61</span>,<span style="color:#ae81ff">37.71</span> ]
+<span style="color:#66d9ef">t26</span>: [ <span style="color:#ae81ff">32.15</span>,<span style="color:#ae81ff">20.96</span>,<span style="color:#ae81ff">21.37</span>,<span style="color:#ae81ff">36.15</span> ]
+<span style="color:#75715e">#以下为表格7.3数据，不需要改动！！！！！！</span>
+<span style="color:#75715e">#算了 这段不调用23333 放着罢</span>
+<span style="color:#66d9ef">t31</span>: [ <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">86</span>,<span style="color:#ae81ff">60</span>,<span style="color:#ae81ff">1</span> ]
+<span style="color:#66d9ef">t32</span>: [ <span style="color:#ae81ff">0.002</span>,<span style="color:#ae81ff">0.05</span>,<span style="color:#ae81ff">0.05</span>,<span style="color:#ae81ff">0.002</span> ]
+
+</code></pre></div><p>输出格式（样例）</p>
+<p>answer.yaml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">table1 answer
+--- t1-t2(%)
+---
+- <span style="color:#ae81ff">1.47</span>
+- <span style="color:#ae81ff">1.91</span>
+- <span style="color:#ae81ff">1.94</span>
+--- dt1-dt2(%)
+---
+- <span style="color:#ae81ff">1.73</span>
+- <span style="color:#ae81ff">1.69</span>
+- <span style="color:#ae81ff">1.25</span>
+table2 answer
+--- dt
+---
+- <span style="color:#ae81ff">32.4183</span>
+- <span style="color:#ae81ff">21.185</span>
+- <span style="color:#ae81ff">21.6117</span>
+- <span style="color:#ae81ff">37.0767</span>
+--- st
+---
+- <span style="color:#ae81ff">0.2506</span>
+- <span style="color:#ae81ff">0.1387</span>
+- <span style="color:#ae81ff">0.1781</span>
+- <span style="color:#ae81ff">0.7568</span>
+--- ut
+---
+- <span style="color:#ae81ff">0.2555</span>
+- <span style="color:#ae81ff">0.1474</span>
+- <span style="color:#ae81ff">0.185</span>
+- <span style="color:#ae81ff">0.7584</span>
+table <span style="color:#ae81ff">3</span>
+--- E(%)
+---
+- <span style="color:#ae81ff">0.2</span>
+- <span style="color:#ae81ff">0.06</span>
+- <span style="color:#ae81ff">0.08</span>
+- <span style="color:#ae81ff">0.2</span>
+Else
+--- T
+--- <span style="color:#ae81ff">0.0027</span>
+--- g
+--- <span style="color:#ae81ff">9.675</span>
+--- Eg
+--- <span style="color:#ae81ff">0.0221</span>
+--- Ug
+--- <span style="color:#ae81ff">0.2138</span>
+...
+Ag
+--- <span style="color:#ae81ff">1.22</span>
+...
+
+</code></pre></div><p>源代码（python3.8）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">数据填写于data.yaml中，填写格式参照data.yaml中注释
+</span><span style="color:#e6db74">由于yaml原因（因为作者懒且菜）
+</span><span style="color:#e6db74">仅输出需要输入的数据，顺序均为按照填写顺序（即由1到n），其中d均为delta之意，后有%均代表为百分数
+</span><span style="color:#e6db74">均输出于answer.yaml中
+</span><span style="color:#e6db74">data.yaml中原始数据为作者舍友手测，answer.yaml中数据为作者由本程序算的结果，经检验与作者舍友手算数据无明显偏差
+</span><span style="color:#e6db74">python版本为3.8
+</span><span style="color:#e6db74">使用方式：填写数据完后python3(或者python?) main.py
+</span><span style="color:#e6db74">或者直接采用pycharm打开本文件并点击运行
+</span><span style="color:#e6db74">标准编码格式为UTF-8
+</span><span style="color:#e6db74">不保证在其他环境下仍可运行
+</span><span style="color:#e6db74">作者:shaosy
+</span><span style="color:#e6db74">邮箱:siyang.shao@outlook.com
+</span><span style="color:#e6db74">日期:2021/1/14
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+<span style="color:#f92672">import</span> yaml
+<span style="color:#f92672">import</span> math
+
+
+<span style="color:#75715e"># 由于python3 round函数存在精度丢失问题，故实现四舍五入,默认均保留四位小数：</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">round_up</span>(number, power<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    实现精确四舍五入，包含正、负小数多种场景
+</span><span style="color:#e6db74">    :param number: 需要四舍五入的小数
+</span><span style="color:#e6db74">    :param power: 四舍五入位数，支持0-∞
+</span><span style="color:#e6db74">    :return: 返回四舍五入后的结果
+</span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+    digit <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">**</span> power
+    num2 <span style="color:#f92672">=</span> float(int(number <span style="color:#f92672">*</span> digit))
+    <span style="color:#75715e"># 处理正数，power不为0的情况</span>
+    <span style="color:#66d9ef">if</span> number <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> power <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>:
+        tag <span style="color:#f92672">=</span> number <span style="color:#f92672">*</span> digit <span style="color:#f92672">-</span> num2 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (digit <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>)
+        <span style="color:#66d9ef">if</span> tag <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.5</span>:
+            <span style="color:#66d9ef">return</span> (num2 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> digit
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> num2 <span style="color:#f92672">/</span> digit
+    <span style="color:#75715e"># 处理正数，power为0取整的情况</span>
+    <span style="color:#66d9ef">elif</span> number <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> power <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        tag <span style="color:#f92672">=</span> number <span style="color:#f92672">*</span> digit <span style="color:#f92672">-</span> int(number)
+        <span style="color:#66d9ef">if</span> tag <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.5</span>:
+            <span style="color:#66d9ef">return</span> (num2 <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> digit
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> num2 <span style="color:#f92672">/</span> digit
+    <span style="color:#75715e"># 处理负数，power为0取整的情况</span>
+    <span style="color:#66d9ef">elif</span> power <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> number <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+        tag <span style="color:#f92672">=</span> number <span style="color:#f92672">*</span> digit <span style="color:#f92672">-</span> int(number)
+        <span style="color:#66d9ef">if</span> tag <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>:
+            <span style="color:#66d9ef">return</span> (num2 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> digit
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> num2 <span style="color:#f92672">/</span> digit
+    <span style="color:#75715e"># 处理负数，power不为0的情况</span>
+    <span style="color:#66d9ef">else</span>:
+        tag <span style="color:#f92672">=</span> number <span style="color:#f92672">*</span> digit <span style="color:#f92672">-</span> num2 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (digit <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>)
+        <span style="color:#66d9ef">if</span> tag <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span>:
+            <span style="color:#66d9ef">return</span> (num2 <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span> digit
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">return</span> num2 <span style="color:#f92672">/</span> digit
+
+
+<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;data.yaml&#39;</span>) <span style="color:#66d9ef">as</span> file:
+    data <span style="color:#f92672">=</span> yaml<span style="color:#f92672">.</span>safe_load(file)
+answer <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#39;answer.yaml&#39;</span>, <span style="color:#e6db74">&#39;w&#39;</span>)
+<span style="color:#75715e"># 表格1数据处理，根据老师要求增加两次相差百分比计算</span>
+t71 <span style="color:#f92672">=</span> [data[<span style="color:#e6db74">&#39;t11&#39;</span>], data[<span style="color:#e6db74">&#39;t12&#39;</span>], data[<span style="color:#e6db74">&#39;t13&#39;</span>]]
+d1 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+d2 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">3</span>):
+    d1[i] <span style="color:#f92672">=</span> round_up((t71[i][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">-</span> t71[i][<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">/</span> t71[i][<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">2</span>)
+    d2[i] <span style="color:#f92672">=</span> round_up((t71[i][<span style="color:#ae81ff">3</span>] <span style="color:#f92672">-</span> t71[i][<span style="color:#ae81ff">2</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">/</span> t71[i][<span style="color:#ae81ff">3</span>], <span style="color:#ae81ff">2</span>)
+yaml<span style="color:#f92672">.</span>safe_dump_all([<span style="color:#e6db74">&#34;table1 answer&#34;</span>, <span style="color:#e6db74">&#34;t1-t2(%)&#34;</span>, d1, <span style="color:#e6db74">&#34;dt1-dt2(%)&#34;</span>, d2], answer)
+<span style="color:#75715e"># 表格2数据处理</span>
+t72 <span style="color:#f92672">=</span> [data[<span style="color:#e6db74">&#39;t21&#39;</span>], data[<span style="color:#e6db74">&#39;t22&#39;</span>], data[<span style="color:#e6db74">&#39;t23&#39;</span>], data[<span style="color:#e6db74">&#39;t24&#39;</span>], data[<span style="color:#e6db74">&#39;t25&#39;</span>], data[<span style="color:#e6db74">&#39;t26&#39;</span>]]
+dt <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+st <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+ut <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">4</span>):
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">6</span>):
+        dt[i] <span style="color:#f92672">=</span> dt[i] <span style="color:#f92672">+</span> t72[j][i]
+    dt[i] <span style="color:#f92672">=</span> round_up(dt[i] <span style="color:#f92672">/</span> <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>)
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">6</span>):
+        st[i] <span style="color:#f92672">=</span> st[i] <span style="color:#f92672">+</span> (t72[j][i] <span style="color:#f92672">-</span> dt[i]) <span style="color:#f92672">*</span> (t72[j][i] <span style="color:#f92672">-</span> dt[i])
+    st[i] <span style="color:#f92672">=</span> st[i] <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span>
+    st[i] <span style="color:#f92672">=</span> round_up(math<span style="color:#f92672">.</span>sqrt(st[i]), <span style="color:#ae81ff">4</span>)
+    ut[i] <span style="color:#f92672">=</span> round_up(math<span style="color:#f92672">.</span>sqrt(st[i] <span style="color:#f92672">*</span> st[i] <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.05</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.05</span>), <span style="color:#ae81ff">4</span>)
+yaml<span style="color:#f92672">.</span>safe_dump_all([<span style="color:#e6db74">&#34;table2 answer&#34;</span>, <span style="color:#e6db74">&#34;dt&#34;</span>, dt, <span style="color:#e6db74">&#34;st&#34;</span>, st, <span style="color:#e6db74">&#34;ut&#34;</span>, ut], answer)
+<span style="color:#75715e"># 表格3数据处理</span>
+t31 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">86</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">1</span>]
+t32 <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.002</span>, <span style="color:#ae81ff">0.05</span>, <span style="color:#ae81ff">0.05</span>, <span style="color:#ae81ff">0.002</span>]
+E <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>]
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">4</span>):
+    E[i] <span style="color:#f92672">=</span> round_up(t32[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">/</span> t31[i], <span style="color:#ae81ff">2</span>)
+yaml<span style="color:#f92672">.</span>safe_dump_all([<span style="color:#e6db74">&#34;table 3&#34;</span>, <span style="color:#e6db74">&#34;E(%)&#34;</span>, E], answer)
+<span style="color:#75715e"># 第三小问</span>
+Tb <span style="color:#f92672">=</span> round_up((<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (dt[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> dt[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (dt[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">*</span> dt[<span style="color:#ae81ff">2</span>])) <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (dt[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> dt[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> (dt[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">*</span> dt[<span style="color:#ae81ff">3</span>])), <span style="color:#ae81ff">4</span>)
+g <span style="color:#f92672">=</span> (t31[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> t31[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> t31[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">/</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> t31[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">*</span> t31[<span style="color:#ae81ff">3</span>])) <span style="color:#f92672">*</span> Tb <span style="color:#f92672">*</span> <span style="color:#ae81ff">10000</span>
+Eg <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> E[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">*</span> E[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span> <span style="color:#f92672">+</span> E[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> E[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span> <span style="color:#f92672">+</span> E[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">*</span> E[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span> <span style="color:#f92672">+</span> E[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">*</span> E[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">/</span> <span style="color:#ae81ff">10000</span>
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">4</span>):
+    Eg <span style="color:#f92672">+=</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> (ut[i] <span style="color:#f92672">*</span> ut[i] <span style="color:#f92672">/</span> (math<span style="color:#f92672">.</span>pow(dt[i], <span style="color:#ae81ff">6</span>))) <span style="color:#f92672">/</span> (Tb <span style="color:#f92672">*</span> Tb)
+Eg <span style="color:#f92672">=</span> round_up(math<span style="color:#f92672">.</span>sqrt(Eg), <span style="color:#ae81ff">4</span>)
+Ug <span style="color:#f92672">=</span> round_up(g <span style="color:#f92672">*</span> Eg, <span style="color:#ae81ff">4</span>)
+yaml<span style="color:#f92672">.</span>safe_dump_all([<span style="color:#e6db74">&#34;Else&#34;</span>, <span style="color:#e6db74">&#34;T&#34;</span>, Tb, <span style="color:#e6db74">&#34;g&#34;</span>, g, <span style="color:#e6db74">&#34;Eg&#34;</span>, Eg, <span style="color:#e6db74">&#34;Ug&#34;</span>, Ug], answer)
+<span style="color:#75715e"># 实验结果</span>
+Ag <span style="color:#f92672">=</span> round_up(abs(g <span style="color:#f92672">-</span> <span style="color:#ae81ff">9.794</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">9.794</span>, <span style="color:#ae81ff">2</span>)
+Eg <span style="color:#f92672">=</span> round_up(Eg <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>)
+yaml<span style="color:#f92672">.</span>safe_dump_all([<span style="color:#e6db74">&#34;Ag&#34;</span>, Ag], answer)
+
+</code></pre></div><p>www</p>
+<p>大概就是这样</p>
+<p>算是我的第一段为了摸鱼的代码？</p>
+<p>在马原上写的2333</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://siyangshao.github.io/posts/202106/">
+                <span class="button__text">202106</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://siyangshao.github.io/assets/main.js"></script>
+<script src="https://siyangshao.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
