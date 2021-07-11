@@ -8,205 +8,75 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Jul 2021 15:29:49 +0800</lastBuildDate><atom:link href="https://siyangshao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>大学物理实验_气垫导轨</title>
-      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</link>
-      <pubDate>Sun, 11 Jul 2021 16:09:52 +0800</pubDate>
+      <title>HUGO迁移</title>
+      <link>https://siyangshao.github.io/posts/hugo%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Sun, 11 Jul 2021 16:22:37 +0800</pubDate>
       
-      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</guid>
-      <description>气垫导轨法测重力加速度 下周一做这个实验，然而老师要求当场出结果www
-yysy 有点阴间
-以上海大学2020届这个大学物理实验数据为主
-输入格式（样例）
-data.yaml
-#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t11: [ 28.65,29.07,29.60,30.12 ] t12: [ 21.46,21.87,22.14,22.52 ] t13: [ 20.65,21.05,21.35,21.62 ] #以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t21: [ 32.81,21.37,21.90,38.16 ] t22: [ 32.34,21.26,21.70,37.17 ] t23: [ 32.17,21.13,21.53,36.76 ] t24: [ 32.52,21.16,21.56,36.51 ] t25: [ 32.52,21.23,21.61,37.71 ] t26: [ 32.15,20.96,21.37,36.15 ] #以下为表格7.3数据，不需要改动！！！！！！ #算了 这段不调用23333 放着罢 t31: [ 1,86,60,1 ] t32: [ 0.002,0.05,0.05,0.002 ] 输出格式（样例）
-answer.yaml
-table1 answer --- t1-t2(%) --- - 1.47 - 1.91 - 1.94 --- dt1-dt2(%) --- - 1.</description>
-      <content>&lt;h2 id=&#34;气垫导轨法测重力加速度&#34;&gt;气垫导轨法测重力加速度&lt;/h2&gt;
-&lt;p&gt;下周一做这个实验，然而老师要求当场出结果www&lt;/p&gt;
-&lt;p&gt;yysy 有点阴间&lt;/p&gt;
-&lt;p&gt;以上海大学2020届这个大学物理实验数据为主&lt;/p&gt;
-&lt;p&gt;输入格式（样例）&lt;/p&gt;
-&lt;p&gt;data.yaml&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t11&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;28.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.07&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;30.12&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t12&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;21.46&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.87&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.14&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.52&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t13&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;20.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.35&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.62&lt;/span&gt; ]
-&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t21&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.81&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.90&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;38.16&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t22&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.34&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.26&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.70&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.17&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t23&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.17&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.13&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.53&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.76&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t24&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.16&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.56&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.51&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t25&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.23&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.61&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.71&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t26&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.15&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20.96&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.15&lt;/span&gt; ]
-&lt;span style=&#34;color:#75715e&#34;&gt;#以下为表格7.3数据，不需要改动！！！！！！&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#算了 这段不调用23333 放着罢&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t31&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;t32&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt; ]
+      <guid>https://siyangshao.github.io/posts/hugo%E8%BF%81%E7%A7%BB/</guid>
+      <description>为什么要迁移？ 首先，自然是因为我重装了系统🤣
+总之，重装完以后，我的HEXO烂掉了，然后npm也烂掉了。之前就听闻基于go的hugo不错，自然这次就选择了hugo作为blog的新的后端
+迁移中所遇到的坑 坑1：HUGO不支持数学公式 是的，你没有看错，HUGO真的不原生支持数学公式！！！
+解决方案：在/themes/theme-name/layouts/partials中修改，添加mathjax.html从而添加latax支持
+其内容为
+&amp;lt;script type=&amp;#34;text/javascript&amp;#34; async src=&amp;#34;https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&amp;gt; MathJax.Hub.Config({ tex2jax: { inlineMath: [[&amp;#39;$&amp;#39;,&amp;#39;$&amp;#39;], [&amp;#39;\\(&amp;#39;,&amp;#39;\\)&amp;#39;]], displayMath: [[&amp;#39;$$&amp;#39;,&amp;#39;$$&amp;#39;], [&amp;#39;\[\[&amp;#39;,&amp;#39;\]\]&amp;#39;]], processEscapes: true, processEnvironments: true, skipTags: [&amp;#39;script&amp;#39;, &amp;#39;noscript&amp;#39;, &amp;#39;style&amp;#39;, &amp;#39;textarea&amp;#39;, &amp;#39;pre&amp;#39;], TeX: { equationNumbers: { autoNumber: &amp;#34;AMS&amp;#34; }, extensions: [&amp;#34;AMSmath.js&amp;#34;, &amp;#34;AMSsymbols.js&amp;#34;] } } }); MathJax.Hub.Queue(function() { // Fix &amp;lt;code&amp;gt; tags after MathJax finishes running. This is a  // hack to overcome a shortcoming of Markdown. Discussion at  // https://github.</description>
+      <content>&lt;h3 id=&#34;为什么要迁移&#34;&gt;为什么要迁移？&lt;/h3&gt;
+&lt;p&gt;首先，自然是因为我重装了系统🤣&lt;/p&gt;
+&lt;p&gt;总之，重装完以后，我的HEXO烂掉了，然后npm也烂掉了。之前就听闻基于go的hugo不错，自然这次就选择了hugo作为blog的新的后端&lt;/p&gt;
+&lt;h3 id=&#34;迁移中所遇到的坑&#34;&gt;迁移中所遇到的坑&lt;/h3&gt;
+&lt;h4 id=&#34;坑1hugo不支持数学公式&#34;&gt;坑1：HUGO不支持数学公式&lt;/h4&gt;
+&lt;p&gt;是的，你没有看错，&lt;strong&gt;HUGO真的不原生支持数学公式！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;解决方案：在/themes/theme-name/layouts/partials中修改，添加mathjax.html从而添加latax支持&lt;/p&gt;
+&lt;p&gt;其内容为&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;async&lt;/span&gt;
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;MathJax&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Hub&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Config&lt;/span&gt;({
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;tex2jax&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; {
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;inlineMath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;], [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\\(&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\\)&amp;#39;&lt;/span&gt;]],
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;displayMath&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;$$&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;$$&amp;#39;&lt;/span&gt;], [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\[\[&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\]\]&amp;#39;&lt;/span&gt;]],
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;processEscapes&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;processEnvironments&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;skipTags&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;noscript&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;textarea&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pre&amp;#39;&lt;/span&gt;],
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;TeX&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;equationNumbers&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;autoNumber&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;AMS&amp;#34;&lt;/span&gt; },
+         &lt;span style=&#34;color:#a6e22e&#34;&gt;extensions&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;AMSmath.js&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;AMSsymbols.js&amp;#34;&lt;/span&gt;] }
+  }
+});
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出格式（样例）&lt;/p&gt;
-&lt;p&gt;answer.yaml&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;table1 answer
---- t1-t2(%)
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.47&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.91&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.94&lt;/span&gt;
---- dt1-dt2(%)
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.73&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.69&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.25&lt;/span&gt;
-table2 answer
---- dt
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;32.4183&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.185&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.6117&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;37.0767&lt;/span&gt;
---- st
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2506&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1387&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1781&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7568&lt;/span&gt;
---- ut
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2555&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1474&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.185&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7584&lt;/span&gt;
-table &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
---- E(%)
----
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.06&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.08&lt;/span&gt;
-- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
-Else
---- T
---- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0027&lt;/span&gt;
---- g
---- &lt;span style=&#34;color:#ae81ff&#34;&gt;9.675&lt;/span&gt;
---- Eg
---- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0221&lt;/span&gt;
---- Ug
---- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2138&lt;/span&gt;
-...
-Ag
---- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.22&lt;/span&gt;
-...
+&lt;span style=&#34;color:#a6e22e&#34;&gt;MathJax&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Hub&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Queue&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;() {
+    &lt;span style=&#34;color:#75715e&#34;&gt;// Fix &amp;lt;code&amp;gt; tags after MathJax finishes running. This is a
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// hack to overcome a shortcoming of Markdown. Discussion at
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// https://github.com/mojombo/jekyll/issues/199
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathJax&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Hub&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;getAllJax&lt;/span&gt;(), &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;; &lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) {
+        &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;i&lt;/span&gt;].&lt;span style=&#34;color:#a6e22e&#34;&gt;SourceElement&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;parentNode&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;className&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39; has-jax&amp;#39;&lt;/span&gt;;
+    }
+});
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;源代码（python3.8）&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;数据填写于data.yaml中，填写格式参照data.yaml中注释
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;由于yaml原因（因为作者懒且菜）
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;仅输出需要输入的数据，顺序均为按照填写顺序（即由1到n），其中d均为delta之意，后有%均代表为百分数
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;均输出于answer.yaml中
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;data.yaml中原始数据为作者舍友手测，answer.yaml中数据为作者由本程序算的结果，经检验与作者舍友手算数据无明显偏差
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;python版本为3.8
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;使用方式：填写数据完后python3(或者python?) main.py
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;或者直接采用pycharm打开本文件并点击运行
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;标准编码格式为UTF-8
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;不保证在其他环境下仍可运行
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;作者:shaosy
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;邮箱:siyang.shao@outlook.com
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;日期:2021/1/14
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; yaml
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
-
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# 由于python3 round函数存在精度丢失问题，故实现四舍五入,默认均保留四位小数：&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;round_up&lt;/span&gt;(number, power&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;):
-    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    实现精确四舍五入，包含正、负小数多种场景
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param number: 需要四舍五入的小数
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param power: 四舍五入位数，支持0-∞
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :return: 返回四舍五入后的结果
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
-    digit &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; power
-    num2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; float(int(number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit))
-    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power不为0的情况&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
-        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power为0取整的情况&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
-        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power为0取整的情况&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
-        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power不为0的情况&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
-
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data.yaml&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; file:
-    data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_load(file)
-answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;answer.yaml&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 表格1数据处理，根据老师要求增加两次相差百分比计算&lt;/span&gt;
-t71 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t11&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t12&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t13&amp;#39;&lt;/span&gt;]]
-d1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-d2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;):
-    d1[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-    d2[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table1 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;t1-t2(%)&amp;#34;&lt;/span&gt;, d1, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt1-dt2(%)&amp;#34;&lt;/span&gt;, d2], answer)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 表格2数据处理&lt;/span&gt;
-t72 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t21&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t22&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t23&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t24&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t25&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t26&amp;#39;&lt;/span&gt;]]
-dt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-st &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-ut &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
-        dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; t72[j][i]
-    dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
-        st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i])
-    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
-    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i]), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-    ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table2 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt&amp;#34;&lt;/span&gt;, dt, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;st&amp;#34;&lt;/span&gt;, st, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ut&amp;#34;&lt;/span&gt;, ut], answer)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 表格3数据处理&lt;/span&gt;
-t31 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]
-t32 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;]
-E &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
-    E[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(t32[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t31[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table 3&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;E(%)&amp;#34;&lt;/span&gt;, E], answer)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 第三小问&lt;/span&gt;
-Tb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-g &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
-Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
-    Eg &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(dt[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;))) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb)
-Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(Eg), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-Ug &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(g &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Eg, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
-yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Else&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T&amp;#34;&lt;/span&gt;, Tb, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;g&amp;#34;&lt;/span&gt;, g, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Eg&amp;#34;&lt;/span&gt;, Eg, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ug&amp;#34;&lt;/span&gt;, Ug], answer)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 实验结果&lt;/span&gt;
-Ag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(abs(g &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(Eg &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
-yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ag&amp;#34;&lt;/span&gt;, Ag], answer)
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;www&lt;/p&gt;
-&lt;p&gt;大概就是这样&lt;/p&gt;
-&lt;p&gt;算是我的第一段为了摸鱼的代码？&lt;/p&gt;
-&lt;p&gt;在马原上写的2333&lt;/p&gt;
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;style&lt;/span&gt;&amp;gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;code&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;has-jax&lt;/span&gt; {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;font&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;inherit&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;font-size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;%&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;background&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;inherit&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;border&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;inherit&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;color&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;#515151&lt;/span&gt;;
+}
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;style&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后再head.html中加入如下语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;{{ partial &amp;#34;mathjax.html&amp;#34; . }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可完成对公式的支持了&lt;/p&gt;
+&lt;h3 id=&#34;坑2live2d&#34;&gt;坑2：live2D&lt;/h3&gt;
+&lt;p&gt;参考https://github.com/stevenjoezhang/live2d-widget&lt;/p&gt;
+&lt;p&gt;在layout中引入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;link&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后加入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://YOUR_WEBSITE_NAME/live2d/autoload.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即可完成伟大的萌娘活动！&lt;/p&gt;
+&lt;p&gt;但是这就引入了一个新的问题——我怎么把这段JS传到github.io上？&lt;/p&gt;
+&lt;h3 id=&#34;坑3-static&#34;&gt;坑3： static&lt;/h3&gt;
+&lt;p&gt;在HUGO的文件目录中，static这个文件夹中内容会&lt;strong&gt;一摸一样上传到public中&lt;/strong&gt;，于是我们可以利用这点，在static中存放images和live2d的源代码，而后调用直接从根目录调用即可&lt;/p&gt;
+&lt;h3 id=&#34;坑4-public&#34;&gt;坑4： public&lt;/h3&gt;
+&lt;p&gt;HUGO的public和hexo的略微有些区别。虽然二者均可以用Github，但是hugo的架构是每次hugo产生的文件都将存储于public中，而后直接将这个文件夹中内容push至你的github.io仓库中即可。那么显然的，便会存在git历史记录不统一问题。于是在这里，建议先pull下来，然后除去git目录全部删除，再进行生成、git操作，最后上传。其中，生成的基本上均为HTML文件，模板存放在主题的layout和自己的layout中，均必须有single.html。在这里可以通过自己编写来修改全局，个人认为比hexo的js更加直观&lt;/p&gt;
 </content>
     </item>
     
@@ -2631,6 +2501,209 @@ map&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;pair&lt;span s
 &lt;p&gt;2月末&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;​		3月，距离期末考只有短短的两周了。微积分，线性代数，大学物理，仿若三座大山压在我的头上。但求80+。&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>大学物理实验_气垫导轨</title>
+      <link>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</link>
+      <pubDate>Thu, 11 Feb 2021 16:09:52 +0800</pubDate>
+      
+      <guid>https://siyangshao.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86%E5%AE%9E%E9%AA%8C_%E6%B0%94%E5%9E%AB%E5%AF%BC%E8%BD%A8/</guid>
+      <description>气垫导轨法测重力加速度 下周一做这个实验，然而老师要求当场出结果www
+yysy 有点阴间
+以上海大学2020届这个大学物理实验数据为主
+输入格式（样例）
+data.yaml
+#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t11: [ 28.65,29.07,29.60,30.12 ] t12: [ 21.46,21.87,22.14,22.52 ] t13: [ 20.65,21.05,21.35,21.62 ] #以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;] t21: [ 32.81,21.37,21.90,38.16 ] t22: [ 32.34,21.26,21.70,37.17 ] t23: [ 32.17,21.13,21.53,36.76 ] t24: [ 32.52,21.16,21.56,36.51 ] t25: [ 32.52,21.23,21.61,37.71 ] t26: [ 32.15,20.96,21.37,36.15 ] #以下为表格7.3数据，不需要改动！！！！！！ #算了 这段不调用23333 放着罢 t31: [ 1,86,60,1 ] t32: [ 0.002,0.05,0.05,0.002 ] 输出格式（样例）
+answer.yaml
+table1 answer --- t1-t2(%) --- - 1.47 - 1.91 - 1.94 --- dt1-dt2(%) --- - 1.</description>
+      <content>&lt;h2 id=&#34;气垫导轨法测重力加速度&#34;&gt;气垫导轨法测重力加速度&lt;/h2&gt;
+&lt;p&gt;下周一做这个实验，然而老师要求当场出结果www&lt;/p&gt;
+&lt;p&gt;yysy 有点阴间&lt;/p&gt;
+&lt;p&gt;以上海大学2020届这个大学物理实验数据为主&lt;/p&gt;
+&lt;p&gt;输入格式（样例）&lt;/p&gt;
+&lt;p&gt;data.yaml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.1数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t11&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;28.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.07&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;29.60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;30.12&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t12&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;21.46&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.87&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.14&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;22.52&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t13&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;20.65&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.35&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.62&lt;/span&gt; ]
+&lt;span style=&#34;color:#75715e&#34;&gt;#以下写入表格7.2数据，格式形如[t1,t2,t2&amp;#39;,t1&amp;#39;]&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t21&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.81&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.90&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;38.16&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t22&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.34&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.26&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.70&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.17&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t23&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.17&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.13&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.53&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.76&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t24&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.16&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.56&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.51&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t25&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.52&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.23&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.61&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;37.71&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t26&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;32.15&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;20.96&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;21.37&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;36.15&lt;/span&gt; ]
+&lt;span style=&#34;color:#75715e&#34;&gt;#以下为表格7.3数据，不需要改动！！！！！！&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#算了 这段不调用23333 放着罢&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t31&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;t32&lt;/span&gt;: [ &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt; ]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;输出格式（样例）&lt;/p&gt;
+&lt;p&gt;answer.yaml&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;table1 answer
+--- t1-t2(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.47&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.91&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.94&lt;/span&gt;
+--- dt1-dt2(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.73&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.69&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.25&lt;/span&gt;
+table2 answer
+--- dt
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;32.4183&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.185&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;21.6117&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;37.0767&lt;/span&gt;
+--- st
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2506&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1387&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1781&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7568&lt;/span&gt;
+--- ut
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2555&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1474&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.185&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7584&lt;/span&gt;
+table &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+--- E(%)
+---
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.06&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.08&lt;/span&gt;
+- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;
+Else
+--- T
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0027&lt;/span&gt;
+--- g
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;9.675&lt;/span&gt;
+--- Eg
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0221&lt;/span&gt;
+--- Ug
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2138&lt;/span&gt;
+...
+Ag
+--- &lt;span style=&#34;color:#ae81ff&#34;&gt;1.22&lt;/span&gt;
+...
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;源代码（python3.8）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;数据填写于data.yaml中，填写格式参照data.yaml中注释
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;由于yaml原因（因为作者懒且菜）
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;仅输出需要输入的数据，顺序均为按照填写顺序（即由1到n），其中d均为delta之意，后有%均代表为百分数
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;均输出于answer.yaml中
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;data.yaml中原始数据为作者舍友手测，answer.yaml中数据为作者由本程序算的结果，经检验与作者舍友手算数据无明显偏差
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;python版本为3.8
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;使用方式：填写数据完后python3(或者python?) main.py
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;或者直接采用pycharm打开本文件并点击运行
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;标准编码格式为UTF-8
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;不保证在其他环境下仍可运行
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;作者:shaosy
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;邮箱:siyang.shao@outlook.com
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;日期:2021/1/14
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; yaml
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; math
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 由于python3 round函数存在精度丢失问题，故实现四舍五入,默认均保留四位小数：&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;round_up&lt;/span&gt;(number, power&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    实现精确四舍五入，包含正、负小数多种场景
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param number: 需要四舍五入的小数
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :param power: 四舍五入位数，支持0-∞
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    :return: 返回四舍五入后的结果
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    digit &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt; power
+    num2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; float(int(number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit))
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power不为0的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理正数，power为0取整的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power为0取整的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; power &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; int(number)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+    &lt;span style=&#34;color:#75715e&#34;&gt;# 处理负数，power不为0的情况&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+        tag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; digit &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (digit &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; tag &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (num2 &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; digit
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;data.yaml&amp;#39;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; file:
+    data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_load(file)
+answer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;answer.yaml&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格1数据处理，根据老师要求增加两次相差百分比计算&lt;/span&gt;
+t71 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t11&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t12&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t13&amp;#39;&lt;/span&gt;]]
+d1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+d2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;):
+    d1[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+    d2[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t71[i][&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table1 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;t1-t2(%)&amp;#34;&lt;/span&gt;, d1, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt1-dt2(%)&amp;#34;&lt;/span&gt;, d2], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格2数据处理&lt;/span&gt;
+t72 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t21&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t22&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t23&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t24&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t25&amp;#39;&lt;/span&gt;], data[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;t26&amp;#39;&lt;/span&gt;]]
+dt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+st &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+ut &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
+        dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; t72[j][i]
+    dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(dt[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;):
+        st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i]) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (t72[j][i] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; dt[i])
+    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+    st[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i]), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+    ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(st[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; st[i] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table2 answer&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dt&amp;#34;&lt;/span&gt;, dt, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;st&amp;#34;&lt;/span&gt;, st, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ut&amp;#34;&lt;/span&gt;, ut], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 表格3数据处理&lt;/span&gt;
+t31 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;86&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]
+t32 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.05&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.002&lt;/span&gt;]
+E &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    E[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(t32[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; t31[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;table 3&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;E(%)&amp;#34;&lt;/span&gt;, E], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 第三小问&lt;/span&gt;
+Tb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up((&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]) &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; dt[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+g &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; t31[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; E[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10000&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;):
+    Eg &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; (ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; ut[i] &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(dt[i], &lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;))) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; (Tb &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Tb)
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(math&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sqrt(Eg), &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+Ug &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(g &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; Eg, &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Else&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T&amp;#34;&lt;/span&gt;, Tb, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;g&amp;#34;&lt;/span&gt;, g, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Eg&amp;#34;&lt;/span&gt;, Eg, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ug&amp;#34;&lt;/span&gt;, Ug], answer)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 实验结果&lt;/span&gt;
+Ag &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(abs(g &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;9.794&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+Eg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; round_up(Eg &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+yaml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;safe_dump_all([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Ag&amp;#34;&lt;/span&gt;, Ag], answer)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;www&lt;/p&gt;
+&lt;p&gt;大概就是这样&lt;/p&gt;
+&lt;p&gt;算是我的第一段为了摸鱼的代码？&lt;/p&gt;
+&lt;p&gt;在马原上写的2333&lt;/p&gt;
 </content>
     </item>
     
